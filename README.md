@@ -1,40 +1,38 @@
-# Mouj Maalik School of Music (MMSM) Website
+# 🎵 MMSM Music School Website
 
-A modern, responsive website for Mouj Maalik School of Music built with Next.js, TypeScript, and Tailwind CSS. The website showcases the school's music programs, services, and facilities with a beautiful, professional design inspired by the Eurydice music school website.
+A beautiful, modern website for **Mouj Maalik School of Music (MMSM)** - a premier music institution in Delhi offering Indian Classical and Western music education since 2010.
 
-## 🎵 Features
+## 🌟 Features
 
-- **Modern Design**: Clean, professional design with smooth animations
-- **Responsive Layout**: Fully responsive across all devices
-- **Interactive Elements**: Tabbed course sections, animated components
-- **Performance Optimized**: Built with Next.js for optimal performance
-- **Accessibility**: Semantic HTML and keyboard navigation support
-- **SEO Ready**: Meta tags and structured content
+### 🎼 **Indian Classical Music Focus**
+- **Traditional Instruments**: Sitar, Tabla, Bansuri, Tanpura
+- **Authentic Design**: Indian classical music themed hero section
+- **Cultural Elements**: Traditional patterns, Sargam notes, Raga waves
 
-## 🎼 Sections
+### 🎨 **Modern Design**
+- **Eurydice-inspired**: Clean, professional design inspired by modern music websites
+- **Responsive**: Fully responsive design for all devices
+- **Interactive**: Smooth animations and hover effects
+- **Professional**: Large MM logo integration
 
-1. **Hero Section**: Eye-catching introduction with call-to-action buttons
-2. **About Section**: School history, associations, and unique selling points
-3. **Statistics**: Key metrics and achievements
-4. **Courses**: Interactive tabs for Western, Indian Classical, and Special programs
-5. **Services**: Studio rental, soundproofing, equipment, and acoustic treatment
-6. **Testimonials**: Student and professional reviews
-7. **Contact**: Contact form and information
-8. **Footer**: Links and additional information
+### 📚 **Comprehensive Content**
+- **Programs**: Private Lessons, Group Classes, Online Lessons, Summer Camps
+- **Courses**: Western & Contemporary, Indian Classical, Special Programs
+- **Services**: Studio Rental, Soundproofing, Audio Equipment, Acoustic Treatment
+- **Contact**: Complete contact information and form
 
-## 🛠️ Technologies Used
+## 🛠️ Technology Stack
 
-- **Next.js 14**: React framework with App Router
-- **TypeScript**: Type-safe development
-- **Tailwind CSS**: Utility-first CSS framework
-- **Framer Motion**: Smooth animations and transitions
-- **Lucide React**: Beautiful icons
-- **Google Fonts**: Inter and Playfair Display
+- **Framework**: Next.js 14 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Images**: Next.js Image optimization
+- **Deployment**: Ready for Vercel/Netlify
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-
 - Node.js 18+ 
 - npm or yarn
 
@@ -42,8 +40,8 @@ A modern, responsive website for Mouj Maalik School of Music built with Next.js,
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd mmsm-website
+   git clone https://github.com/SamriddhiRoy/mmsm-music-school-website.git
+   cd mmsm-music-school-website
    ```
 
 2. **Install dependencies**
@@ -53,7 +51,7 @@ A modern, responsive website for Mouj Maalik School of Music built with Next.js,
    yarn install
    ```
 
-3. **Run the development server**
+3. **Run development server**
    ```bash
    npm run dev
    # or
@@ -63,105 +61,93 @@ A modern, responsive website for Mouj Maalik School of Music built with Next.js,
 4. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
+### Build for Production
+
+```bash
+npm run build
+npm start
+```
+
 ## 📁 Project Structure
 
 ```
-mmsm-website/
+mmsm-music-school-website/
 ├── app/
-│   ├── globals.css          # Global styles and Tailwind imports
-│   ├── layout.tsx           # Root layout component
+│   ├── globals.css          # Global styles
+│   ├── layout.tsx           # Root layout
 │   └── page.tsx             # Main page component
-├── public/                  # Static assets
-├── package.json             # Dependencies and scripts
-├── tailwind.config.js       # Tailwind configuration
-├── tsconfig.json           # TypeScript configuration
-└── README.md               # Project documentation
+├── public/
+│   ├── MM Logo(White).png   # MM Logo
+│   ├── hero-music.svg       # Hero section illustration
+│   ├── private-lessons.svg  # Program illustrations
+│   ├── group-classes.svg
+│   ├── online-lessons.svg
+│   └── summer-camps.svg
+├── package.json
+├── tailwind.config.js
+├── next.config.js
+└── README.md
 ```
 
-## 🎨 Customization
+## 🎨 Design Features
 
-### Colors
-The website uses a custom color palette defined in `tailwind.config.js`:
-- **Primary**: Orange tones (#ed7519)
-- **Secondary**: Blue tones (#0ea5e9)
-- **Gradients**: Beautiful gradient backgrounds
+### **Hero Section**
+- Split background design (Teal & Yellow)
+- Indian classical musician avatar playing sitar
+- Traditional instruments illustration
+- Curved divider design
 
-### Content
-All content is easily customizable in the `app/page.tsx` file:
-- Course information
-- Services details
-- Testimonials
-- Contact information
-- Statistics
+### **Navigation**
+- Fixed transparent navigation
+- MM logo integration
+- Smooth scroll navigation
 
-### Styling
-- Custom CSS classes in `app/globals.css`
-- Responsive design utilities
-- Animation configurations
+### **Programs Section**
+- Beautiful SVG illustrations
+- Hover animations
+- Arrow buttons for interaction
 
-## 📱 Responsive Design
+### **Courses Section**
+- Tabbed interface (Western, Indian, Special)
+- Icon-based course cards
+- Detailed descriptions
 
-The website is fully responsive with breakpoints:
-- **Mobile**: < 768px
-- **Tablet**: 768px - 1024px
-- **Desktop**: > 1024px
-
-## 🎯 Key Features
-
-### Interactive Course Tabs
-- Switch between Western, Indian Classical, and Special programs
-- Smooth animations and transitions
-- Responsive grid layouts
-
-### Animated Components
-- Framer Motion animations
-- Scroll-triggered animations
-- Hover effects and transitions
-
-### Professional Services Showcase
-- Studio rental information
-- Soundproofing consultation
-- Audio equipment access
-- Acoustic treatment services
-
-## 🔧 Build and Deploy
-
-### Build for Production
-```bash
-npm run build
-# or
-yarn build
-```
-
-### Start Production Server
-```bash
-npm start
-# or
-yarn start
-```
-
-### Deploy to Vercel
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Deploy automatically
+### **Services Section**
+- Feature lists with checkmarks
+- Professional service descriptions
+- Hover effects
 
 ## 📞 Contact Information
 
+**Mouj Maalik School of Music**
+- **Address**: G-8, Basement Block G, Lajpat Nagar I, New Delhi – 110024
+- **Phone**: +91 9711807406 | +91 9910014840
+- **Email**: moujmaalikmusic@gmail.com
 - **Website**: www.moujmaalik.com
-- **Email**: info@moujmaalik.com
-- **Location**: Delhi, India
-- **Founded**: 2010
 
-## 🎓 School Associations
+## 🎓 Certifications
 
-- Trinity College London
-- Music Teachers Board
-- Prayag Sangeet Samiti, Allahabad University
+MMSM is proudly associated with:
+- **Trinity College London**
+- **Music Teachers Board**
+- **Prayag Sangeet Samiti, Allahabad University**
 
-## 📄 License
+## 🚀 Deployment
+
+This project is ready for deployment on:
+- **Vercel** (Recommended for Next.js)
+- **Netlify**
+- **GitHub Pages**
+- Any static hosting service
+
+## 📝 License
 
 This project is created for Mouj Maalik School of Music. All rights reserved.
 
+## 🤝 Contributing
+
+This is a private project for MMSM. For any suggestions or improvements, please contact the school directly.
+
 ---
 
-**Built with ❤️ for MMSM - Inspiring Young Lives Through Music**
+**Built with ❤️ for Indian Classical Music Education**
