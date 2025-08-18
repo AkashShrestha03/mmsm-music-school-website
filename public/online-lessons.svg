@@ -1,0 +1,105 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E6FFFA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B2F5EA;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="laptopGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2D3748;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4A5568;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="screenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E2E8F0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#CBD5E0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="personGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A5568;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2D3748;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bgGradient3)"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="80" cy="60" r="35" fill="#38B2AC" opacity="0.08"/>
+  <circle cx="320" cy="240" r="30" fill="#38B2AC" opacity="0.08"/>
+  <circle cx="350" cy="80" r="25" fill="#38B2AC" opacity="0.08"/>
+  
+  <!-- Person figure (more detailed) -->
+  <circle cx="200" cy="100" r="18" fill="url(#personGradient)"/>
+  <!-- Hair -->
+  <path d="M182 90 Q200 75 218 90 Q216 85 200 85 Q184 85 182 90" fill="#2D3748"/>
+  <!-- Body -->
+  <rect x="190" y="118" width="20" height="30" fill="url(#personGradient)" rx="2"/>
+  <!-- Arms -->
+  <rect x="180" y="125" width="15" height="4" fill="url(#personGradient)" rx="2" transform="rotate(-25 180 125)"/>
+  <rect x="215" y="125" width="15" height="4" fill="url(#personGradient)" rx="2" transform="rotate(25 215 125)"/>
+  
+  <!-- Beautiful Headphones -->
+  <ellipse cx="185" cy="95" rx="12" ry="6" fill="#2D3748"/>
+  <ellipse cx="215" cy="95" rx="12" ry="6" fill="#2D3748"/>
+  <path d="M197 95 Q200 85 203 95" stroke="#2D3748" stroke-width="3" fill="none"/>
+  <!-- Headphone details -->
+  <ellipse cx="185" cy="95" rx="8" ry="4" fill="#4A5568"/>
+  <ellipse cx="215" cy="95" rx="8" ry="4" fill="#4A5568"/>
+  
+  <!-- Laptop/Computer (more detailed) -->
+  <rect x="120" y="140" width="160" height="100" fill="url(#laptopGradient)" rx="5"/>
+  <!-- Screen -->
+  <rect x="130" y="150" width="140" height="80" fill="url(#screenGradient)" rx="3"/>
+  
+  <!-- Screen content -->
+  <!-- Video call interface -->
+  <rect x="140" y="160" width="120" height="60" fill="#38B2AC" opacity="0.1" rx="3"/>
+  <!-- Video window -->
+  <rect x="150" y="170" width="100" height="40" fill="#38B2AC" opacity="0.2" rx="2"/>
+  <!-- Control buttons -->
+  <circle cx="160" cy="220" r="3" fill="#38B2AC"/>
+  <circle cx="170" cy="220" r="3" fill="#38B2AC"/>
+  <circle cx="180" cy="220" r="3" fill="#38B2AC"/>
+  <!-- Camera indicator -->
+  <circle cx="200" cy="175" r="2" fill="#38B2AC" opacity="0.6"/>
+  
+  <!-- Music notes -->
+  <g fill="#38B2AC">
+    <!-- First note -->
+    <circle cx="280" cy="120" r="4"/>
+    <path d="M284 120 L284 135" stroke="#38B2AC" stroke-width="1.5" fill="none"/>
+    <path d="M284 135 Q287 135 287 132 Q287 129 284 129" stroke="#38B2AC" stroke-width="1.5" fill="none"/>
+    
+    <!-- Second note -->
+    <circle cx="295" cy="110" r="3"/>
+    <path d="M298 110 L298 120" stroke="#38B2AC" stroke-width="1.5" fill="none"/>
+    <path d="M298 120 Q300 120 300 118 Q300 116 298 116" stroke="#38B2AC" stroke-width="1.5" fill="none"/>
+    
+    <!-- Third note -->
+    <circle cx="310" cy="125" r="2.5"/>
+    <path d="M312.5 125 L312.5 132" stroke="#38B2AC" stroke-width="1" fill="none"/>
+  </g>
+  
+  <!-- Connection lines (WiFi signal) -->
+  <g stroke="#38B2AC" stroke-width="2" fill="none" opacity="0.6">
+    <path d="M200 118 Q200 130 200 140" stroke-dasharray="3,3"/>
+    <!-- WiFi signal -->
+    <path d="M200 140 Q190 150 180 160" stroke-dasharray="2,2"/>
+    <path d="M200 140 Q210 150 220 160" stroke-dasharray="2,2"/>
+    <path d="M200 140 Q185 155 170 170" stroke-dasharray="2,2"/>
+    <path d="M200 140 Q215 155 230 170" stroke-dasharray="2,2"/>
+  </g>
+  
+  <!-- Decorative elements -->
+  <circle cx="80" cy="200" r="4" fill="#38B2AC" opacity="0.6"/>
+  <circle cx="85" cy="210" r="3" fill="#38B2AC" opacity="0.4"/>
+  <circle cx="90" cy="220" r="3.5" fill="#38B2AC" opacity="0.5"/>
+  
+  <!-- Small icons on screen -->
+  <rect x="155" y="180" width="8" height="8" fill="#38B2AC" opacity="0.3" rx="1"/>
+  <rect x="165" y="180" width="8" height="8" fill="#38B2AC" opacity="0.3" rx="1"/>
+  <rect x="175" y="180" width="8" height="8" fill="#38B2AC" opacity="0.3" rx="1"/>
+  
+  <!-- Status indicators -->
+  <circle cx="250" cy="165" r="2" fill="#38B2AC" opacity="0.8"/>
+  <circle cx="255" cy="165" r="2" fill="#38B2AC" opacity="0.6"/>
+  <circle cx="260" cy="165" r="2" fill="#38B2AC" opacity="0.4"/>
+</svg>

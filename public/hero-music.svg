@@ -1,0 +1,215 @@
+<svg width="500" height="600" viewBox="0 0 500 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heroBgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FEF3C7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FDE68A;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="sitarGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A0522D;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="tablaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A0522D;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="musicianGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2D3748;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4A5568;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bansuriGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2D3748;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4A5568;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="mandalaGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#38B2AC;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#38B2AC;stop-opacity:0.05" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="500" height="600" fill="url(#heroBgGradient)"/>
+  
+  <!-- Decorative mandala pattern -->
+  <circle cx="250" cy="300" r="180" fill="url(#mandalaGradient)"/>
+  
+  <!-- Background decorative elements -->
+  <circle cx="80" cy="120" r="40" fill="#FDE68A" opacity="0.15"/>
+  <circle cx="420" cy="480" r="35" fill="#FDE68A" opacity="0.12"/>
+  <circle cx="460" cy="180" r="30" fill="#FDE68A" opacity="0.18"/>
+  
+  <!-- Traditional Indian Classical Musician Avatar -->
+  <!-- Head -->
+  <circle cx="250" cy="180" r="35" fill="url(#musicianGradient)"/>
+  
+  <!-- Traditional Turban -->
+  <ellipse cx="250" cy="150" rx="40" ry="18" fill="#8B4513"/>
+  <ellipse cx="250" cy="150" rx="35" ry="12" fill="#A0522D"/>
+  <!-- Turban details -->
+  <path d="M210 150 Q250 140 290 150" stroke="#2D3748" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M215 145 Q250 135 285 145" stroke="#2D3748" stroke-width="1.5" fill="none" opacity="0.4"/>
+  
+  <!-- Face features -->
+  <!-- Eyes -->
+  <ellipse cx="240" cy="175" rx="4" ry="2" fill="#F7FAFC"/>
+  <ellipse cx="260" cy="175" rx="4" ry="2" fill="#F7FAFC"/>
+  <!-- Eyebrows -->
+  <path d="M235 170 Q240 168 245 170" stroke="#2D3748" stroke-width="2" fill="none"/>
+  <path d="M255 170 Q260 168 265 170" stroke="#2D3748" stroke-width="2" fill="none"/>
+  <!-- Nose -->
+  <path d="M250 180 Q250 185 250 190" stroke="#2D3748" stroke-width="1.5" fill="none"/>
+  <!-- Mustache -->
+  <path d="M240 195 Q250 200 260 195" stroke="#2D3748" stroke-width="2" fill="none"/>
+  
+  <!-- Body with traditional kurta -->
+  <rect x="220" y="215" width="60" height="100" fill="url(#musicianGradient)" rx="8"/>
+  <!-- Kurta collar -->
+  <path d="M230 215 Q250 225 270 215" stroke="#4A5568" stroke-width="2" fill="none"/>
+  
+  <!-- Arms -->
+  <!-- Left arm (holding sitar) -->
+  <rect x="200" y="240" width="30" height="8" fill="url(#musicianGradient)" rx="4" transform="rotate(-30 200 240)"/>
+  <!-- Right arm (playing sitar) -->
+  <rect x="300" y="250" width="25" height="6" fill="url(#musicianGradient)" rx="3" transform="rotate(20 300 250)"/>
+  
+  <!-- Hands -->
+  <!-- Left hand -->
+  <ellipse cx="185" cy="255" rx="8" ry="6" fill="url(#musicianGradient)"/>
+  <!-- Right hand -->
+  <ellipse cx="310" cy="260" rx="6" ry="8" fill="url(#musicianGradient)"/>
+  
+  <!-- Beautiful Sitar (Main Instrument) -->
+  <!-- Sitar body -->
+  <ellipse cx="250" cy="380" rx="65" ry="35" fill="url(#sitarGradient)"/>
+  <ellipse cx="250" cy="380" rx="57" ry="28" fill="#A0522D"/>
+  <!-- Sitar neck -->
+  <rect x="245" y="310" width="10" height="90" fill="#8B4513" rx="2"/>
+  <!-- Sitar head with tuning pegs -->
+  <rect x="240" y="300" width="20" height="25" fill="#8B4513" rx="3"/>
+  <!-- Tuning pegs -->
+  <circle cx="245" cy="305" r="2.5" fill="#2D3748"/>
+  <circle cx="250" cy="305" r="2.5" fill="#2D3748"/>
+  <circle cx="255" cy="305" r="2.5" fill="#2D3748"/>
+  <circle cx="245" cy="310" r="2.5" fill="#2D3748"/>
+  <circle cx="250" cy="310" r="2.5" fill="#2D3748"/>
+  <circle cx="255" cy="310" r="2.5" fill="#2D3748"/>
+  <!-- Sitar strings -->
+  <line x1="245" y1="310" x2="245" y2="400" stroke="#F7FAFC" stroke-width="1"/>
+  <line x1="247" y1="310" x2="247" y2="400" stroke="#F7FAFC" stroke-width="1"/>
+  <line x1="249" y1="310" x2="249" y2="400" stroke="#F7FAFC" stroke-width="1"/>
+  <line x1="251" y1="310" x2="251" y2="400" stroke="#F7FAFC" stroke-width="1"/>
+  <line x1="253" y1="310" x2="253" y2="400" stroke="#F7FAFC" stroke-width="1"/>
+  <line x1="255" y1="310" x2="255" y2="400" stroke="#F7FAFC" stroke-width="1"/>
+  <!-- Sitar gourd -->
+  <ellipse cx="250" cy="380" rx="50" ry="22" fill="#8B4513" opacity="0.3"/>
+  <!-- Sitar bridge -->
+  <rect x="240" y="395" width="20" height="3" fill="#2D3748" rx="1"/>
+  
+  <!-- Beautiful Tabla Set -->
+  <!-- Dayan (right drum) -->
+  <ellipse cx="120" cy="480" rx="45" ry="28" fill="url(#tablaGradient)"/>
+  <ellipse cx="120" cy="480" rx="38" ry="22" fill="#A0522D"/>
+  <!-- Tabla head with traditional design -->
+  <ellipse cx="120" cy="480" rx="32" ry="18" fill="#8B4513" opacity="0.4"/>
+  <!-- Tabla stand -->
+  <rect x="118" y="480" width="4" height="35" fill="#2D3748"/>
+  
+  <!-- Bayan (left drum) -->
+  <ellipse cx="380" cy="480" rx="40" ry="25" fill="url(#tablaGradient)"/>
+  <ellipse cx="380" cy="480" rx="33" ry="19" fill="#A0522D"/>
+  <!-- Bayan head -->
+  <ellipse cx="380" cy="480" rx="28" ry="15" fill="#8B4513" opacity="0.4"/>
+  <!-- Bayan stand -->
+  <rect x="378" y="480" width="4" height="30" fill="#2D3748"/>
+  
+  <!-- Tabla sticks -->
+  <rect x="95" y="450" width="3" height="30" fill="#8B4513" transform="rotate(-25 95 450)"/>
+  <rect x="145" y="450" width="3" height="30" fill="#8B4513" transform="rotate(25 145 450)"/>
+  
+  <!-- Beautiful Bansuri (Indian Flute) -->
+  <rect x="350" y="200" width="4" height="80" fill="url(#bansuriGradient)" rx="2"/>
+  <!-- Bansuri holes -->
+  <circle cx="352" cy="220" r="1.5" fill="#F7FAFC"/>
+  <circle cx="352" cy="235" r="1.5" fill="#F7FAFC"/>
+  <circle cx="352" cy="250" r="1.5" fill="#F7FAFC"/>
+  <circle cx="352" cy="265" r="1.5" fill="#F7FAFC"/>
+  <circle cx="352" cy="280" r="1.5" fill="#F7FAFC"/>
+  <circle cx="352" cy="295" r="1.5" fill="#F7FAFC"/>
+  <!-- Bansuri mouthpiece -->
+  <rect x="350" y="195" width="4" height="8" fill="#2D3748" rx="2"/>
+  
+  <!-- Traditional Tanpura (Drone Instrument) -->
+  <ellipse cx="80" cy="320" rx="30" ry="18" fill="url(#sitarGradient)" opacity="0.7"/>
+  <rect x="78" y="280" width="4" height="80" fill="#8B4513" opacity="0.7"/>
+  <!-- Tanpura strings -->
+  <line x1="78" y1="285" x2="78" y2="360" stroke="#F7FAFC" stroke-width="0.8" opacity="0.6"/>
+  <line x1="80" y1="285" x2="80" y2="360" stroke="#F7FAFC" stroke-width="0.8" opacity="0.6"/>
+  <line x1="82" y1="285" x2="82" y2="360" stroke="#F7FAFC" stroke-width="0.8" opacity="0.6"/>
+  
+  <!-- Indian Classical Music Notes (Sargam) -->
+  <g fill="#38B2AC">
+    <!-- Sa (first note) -->
+    <circle cx="80" cy="150" r="12"/>
+    <path d="M92 150 L92 185" stroke="#38B2AC" stroke-width="4" fill="none"/>
+    <path d="M92 185 Q98 185 98 180 Q98 175 92 175" stroke="#38B2AC" stroke-width="4" fill="none"/>
+    
+    <!-- Re (second note) -->
+    <circle cx="110" cy="130" r="10"/>
+    <path d="M120 130 L120 160" stroke="#38B2AC" stroke-width="3" fill="none"/>
+    <path d="M120 160 Q125 160 125 156 Q125 152 120 152" stroke="#38B2AC" stroke-width="3" fill="none"/>
+    
+    <!-- Ga (third note) -->
+    <circle cx="420" cy="200" r="14"/>
+    <path d="M434 200 L434 245" stroke="#38B2AC" stroke-width="5" fill="none"/>
+    <path d="M434 245 Q440 245 440 240 Q440 235 434 235" stroke="#38B2AC" stroke-width="5" fill="none"/>
+    
+    <!-- Ma (fourth note) -->
+    <circle cx="440" cy="180" r="11"/>
+    <path d="M451 180 L451 215" stroke="#38B2AC" stroke-width="4" fill="none"/>
+    <path d="M451 215 Q456 215 456 211 Q456 207 451 207" stroke="#38B2AC" stroke-width="4" fill="none"/>
+  </g>
+  
+  <!-- Traditional Decorative Elements -->
+  <!-- Rangoli pattern -->
+  <path d="M50 300 Q75 280 100 300 Q125 320 150 300" stroke="#F59E0B" stroke-width="4" fill="none" opacity="0.7"/>
+  <path d="M350 300 Q375 320 400 300 Q425 280 450 300" stroke="#F59E0B" stroke-width="4" fill="none" opacity="0.7"/>
+  
+  <!-- Decorative paisley patterns -->
+  <path d="M60 400 Q70 390 80 400 Q90 410 100 400" stroke="#38B2AC" stroke-width="3" fill="none" opacity="0.5"/>
+  <path d="M400 400 Q410 390 420 400 Q430 410 440 400" stroke="#38B2AC" stroke-width="3" fill="none" opacity="0.5"/>
+  
+  <!-- Small decorative elements -->
+  <circle cx="60" cy="350" r="5" fill="#F59E0B" opacity="0.7"/>
+  <circle cx="70" cy="370" r="4" fill="#F59E0B" opacity="0.5"/>
+  <circle cx="80" cy="390" r="4.5" fill="#F59E0B" opacity="0.6"/>
+  
+  <circle cx="440" cy="250" r="5" fill="#F59E0B" opacity="0.7"/>
+  <circle cx="450" cy="270" r="4" fill="#F59E0B" opacity="0.5"/>
+  <circle cx="460" cy="290" r="4.5" fill="#F59E0B" opacity="0.6"/>
+  
+  <!-- Energy waves around musician (representing raga) -->
+  <path d="M250 180 Q270 170 290 180" stroke="#38B2AC" stroke-width="3" opacity="0.5" fill="none"/>
+  <path d="M250 180 Q230 170 210 180" stroke="#38B2AC" stroke-width="3" opacity="0.5" fill="none"/>
+  <path d="M250 180 Q270 190 290 180" stroke="#38B2AC" stroke-width="3" opacity="0.5" fill="none"/>
+  <path d="M250 180 Q230 190 210 180" stroke="#38B2AC" stroke-width="3" opacity="0.5" fill="none"/>
+  
+  <!-- Traditional musical symbols -->
+  <path d="M150 100 Q160 90 170 100" stroke="#F59E0B" stroke-width="4" fill="none" opacity="0.8"/>
+  <path d="M330 120 Q340 110 350 120" stroke="#F59E0B" stroke-width="4" fill="none" opacity="0.8"/>
+  
+  <!-- Small dots representing taal (rhythm) -->
+  <circle cx="200" cy="120" r="3" fill="#38B2AC" opacity="0.7"/>
+  <circle cx="220" cy="125" r="3" fill="#38B2AC" opacity="0.7"/>
+  <circle cx="240" cy="120" r="3" fill="#38B2AC" opacity="0.7"/>
+  <circle cx="260" cy="125" r="3" fill="#38B2AC" opacity="0.7"/>
+  <circle cx="280" cy="120" r="3" fill="#38B2AC" opacity="0.7"/>
+  <circle cx="300" cy="125" r="3" fill="#38B2AC" opacity="0.7"/>
+  
+  <!-- Additional traditional elements -->
+  <!-- Small bells -->
+  <circle cx="90" cy="200" r="8" fill="#F59E0B" opacity="0.6"/>
+  <circle cx="410" cy="350" r="8" fill="#F59E0B" opacity="0.6"/>
+  
+  <!-- Traditional patterns -->
+  <path d="M70 250 Q80 240 90 250" stroke="#38B2AC" stroke-width="2" fill="none" opacity="0.4"/>
+  <path d="M410 300 Q420 290 430 300" stroke="#38B2AC" stroke-width="2" fill="none" opacity="0.4"/>
+</svg>
