@@ -1,47 +1,58 @@
-# 🎵 MMSM Music School Website
+# 🎵 Sangeet Academy - Indian Music Academy Website
 
-A beautiful, modern website for **Mouj Maalik School of Music (MMSM)** - a premier music institution in Delhi offering Indian Classical and Western music education since 2010.
+A beautiful, culturally-rich website for Sangeet Academy, showcasing the essence of Indian classical music with modern web design and traditional cultural elements.
 
-## 🌟 Features
+## ✨ Features
 
-### 🎼 **Indian Classical Music Focus**
-- **Traditional Instruments**: Sitar, Tabla, Bansuri, Tanpura
-- **Authentic Design**: Indian classical music themed hero section
-- **Cultural Elements**: Traditional patterns, Sargam notes, Raga waves
+- **Cultural Authenticity**: Rich Indian music heritage with Devanagari script and cultural elements
+- **Modern Design**: Beautiful, responsive design using Next.js 14 and Tailwind CSS
+- **Interactive Elements**: Smooth animations and transitions with Framer Motion
+- **Comprehensive Sections**: 6 main components covering all aspects of the academy
+- **Mobile Responsive**: Optimized for all devices and screen sizes
+- **Performance Optimized**: Built with Next.js for optimal performance
 
-### 🎨 **Modern Design**
-- **Eurydice-inspired**: Clean, professional design inspired by modern music websites
-- **Responsive**: Fully responsive design for all devices
-- **Interactive**: Smooth animations and hover effects
-- **Professional**: Large MM logo integration
+## 🎨 Design Elements
 
-### 📚 **Comprehensive Content**
-- **Programs**: Private Lessons, Group Classes, Online Lessons, Summer Camps
-- **Courses**: Western & Contemporary, Indian Classical, Special Programs
-- **Services**: Studio Rental, Soundproofing, Audio Equipment, Acoustic Treatment
-- **Contact**: Complete contact information and form
+- **Color Palette**: Traditional Indian colors (Saffron, Maroon, Gold, Deep Orange)
+- **Typography**: Combination of English and Devanagari fonts
+- **Cultural Motifs**: Music notes, traditional patterns, and cultural symbolism
+- **Animations**: Smooth scroll animations, floating elements, and interactive hover effects
 
-## 🛠️ Technology Stack
+## 🏗️ Project Structure
 
-- **Framework**: Next.js 14 with App Router
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
-- **Images**: Next.js Image optimization
-- **Deployment**: Ready for Vercel/Netlify
+```
+music-homepage/
+├── app/
+│   ├── layout.tsx          # Root layout with fonts and metadata
+│   ├── page.tsx            # Main page component
+│   └── globals.css         # Global styles and Tailwind directives
+├── components/
+│   ├── Hero.tsx            # Hero section with main messaging
+│   ├── About.tsx           # Academy history and mission
+│   ├── Courses.tsx         # Available music courses
+│   ├── Teachers.tsx        # Master musicians profiles
+│   ├── Gallery.tsx         # Events and performances
+│   ├── Contact.tsx         # Contact form and information
+│   └── Footer.tsx          # Footer with links and cultural message
+├── package.json            # Dependencies and scripts
+├── tailwind.config.js      # Tailwind configuration with custom colors
+├── tsconfig.json           # TypeScript configuration
+└── README.md               # Project documentation
+```
 
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js 18+ 
-- npm or yarn
+- npm or yarn package manager
 
 ### Installation
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/SamriddhiRoy/mmsm-music-school-website.git
-   cd mmsm-music-school-website
+   git clone <repository-url>
+   cd music-homepage
    ```
 
 2. **Install dependencies**
@@ -51,7 +62,7 @@ A beautiful, modern website for **Mouj Maalik School of Music (MMSM)** - a premi
    yarn install
    ```
 
-3. **Run development server**
+3. **Run the development server**
    ```bash
    npm run dev
    # or
@@ -61,93 +72,152 @@ A beautiful, modern website for **Mouj Maalik School of Music (MMSM)** - a premi
 4. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
-### Build for Production
+## 🎯 Available Scripts
 
-```bash
-npm run build
-npm start
-```
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
-## 📁 Project Structure
+## 🎨 Customization
 
-```
-mmsm-music-school-website/
-├── app/
-│   ├── globals.css          # Global styles
-│   ├── layout.tsx           # Root layout
-│   └── page.tsx             # Main page component
-├── public/
-│   ├── MM Logo(White).png   # MM Logo
-│   ├── hero-music.svg       # Hero section illustration
-│   ├── private-lessons.svg  # Program illustrations
-│   ├── group-classes.svg
-│   ├── online-lessons.svg
-│   └── summer-camps.svg
-├── package.json
-├── tailwind.config.js
-├── next.config.js
-└── README.md
-```
+### Colors
+The website uses a custom color palette defined in `tailwind.config.js`:
+- Saffron (`#FF9933`)
+- Deep Orange (`#FF6B35`)
+- Gold (`#FFD700`)
+- Maroon (`#800000`)
+- Deep Red (`#8B0000`)
+- Indigo (`#4B0082`)
+- Purple (`#800080`)
 
-## 🎨 Design Features
+### Fonts
+- **English**: Inter (body), Playfair Display (headings)
+- **Devanagari**: Noto Sans Devanagari (cultural text)
 
-### **Hero Section**
-- Split background design (Teal & Yellow)
-- Indian classical musician avatar playing sitar
-- Traditional instruments illustration
-- Curved divider design
+### Animations
+- Floating music notes
+- Scroll-triggered animations
+- Hover effects and transitions
+- Custom keyframe animations
 
-### **Navigation**
-- Fixed transparent navigation
-- MM logo integration
-- Smooth scroll navigation
+## 📱 Responsive Design
 
-### **Programs Section**
-- Beautiful SVG illustrations
-- Hover animations
-- Arrow buttons for interaction
+The website is fully responsive with breakpoints:
+- Mobile: Default (320px+)
+- Tablet: `md:` (768px+)
+- Desktop: `lg:` (1024px+)
+- Large Desktop: `xl:` (1280px+)
 
-### **Courses Section**
-- Tabbed interface (Western, Indian, Special)
-- Icon-based course cards
-- Detailed descriptions
+## 🌟 Key Components
 
-### **Services Section**
-- Feature lists with checkmarks
-- Professional service descriptions
-- Hover effects
+### 1. Hero Section
+- Stunning gradient background
+- Cultural messaging in Devanagari
+- Call-to-action buttons
+- Floating music notes
 
-## 📞 Contact Information
+### 2. About Section
+- Academy history and mission
+- Statistics and achievements
+- Cultural philosophy
+- Traditional values
 
-**Mouj Maalik School of Music**
-- **Address**: G-8, Basement Block G, Lajpat Nagar I, New Delhi – 110024
-- **Phone**: +91 9711807406 | +91 9910014840
-- **Email**: moujmaalikmusic@gmail.com
-- **Website**: www.moujmaalik.com
+### 3. Courses Section
+- 6 comprehensive music courses
+- Course details and features
+- Enrollment buttons
+- Cultural course names
 
-## 🎓 Certifications
+### 4. Teachers Section
+- Master musician profiles
+- Awards and achievements
+- Social media links
+- Guru-Shishya tradition
 
-MMSM is proudly associated with:
-- **Trinity College London**
-- **Music Teachers Board**
-- **Prayag Sangeet Samiti, Allahabad University**
+### 5. Gallery Section
+- Event showcases
+- Performance highlights
+- Upcoming events
+- Cultural celebrations
+
+### 6. Contact Section
+- Contact form
+- Academy information
+- Cultural message
+- Location details
+
+### 7. Footer
+- Comprehensive links
+- Newsletter signup
+- Cultural philosophy
+- Social media integration
+
+## 🎵 Cultural Elements
+
+- **Devanagari Script**: Traditional Indian text for cultural authenticity
+- **Music Symbols**: Emojis and icons representing different instruments
+- **Cultural Philosophy**: Traditional Indian music philosophy and values
+- **Color Symbolism**: Colors representing Indian cultural heritage
+- **Traditional Patterns**: Background patterns inspired by Indian art
+
+## 🔧 Technologies Used
+
+- **Framework**: Next.js 14 (App Router)
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Fonts**: Google Fonts (Inter, Playfair Display, Noto Sans Devanagari)
+- **Language**: TypeScript
+- **Build Tool**: Next.js built-in bundler
+
+## 📈 Performance Features
+
+- **Image Optimization**: Next.js Image component
+- **Code Splitting**: Automatic route-based code splitting
+- **Static Generation**: Optimized for static generation
+- **Responsive Images**: Automatic responsive image handling
+- **CSS Optimization**: Purged CSS with Tailwind
 
 ## 🚀 Deployment
 
-This project is ready for deployment on:
-- **Vercel** (Recommended for Next.js)
-- **Netlify**
-- **GitHub Pages**
-- Any static hosting service
+### Vercel (Recommended)
+1. Push code to GitHub
+2. Connect repository to Vercel
+3. Deploy automatically
 
-## 📝 License
-
-This project is created for Mouj Maalik School of Music. All rights reserved.
+### Other Platforms
+- Netlify
+- AWS Amplify
+- DigitalOcean App Platform
 
 ## 🤝 Contributing
 
-This is a private project for MMSM. For any suggestions or improvements, please contact the school directly.
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🙏 Acknowledgments
+
+- Indian classical music traditions
+- Cultural heritage preservation
+- Modern web development community
+- Open source contributors
+
+## 📞 Support
+
+For support or questions:
+- Email: info@sangeetacademy.com
+- Website: [sangeetacademy.com](https://sangeetacademy.com)
 
 ---
 
-**Built with ❤️ for Indian Classical Music Education**
+**संगीतम् शिवम् - Music is Divine** 🎵
+
+*Built with ❤️ for music lovers and cultural preservation*
