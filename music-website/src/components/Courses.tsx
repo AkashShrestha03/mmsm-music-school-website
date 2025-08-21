@@ -10,18 +10,17 @@ const Courses = () => {
         {
           name: "Tabla",
           description: "Learn traditional Indian percussion rhythms",
-          image: "https://images.unsplash.com/photo-1603190287605-6d8e730b8f87?w=800&h=600&fit=crop", // Tabla drums
+          image: "/courses/tabla.jpg", // Tabla drums
         },
         {
           name: "Indian Vocals",
           description: "Master classical Indian vocal techniques",
-          image:
-          "https://images.pexels.com/photos/1724887/pexels-photo-1724887.jpeg?w=800&h=600&fit=crop", 
-     },
+          image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&h=600&fit=crop", // Indian classical singing
+        },
         {
           name: "Indian Flute (Bansuri)",
           description: "Explore the beautiful sounds of Bansuri flute",
-          image: "https://images.unsplash.com/photo-1606925797302-9e9ac8d81382?w=800&h=600&fit=crop", // Bansuri flute
+          image: "/courses/flute.webp", // Bansuri flute
         },
       ],
     },
@@ -56,7 +55,7 @@ const Courses = () => {
         {
           name: "Music Production & Audio Engineering",
           description: "Short-term course in music production and audio engineering",
-          image: "https://images.unsplash.com/photo-1619983081563-dbe8a1f79c56?w=800&h=600&fit=crop", // Music studio
+          image: "/courses/1.jpg", // Music studio
         },
       ],
     },

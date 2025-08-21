@@ -12,7 +12,7 @@ const Gallery = () => {
       title: "Piano Masterclass",
       category: "performances",
       description: "Students performing classical pieces during our annual recital",
-      image: "https://images.unsplash.com/photo-1513883049090-d0b7439799bf?w=800&h=600&fit=crop", // Piano performance
+      image: "/gallery/1.jpg", // Piano performance
       date: "2024"
     },
     {
@@ -20,48 +20,39 @@ const Gallery = () => {
       title: "Guitar Ensemble",
       category: "performances", 
       description: "Advanced guitar students showcasing their skills together",
-      image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&h=600&fit=crop", // Guitar ensemble
+      image: "/gallery/2.jpg", // Guitar ensemble
       date: "2024"
     },
-
     {
       id: 3,
-      title: "Student Band Practice",
+      title: "Music Performance",
       category: "performances",
-      description: "Young musicians learning the art of collaboration",
-      image: "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?w=800&h=600&fit=crop", // Band practice
+      description: "Live music performance by our talented students",
+      image: "/gallery/perf1.jpg", // Performance
       date: "2024"
     },
     {
       id: 4,
-      title: "Violin Lessons",
+      title: "Music Studio Session",
       category: "lessons",
-      description: "One-on-one instruction with our expert violin teachers",
-      image: "https://images.unsplash.com/photo-1606925797302-9e9ac8d81382?w=800&h=600&fit=crop", // Violin lesson
+      description: "Students learning in our professional music studio",
+      image: "/gallery/mus2.jpg", // Music studio
       date: "2024"
     },
     {
       id: 5,
-      title: "Drum Workshop",
+      title: "Instrument Practice",
       category: "lessons",
-      description: "Rhythm and percussion fundamentals for beginners",
-      image: "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?w=800&h=600&fit=crop", // Drum workshop
+      description: "Students practicing various musical instruments",
+      image: "/gallery/mus3.jpg", // Music practice
       date: "2024"
     },
     {
       id: 6,
-      title: "Vocal Training",
-      category: "lessons",
-      description: "Professional vocal coaching and technique development",
-      image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=800&h=600&fit=crop", // Vocal training
-      date: "2024"
-    },
-    {
-      id: 7,
-      title: "Music Theory Class",
-      category: "lessons",
-      description: "Understanding the fundamentals of music composition",
-      image: "https://images.unsplash.com/photo-1603190287605-6d8e730b8f87?w=800&h=600&fit=crop", // Music theory
+      title: "Live Performance",
+      category: "performances",
+      description: "Captivating live performance on stage",
+      image: "/gallery/perf2.jpg", // Live performance
       date: "2024"
     }
   ];
