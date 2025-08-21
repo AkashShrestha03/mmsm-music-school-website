@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 const About = () => {
   const instruments = [
@@ -58,7 +59,7 @@ const About = () => {
               for learners, musicians, and producers alike.
             </p>
             <p className="italic text-[#353535] mb-6 sm:mb-8 font-['Merriweather'] text-sm sm:text-base">
-              "Music is not taught here, it's lived."
+              &ldquo;Music is not taught here, it&apos;s lived.&rdquo;
             </p>
             <Link href="/about">
               <button className="px-6 sm:px-8 py-3 sm:py-4 bg-[#FFF176] text-[#353535] font-semibold text-base sm:text-lg rounded-xl sm:rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 active:scale-95">
@@ -71,10 +72,11 @@ const About = () => {
           <div className="lg:w-1/2 w-full">
             <div className="relative w-full h-64 sm:h-80 lg:h-96 rounded-xl sm:rounded-2xl shadow-2xl overflow-hidden">
               {/* Real Photo (from Pexels - copyright free) */}
-              <img 
+              <Image 
                 src="https://images.pexels.com/photos/164907/pexels-photo-164907.jpeg" 
                 alt="Music class in studio" 
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-500"
               />
               
               {/* Gradient Overlay for brand feel */}

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 const Gallery = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -107,10 +108,11 @@ const Gallery = () => {
             >
               {/* Image Container */}
               <div className="relative overflow-hidden aspect-[4/3]">
-                <img
+                <Image
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-700"
                 />
               </div>
             </div>
@@ -131,10 +133,11 @@ const Gallery = () => {
             onClick={() => setSelectedImage(null)}
           >
             <div className="relative max-w-4xl max-h-[90vh]">
-              <img
-                src={galleryItems.find(item => item.id === selectedImage)?.image}
+              <Image
+                src={galleryItems.find(item => item.id === selectedImage)?.image || ''}
                 alt="Gallery Image"
-                className="w-full h-full object-contain rounded-lg"
+                fill
+                className="object-contain rounded-lg"
               />
               <button
                 onClick={() => setSelectedImage(null)}

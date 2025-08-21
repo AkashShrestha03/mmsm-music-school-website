@@ -256,7 +256,7 @@ const Courses = () => {
 
                 {/* Features */}
                 <div className="mb-6 sm:mb-8">
-                  <h3 className="text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">What You'll Learn</h3>
+                                      <h3 className="text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">What You&apos;ll Learn</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                     {selectedCourse.features.map((feature, index) => (
                       <div key={index} className="flex items-center space-x-2 sm:space-x-3">
