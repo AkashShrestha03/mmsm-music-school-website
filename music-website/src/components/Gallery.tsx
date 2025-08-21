@@ -71,22 +71,22 @@ const Gallery = () => {
     <section className="py-20 bg-[#FFFDF6]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-black mb-6 font-['Montserrat']">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4 sm:mb-6 font-['Montserrat']">
             Our <span className="text-black">Gallery</span>
           </h2>
-          <p className="text-xl text-[#353535]/80 max-w-3xl mx-auto font-['Nunito']">
+          <p className="text-lg sm:text-xl text-[#353535]/80 max-w-3xl mx-auto font-['Nunito'] px-4">
             Take a glimpse into the vibrant world of music education at MOUJ MAALIK
           </p>
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 px-4">
           {filters.map((filter) => (
             <button
               key={filter.key}
               onClick={() => setActiveFilter(filter.key)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 font-['Nunito'] ${
+              className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 active:scale-95 font-['Nunito'] text-sm sm:text-base ${
                 activeFilter === filter.key
                   ? 'bg-[#81E6D9] text-white shadow-lg'
                   : 'bg-white text-[#353535] hover:bg-[#C8F8E4] border-2 border-[#C8F8E4] hover:border-[#81E6D9]'
@@ -98,11 +98,11 @@ const Gallery = () => {
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 px-4">
           {filteredItems.map((item) => (
             <div
               key={item.id}
-              className="group relative bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:scale-105 cursor-pointer"
+              className="group relative bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:scale-105 active:scale-95 cursor-pointer"
               onClick={() => setSelectedImage(item.id)}
             >
               {/* Image Container */}
@@ -118,8 +118,8 @@ const Gallery = () => {
         </div>
 
         {/* Load More Button */}
-        <div className="text-center mt-12">
-          <button className="px-8 py-4 bg-[#FFF176] hover:bg-[#FFE066] text-[#353535] font-bold text-lg rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-lg font-['Nunito']">
+        <div className="text-center mt-8 sm:mt-12 px-4">
+          <button className="px-6 sm:px-8 py-3 sm:py-4 bg-[#FFF176] hover:bg-[#FFE066] active:bg-[#FFD54F] text-[#353535] font-bold text-base sm:text-lg rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 transition-all duration-300 font-['Nunito']">
             View More Photos
           </button>
         </div>

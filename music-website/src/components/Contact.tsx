@@ -43,39 +43,39 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-[#FFFDF6]">
+    <section id="contact" className="py-16 sm:py-20 bg-[#FFFDF6]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-black mb-6 font-['Montserrat']">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4 sm:mb-6 font-['Montserrat']">
             Contact <span className="text-black">Us</span>
           </h2>
-          <p className="text-xl text-[#353535] max-w-3xl mx-auto font-['Nunito']">
+          <p className="text-lg sm:text-xl text-[#353535] max-w-3xl mx-auto font-['Nunito'] italic px-4">
             Ready to start your musical journey? Get in touch with us today.
           </p>
         </div>
 
         {/* Top Row */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 mb-16 sm:mb-20">
           {/* Who We Serve */}
           <div>
-                         <h3 className="text-2xl font-bold text-black mb-6 font-['Montserrat']">Who We Serve</h3>
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-              <div className="h-48 relative">
+            <h3 className="text-xl sm:text-2xl font-bold text-black mb-4 sm:mb-6 font-['Montserrat']"></h3>
+            <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden">
+              <div className="h-40 sm:h-48 relative">
                 <Image
-                  src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&h=400&fit=crop"
+                  src="https://images.pexels.com/photos/164907/pexels-photo-164907.jpeg?w=800&h=400&fit=crop"
                   alt="Music lesson"
                   fill
                   className="object-cover"
                   priority
                 />
               </div>
-              <div className="p-6">
-                <p className="text-[#353535] leading-relaxed mb-6 font-['Nunito']">
+              <div className="p-4 sm:p-6">
+                <p className="text-sm sm:text-base text-[#353535] leading-relaxed mb-4 sm:mb-6 font-['Nunito']">
                   We offer music lessons for students of all levels, from complete beginners to advanced musicians. 
                   Our experienced instructors are passionate about helping you achieve your musical goals.
                 </p>
-                <button className="w-full py-3 bg-[#FFF176] hover:bg-[#FFE066] text-[#353535] font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 font-['Nunito']">
+                <button className="w-full py-2 sm:py-3 bg-[#FFF176] hover:bg-[#FFE066] active:bg-[#FFD54F] text-[#353535] font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 font-['Nunito'] text-sm sm:text-base">
                   Get in Touch
                 </button>
               </div>
@@ -84,18 +84,18 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div>
-                         <h3 className="text-2xl font-bold text-black mb-6 font-['Montserrat']">Contact Us</h3>
-            <div className="bg-white rounded-2xl shadow-lg p-8">
+            <h3 className="text-xl sm:text-2xl font-bold text-black mb-4 sm:mb-6 font-['Montserrat']">Contact Us</h3>
+            <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg p-6 sm:p-8">
               {submitSuccess ? (
-                <div className="text-center py-12">
-                  <div className="text-6xl mb-4">✅</div>
-                                     <h4 className="text-2xl font-bold text-black mb-2 font-['Montserrat']">Message Sent!</h4>
-                  <p className="text-[#353535] font-['Nunito']">Thank you for contacting us. We&apos;ll get back to you soon!</p>
+                <div className="text-center py-8 sm:py-12">
+                  <div className="text-4xl sm:text-6xl mb-3 sm:mb-4">✅</div>
+                  <h4 className="text-xl sm:text-2xl font-bold text-black mb-2 font-['Montserrat']">Message Sent!</h4>
+                  <p className="text-sm sm:text-base text-[#353535] font-['Nunito']">Thank you for contacting us. We&apos;ll get back to you soon!</p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-[#353535] font-medium mb-2 font-['Nunito']">
+                    <label htmlFor="name" className="block text-[#353535] font-medium mb-2 font-['Nunito'] text-sm sm:text-base">
                       Name
                     </label>
                     <input
@@ -105,13 +105,12 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#C8F8E4] rounded-lg text-[#353535] placeholder-[#353535]/50 focus:outline-none focus:ring-2 focus:ring-[#81E6D9] focus:border-transparent transition-all duration-300"
-                      placeholder="Enter your name"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#81E6D9] focus:border-transparent transition-all duration-300 text-sm sm:text-base"
+                      placeholder="Your full name"
                     />
                   </div>
-                  
                   <div>
-                    <label htmlFor="email" className="block text-[#353535] font-medium mb-2 font-['Nunito']">
+                    <label htmlFor="email" className="block text-[#353535] font-medium mb-2 font-['Nunito'] text-sm sm:text-base">
                       Email
                     </label>
                     <input
@@ -121,13 +120,12 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#C8F8E4] rounded-lg text-[#353535] placeholder-[#353535]/50 focus:outline-none focus:ring-2 focus:ring-[#81E6D9] focus:border-transparent transition-all duration-300"
-                      placeholder="Enter your email"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#81E6D9] focus:border-transparent transition-all duration-300 text-sm sm:text-base"
+                      placeholder="your.email@example.com"
                     />
                   </div>
-
                   <div>
-                    <label htmlFor="message" className="block text-[#353535] font-medium mb-2 font-['Nunito']">
+                    <label htmlFor="message" className="block text-[#353535] font-medium mb-2 font-['Nunito'] text-sm sm:text-base">
                       Message
                     </label>
                     <textarea
@@ -136,25 +134,17 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleInputChange}
                       required
-                      rows={5}
-                      className="w-full px-4 py-3 bg-[#F7F7F7] border border-[#C8F8E4] rounded-lg text-[#353535] placeholder-[#353535]/50 focus:outline-none focus:ring-2 focus:ring-[#81E6D9] focus:border-transparent transition-all duration-300 resize-none"
-                      placeholder="Tell us about your musical interests..."
+                      rows={4}
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#81E6D9] focus:border-transparent transition-all duration-300 text-sm sm:text-base resize-none"
+                      placeholder="Tell us about your musical interests and goals..."
                     />
                   </div>
-
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 bg-[#FFF176] hover:bg-[#FFE066] disabled:bg-[#FFF176]/50 text-[#353535] font-bold text-lg rounded-lg transition-all duration-300 transform hover:scale-105 disabled:transform-none disabled:cursor-not-allowed font-['Nunito']"
+                    className="w-full py-3 sm:py-4 bg-[#FFF176] hover:bg-[#FFE066] active:bg-[#FFD54F] disabled:bg-gray-400 text-[#353535] font-bold rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:transform-none text-base sm:text-lg"
                   >
-                    {isSubmitting ? (
-                      <div className="flex items-center justify-center">
-                        <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-[#353535] mr-3"></div>
-                        Sending Message...
-                      </div>
-                    ) : (
-                      'Send Message'
-                    )}
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
                 </form>
               )}
