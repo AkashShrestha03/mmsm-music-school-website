@@ -112,40 +112,6 @@ const Gallery = () => {
                   alt={item.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
-                
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#353535]/80 via-[#353535]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 className="text-xl font-bold mb-2 font-['Montserrat']">{item.title}</h3>
-                    <p className="text-white/90 text-sm leading-relaxed font-['Nunito']">{item.description}</p>
-                    <div className="flex items-center justify-between mt-3">
-                      <span className="text-[#FFF176] font-semibold">{item.date}</span>
-                      <span className="bg-[#81E6D9] px-3 py-1 rounded-full text-xs font-medium capitalize">
-                        {item.category}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Play Button for Performances */}
-                {item.category === 'performances' && (
-                  <div className="absolute top-4 right-4 bg-[#81E6D9] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                )}
-              </div>
-
-              {/* Quick Info (visible on mobile) */}
-              <div className="p-4 md:hidden">
-                <h3 className="text-lg font-bold text-[#353535] mb-2 font-['Montserrat']">{item.title}</h3>
-                <div className="flex items-center justify-between">
-                  <span className="text-[#81E6D9] font-semibold text-sm">{item.date}</span>
-                  <span className="bg-[#C8F8E4] text-[#353535] px-2 py-1 rounded-full text-xs font-medium capitalize">
-                    {item.category}
-                  </span>
-                </div>
               </div>
             </div>
           ))}

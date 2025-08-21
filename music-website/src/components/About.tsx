@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 const About = () => {
   const instruments = [
     { icon: "🎸", title: "Guitar", bgColor: "bg-red-800", textColor: "text-white" },
@@ -56,11 +58,13 @@ const About = () => {
               for learners, musicians, and producers alike.
             </p>
             <p className="italic text-[#353535] mb-8 font-[Merriweather]">
-              “Music is not taught here, it’s lived.”
+              "Music is not taught here, it's lived."
             </p>
-            <button className="px-8 py-4 bg-[#FFF176] text-[#353535] font-semibold text-lg rounded-2xl shadow-md hover:shadow-lg transition-transform transform hover:scale-105">
-              Know More About Us
-            </button>
+            <Link href="/about">
+              <button className="px-8 py-4 bg-[#FFF176] text-[#353535] font-semibold text-lg rounded-2xl shadow-md hover:shadow-lg transition-transform transform hover:scale-105">
+                Know More About Us
+              </button>
+            </Link>
           </div>
 
           {/* Right Side - Real Studio Image */}

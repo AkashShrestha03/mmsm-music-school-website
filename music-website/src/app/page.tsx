@@ -5,6 +5,7 @@ import Courses from '@/components/Courses';
 import Specials from '@/components/Specials';
 import Gallery from '@/components/Gallery';
 import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Gallery />
         <Contact />
       </main>
+      <Footer />
     </div>
   );
 }
