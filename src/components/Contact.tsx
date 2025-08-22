@@ -115,7 +115,7 @@ const Contact = () => {
               <div className="text-center py-12">
                 <div className="text-4xl mb-4">✅</div>
                 <h4 className="text-xl font-bold text-gray-800 mb-2">Message Sent!</h4>
-                <p className="text-gray-600">Thank you for contacting us. We'll get back to you soon!</p>
+                <p className="text-gray-600">Thank you for contacting us. We&apos;ll get back to you soon!</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">

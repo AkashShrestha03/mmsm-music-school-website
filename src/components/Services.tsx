@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 const Services = () => {
-  const [activeService, setActiveService] = useState(0);
+
 
   const services = [
     {
@@ -62,7 +62,7 @@ const Services = () => {
             Our <span className="text-gray-600">Services</span>
           </h2>
           <p className="text-lg text-[#353535] max-w-3xl mx-auto font-['Nunito'] leading-relaxed">
-            At MMSM, we don't just teach music — we provide end-to-end solutions for learners, musicians, producers, and creators.
+            At MMSM, we don&apos;t just teach music — we provide end-to-end solutions for learners, musicians, producers, and creators.
           </p>
         </div>
 
@@ -71,7 +71,6 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={service.id}
-              onClick={() => setActiveService(index)}
               className="group cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
             >
                              <div className={`bg-white rounded-2xl shadow-lg hover:shadow-2xl overflow-hidden flex flex-col h-full transition-all duration-300 relative group border-2 ${service.borderColor} hover:border-4 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]`}>
@@ -121,7 +120,7 @@ const Services = () => {
               Ready to Experience Professional Music Services?
             </h3>
             <p className="text-lg text-[#353535] mb-6 max-w-2xl mx-auto leading-relaxed">
-              Whether you need studio time, equipment access, or acoustic consultation, we've got you covered with professional-grade solutions.
+              Whether you need studio time, equipment access, or acoustic consultation, we&apos;ve got you covered with professional-grade solutions.
             </p>
             <button className="px-8 py-4 bg-gray-500 hover:bg-gray-600 text-white font-semibold text-lg rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
               Get Started Today

@@ -37,13 +37,7 @@ const Testimonials = () => {
     "They offered excellent solutions for a portion of what other companies charged."
   ];
 
-  const nextTestimonial = () => {
-    setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
-  };
 
-  const prevTestimonial = () => {
-    setActiveTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
 
   return (
     <section className="py-20 bg-white">
@@ -83,7 +77,7 @@ const Testimonials = () => {
               
               {/* Testimonial Text */}
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                "{testimonials[activeTestimonial].text}"
+                &ldquo;{testimonials[activeTestimonial].text}&rdquo;
               </p>
               
               {/* Client Name and Title */}
