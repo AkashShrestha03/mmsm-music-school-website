@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -43,145 +42,140 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-16 sm:py-20 bg-[#FFFDF6]">
+    <section id="contact" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4 sm:mb-6 font-['Montserrat']">
-            Contact <span className="text-black">Us</span>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-extrabold text-black mb-4 font-['Montserrat']">
+            Get in <span className="text-gray-600">Touch</span>
           </h2>
-          <p className="text-lg sm:text-xl text-[#353535] max-w-3xl mx-auto font-['Nunito'] italic px-4">
-            Ready to start your musical journey? Get in touch with us today.
-          </p>
         </div>
 
-        {/* Top Row */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 mb-16 sm:mb-20">
-          {/* Who We Serve */}
-          <div>
-            <h3 className="text-xl sm:text-2xl font-bold text-black mb-4 sm:mb-6 font-['Montserrat']"></h3>
-            <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden">
-              <div className="h-40 sm:h-48 relative">
-                <Image
-                  src="https://images.pexels.com/photos/164907/pexels-photo-164907.jpeg?w=800&h=400&fit=crop"
-                  alt="Music lesson"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-              <div className="p-4 sm:p-6">
-                <p className="text-sm sm:text-base text-[#353535] leading-relaxed mb-4 sm:mb-6 font-['Nunito']">
-                  We offer music lessons for students of all levels, from complete beginners to advanced musicians. 
-                  Our experienced instructors are passionate about helping you achieve your musical goals.
-                </p>
-                <button className="w-full py-2 sm:py-3 bg-[#FFF176] hover:bg-[#FFE066] active:bg-[#FFD54F] text-[#353535] font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 font-['Nunito'] text-sm sm:text-base">
-                  Get in Touch
-                </button>
-              </div>
+        {/* Two Card Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Card 1: Contact Details & Map */}
+          <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">
+            <h3 className="text-2xl font-bold text-gray-800 mb-6 font-['Montserrat']">Contact Information</h3>
+            
+            <div className="space-y-6">
+                             {/* Address */}
+               <div className="flex items-start space-x-4">
+                 <div className="w-6 h-6 text-gray-700 mt-1">
+                   📍
+                 </div>
+                 <div>
+                   <p className="text-gray-700 font-medium">G-8, Basement Block G, Lajpat Nagar I</p>
+                   <p className="text-gray-700">New Delhi – 110024</p>
+                 </div>
+               </div>
+
+               {/* Email */}
+               <div className="flex items-start space-x-4">
+                 <div className="w-6 h-6 text-gray-700 mt-1">
+                   📧
+                 </div>
+                 <div>
+                   <p className="text-gray-700 font-medium">moujmaalikmusic@gmail.com</p>
+                 </div>
+               </div>
+
+               {/* Phone Numbers */}
+               <div className="flex items-start space-x-4">
+                 <div className="w-6 h-6 text-gray-700 mt-1">
+                   📞
+                 </div>
+                 <div>
+                   <p className="text-gray-700 font-medium">+91 9711807406 | +91 9910014840</p>
+                 </div>
+               </div>
+
+                             {/* Map */}
+               <div className="pt-4">
+                 <div className="w-full h-64 rounded-lg overflow-hidden">
+                   <iframe
+                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.8414633432562!2d77.24224171202825!3d28.574522975595123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3ab8ad4c6bb%3A0x872cdbaeaa283122!2sG-20%2C%20Block%20G%2C%20Lajpat%20Nagar%20I%2C%20Lajpat%20Nagar%2C%20New%20Delhi%2C%20Delhi%20110024!5e0!3m2!1sen!2sin!4v1755853469560!5m2!1sen!2sin"
+                     width="100%"
+                     height="100%"
+                     style={{ border: 0 }}
+                     allowFullScreen
+                     loading="lazy"
+                     referrerPolicy="no-referrer-when-downgrade"
+                     title="MMSM Music School Location"
+                   ></iframe>
+                 </div>
+               </div>
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div>
-            <h3 className="text-xl sm:text-2xl font-bold text-black mb-4 sm:mb-6 font-['Montserrat']">Contact Us</h3>
-            <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg p-6 sm:p-8">
-              {submitSuccess ? (
-                <div className="text-center py-8 sm:py-12">
-                  <div className="text-4xl sm:text-6xl mb-3 sm:mb-4">✅</div>
-                  <h4 className="text-xl sm:text-2xl font-bold text-black mb-2 font-['Montserrat']">Message Sent!</h4>
-                  <p className="text-sm sm:text-base text-[#353535] font-['Nunito']">Thank you for contacting us. We&apos;ll get back to you soon!</p>
+          {/* Card 2: Contact Form */}
+          <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">
+            <h3 className="text-2xl font-bold text-gray-800 mb-6 font-['Montserrat']">Leave us a message</h3>
+            
+            {submitSuccess ? (
+              <div className="text-center py-12">
+                <div className="text-4xl mb-4">✅</div>
+                <h4 className="text-xl font-bold text-gray-800 mb-2">Message Sent!</h4>
+                <p className="text-gray-600">Thank you for contacting us. We'll get back to you soon!</p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-gray-800 font-medium mb-2">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 text-gray-700 placeholder-gray-500"
+                    placeholder="Your full name"
+                  />
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
-                  <div>
-                    <label htmlFor="name" className="block text-[#353535] font-medium mb-2 font-['Nunito'] text-sm sm:text-base">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#81E6D9] focus:border-transparent transition-all duration-300 text-sm sm:text-base"
-                      placeholder="Your full name"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-[#353535] font-medium mb-2 font-['Nunito'] text-sm sm:text-base">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#81E6D9] focus:border-transparent transition-all duration-300 text-sm sm:text-base"
-                      placeholder="your.email@example.com"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="message" className="block text-[#353535] font-medium mb-2 font-['Nunito'] text-sm sm:text-base">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      required
-                      rows={4}
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#81E6D9] focus:border-transparent transition-all duration-300 text-sm sm:text-base resize-none"
-                      placeholder="Tell us about your musical interests and goals..."
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full py-3 sm:py-4 bg-[#FFF176] hover:bg-[#FFE066] active:bg-[#FFD54F] disabled:bg-gray-400 text-[#353535] font-bold rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:transform-none text-base sm:text-lg"
-                  >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
-                  </button>
-                </form>
-              )}
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Row: Location with Real Map */}
-        <div>
-                     <h3 className="text-2xl font-bold text-black mb-6 font-['Montserrat']">Our Location</h3>
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-            {/* Google Maps Embed */}
-            <div className="h-96">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.289056429655!2d-122.41941518468153!3d37.77492977975909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c7fbb5a03%3A0xf6f66cbd7c0f7b6!2sMusic%20School!5e0!3m2!1sen!2sus!4v1678901234567"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-
-            <div className="p-6">
-              <p className="text-[#353535] text-sm leading-relaxed font-['Nunito']">
-                Located in the heart of the city, our music school is easily accessible and provides a welcoming environment for all music enthusiasts.
-              </p>
-              <div className="mt-4 pt-4 border-t border-[#C8F8E4]">
-                <p className="text-[#353535] text-sm font-['Nunito']">
-                  <strong>Address:</strong> 123 Music Street, Harmony City
-                </p>
-                <p className="text-[#353535] text-sm font-['Nunito']">
-                  <strong>Phone:</strong> +1 (555) 123-4567
-                </p>
-              </div>
-            </div>
+                
+                <div>
+                  <label htmlFor="email" className="block text-gray-800 font-medium mb-2">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 text-gray-700 placeholder-gray-500"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="message" className="block text-gray-800 font-medium mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
+                    rows={4}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 text-gray-700 placeholder-gray-500 resize-none"
+                    placeholder="Tell us about your musical interests and goals..."
+                  />
+                </div>
+                
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full py-3 bg-gray-500 hover:bg-gray-600 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50"
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </button>
+              </form>
+            )}
           </div>
         </div>
       </div>

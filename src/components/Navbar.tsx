@@ -22,8 +22,8 @@ const Navbar = () => {
             {/* Logo */}
             <div className="flex items-center">
               <Link href="/" className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-[#FFF176] rounded-full flex items-center justify-center">
-                  <span className="text-[#353535] text-2xl">🎸</span>
+                <div className="w-12 h-12 bg-gray-400 rounded-full flex items-center justify-center">
+                  <span className="text-white text-2xl">🎸</span>
                 </div>
                 <div className="flex flex-col">
                   <span className="text-2xl font-bold text-[#353535]">MOUJ MAALIK</span>
@@ -36,7 +36,7 @@ const Navbar = () => {
             <div>
               <button
                 onClick={toggleMenu}
-                className="text-[#353535] hover:text-[#FFF176] focus:outline-none focus:text-[#FFF176] p-2"
+                className="text-[#353535] hover:text-gray-500 focus:outline-none focus:text-gray-500 p-2"
                 aria-label="Toggle menu"
               >
                 <div className="w-6 h-6 flex flex-col justify-center items-center">
@@ -58,8 +58,8 @@ const Navbar = () => {
             {/* Sidebar Header */}
             <div className="flex items-center justify-between p-6 border-b border-[#F7F7F7]">
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-[#FFF176] rounded-full flex items-center justify-center">
-                  <span className="text-[#353535] text-xl">🎸</span>
+                <div className="w-10 h-10 bg-gray-400 rounded-full flex items-center justify-center">
+                  <span className="text-white text-xl">🎸</span>
                 </div>
                 <div className="flex flex-col">
                   <span className="text-lg font-bold text-[#353535]">MOUJ MAALIK</span>
@@ -68,7 +68,7 @@ const Navbar = () => {
               </div>
               <button
                 onClick={closeMenu}
-                className="text-[#353535]/60 hover:text-[#FFF176] transition-colors duration-200"
+                className="text-[#353535]/60 hover:text-gray-500 transition-colors duration-200"
                 aria-label="Close menu"
               >
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -83,21 +83,21 @@ const Navbar = () => {
                 <Link 
                   href="/" 
                   onClick={closeMenu}
-                  className="block py-3 px-4 text-lg font-medium text-[#353535] bg-[#FFF176] rounded-lg border-l-4 border-[#353535]"
+                  className="block py-3 px-4 text-lg font-medium text-white bg-gray-500 rounded-lg border-l-4 border-gray-600"
                 >
                   Home
                 </Link>
                 <Link 
                   href="/#about" 
                   onClick={closeMenu}
-                  className="block py-3 px-4 text-lg text-[#353535] hover:text-[#353535] hover:bg-[#FFF176] rounded-lg transition-colors duration-200"
+                  className="block py-3 px-4 text-lg text-[#353535] hover:text-white hover:bg-gray-500 rounded-lg transition-colors duration-200"
                 >
                   About
                 </Link>
                 <Link 
                   href="/#contact" 
                   onClick={closeMenu}
-                  className="block py-3 px-4 text-lg text-[#353535] hover:text-[#353535] hover:bg-[#FFF176] rounded-lg transition-colors duration-200"
+                  className="block py-3 px-4 text-lg font-medium text-white bg-gray-500 rounded-lg border-l-4 border-gray-600 hover:bg-gray-600 transition-colors duration-200"
                 >
                   Contact Us
                 </Link>
@@ -108,7 +108,7 @@ const Navbar = () => {
                 <div className="text-center">
                   <p className="text-sm text-[#353535]/60 mb-4">Ready to start your musical journey?</p>
                   <Link href="/#contact" onClick={closeMenu}>
-                    <button className="w-full bg-[#FFF176] hover:bg-[#FFE066] text-[#353535] py-3 px-6 rounded-lg font-semibold transition-colors duration-200">
+                    <button className="w-full bg-gray-500 hover:bg-gray-600 text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-200">
                       Get Started Today
                     </button>
                   </Link>

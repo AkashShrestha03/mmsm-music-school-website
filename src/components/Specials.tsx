@@ -40,8 +40,8 @@ const Specials = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-black mb-6 font-['Montserrat']">
-            Special <span className="text-black">Offerings</span>
+          <h2 className="text-4xl font-extrabold text-black mb-4 font-['Montserrat']">
+            Special <span className="text-gray-600">Offerings</span>
           </h2>
                      <p className="text-xl text-[#353535]/80 max-w-3xl mx-auto font-['Nunito'] italic">
              Discover our exclusive music programs designed to accelerate your musical journey
@@ -94,7 +94,7 @@ const Specials = () => {
               </div>
 
               {/* CTA Button */}
-              <button className="w-full py-3 bg-[#FFF176] hover:bg-[#FFE066] text-[#353535] font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg font-['Nunito']">
+              <button className="w-full py-3 bg-gray-500 hover:bg-gray-600 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg font-['Nunito']">
                 Enroll Now
               </button>
 
@@ -111,7 +111,7 @@ const Specials = () => {
                      <p className="text-[#353535]/80 text-lg mb-6 font-['Nunito'] italic">
              Ready to take your music to the next level?
            </p>
-          <button className="px-8 py-4 bg-[#FFF176] hover:bg-[#FFE066] text-[#353535] font-bold text-lg rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-lg font-['Nunito']">
+          <button className="px-8 py-4 bg-gray-500 hover:bg-gray-600 text-white font-bold text-lg rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-lg font-['Nunito']">
             View All Programs
           </button>
         </div>

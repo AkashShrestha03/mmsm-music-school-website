@@ -69,12 +69,12 @@ const Gallery = () => {
     : galleryItems.filter(item => item.category === activeFilter);
 
   return (
-    <section className="py-20 bg-[#FFFDF6]">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4 sm:mb-6 font-['Montserrat']">
-            Our <span className="text-black">Gallery</span>
+          <h2 className="text-4xl font-extrabold text-black mb-4 font-['Montserrat']">
+            Our <span className="text-gray-600">Gallery</span>
           </h2>
           <p className="text-lg sm:text-xl text-[#353535]/80 max-w-3xl mx-auto font-['Nunito'] px-4">
             Take a glimpse into the vibrant world of music education at MOUJ MAALIK
@@ -89,8 +89,8 @@ const Gallery = () => {
               onClick={() => setActiveFilter(filter.key)}
               className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 active:scale-95 font-['Nunito'] text-sm sm:text-base ${
                 activeFilter === filter.key
-                  ? 'bg-[#81E6D9] text-white shadow-lg'
-                  : 'bg-white text-[#353535] hover:bg-[#C8F8E4] border-2 border-[#C8F8E4] hover:border-[#81E6D9]'
+                  ? 'bg-gray-500 text-white shadow-lg'
+                  : 'bg-white text-[#353535] hover:bg-gray-100 border-2 border-gray-300 hover:border-gray-500'
               }`}
             >
               {filter.label}
@@ -121,7 +121,7 @@ const Gallery = () => {
 
         {/* Load More Button */}
         <div className="text-center mt-8 sm:mt-12 px-4">
-          <button className="px-6 sm:px-8 py-3 sm:py-4 bg-[#FFF176] hover:bg-[#FFE066] active:bg-[#FFD54F] text-[#353535] font-bold text-base sm:text-lg rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 transition-all duration-300 font-['Nunito']">
+          <button className="px-6 sm:px-8 py-3 sm:py-4 bg-gray-500 hover:bg-gray-600 active:bg-gray-700 text-white font-bold text-base sm:text-lg rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 transition-all duration-300 font-['Nunito']">
             View More Photos
           </button>
         </div>

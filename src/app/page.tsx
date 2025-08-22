@@ -2,7 +2,9 @@ import Navbar from '@/components/Navbar';
 import Banner from '@/components/Banner';
 import About from '@/components/About';
 import Courses from '@/components/Courses';
-import Specials from '@/components/Specials';
+import Services from '@/components/Services';
+import Testimonials from '@/components/Testimonials';
+
 import Gallery from '@/components/Gallery';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -15,7 +17,8 @@ export default function Home() {
         <Banner />
         <About />
         <Courses />
-        <Specials />
+        <Services />
+        <Testimonials />
         <Gallery />
         <Contact />
       </main>

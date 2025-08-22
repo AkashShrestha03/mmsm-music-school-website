@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 
 interface Course {
   name: string;
@@ -15,10 +16,7 @@ interface Course {
   schedule: string;
 }
 
-interface CourseCategory {
-  title: string;
-  courses: Course[];
-}
+
 
 const Courses = () => {
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
@@ -34,182 +32,144 @@ const Courses = () => {
     setSelectedCourse(null);
   };
 
-  const courseCategories: CourseCategory[] = [
-    {
-      title: "Indian Classical",
-      courses: [
-        {
-          name: "Tabla",
-          description: "Master the art of Indian percussion with traditional tabla techniques.",
-          image: "/courses/tabla.jpg",
-          duration: "6 months",
-          price: "₹12,000",
-          level: "Beginner to Advanced",
-          features: ["Basic bols and compositions", "Advanced taals and laya", "Performance techniques", "Recording sessions"],
-          instructor: "Pandit Rajesh Kumar",
-          schedule: "Mon, Wed, Fri - 6:00 PM"
-        },
-        {
-          name: "Indian Flute (Bansuri)",
-          description: "Learn the soulful melodies of the bamboo flute.",
-          image: "/courses/flute.webp",
-          duration: "8 months",
-          price: "₹15,000",
-          level: "Beginner to Intermediate",
-          features: ["Breathing techniques", "Raga basics", "Classical compositions", "Solo performances"],
-          instructor: "Ustad Amir Khan",
-          schedule: "Tue, Thu, Sat - 5:00 PM"
-        },
-        {
-          name: "Sitar",
-          description: "Discover the rich heritage of Indian classical music through sitar.",
-          image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&h=600&fit=crop",
-          duration: "12 months",
-          price: "₹20,000",
-          level: "Beginner to Advanced",
-          features: ["String techniques", "Raga exploration", "Classical compositions", "Concert preparation"],
-          instructor: "Vidushi Meera Sharma",
-          schedule: "Mon, Wed, Fri - 7:00 PM"
-        }
-      ]
-    },
-    {
-      title: "Western & Contemporary",
-      courses: [
-        {
-          name: "Guitar (Acoustic & Electric)",
-          description: "Learn both acoustic and electric guitar from basic chords to advanced solos.",
-          image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&h=600&fit=crop",
-          duration: "10 months",
-          price: "₹18,000",
-          level: "Beginner to Advanced",
-          features: ["Basic chords and strumming", "Fingerpicking techniques", "Electric guitar solos", "Band performance"],
-          instructor: "John Smith",
-          schedule: "Tue, Thu, Sat - 6:00 PM"
-        },
-        {
-          name: "Piano & Keyboard",
-          description: "Master the piano with classical and contemporary styles.",
-          image: "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?w=800&h=600&fit=crop",
-          duration: "12 months",
-          price: "₹22,000",
-          level: "Beginner to Advanced",
-          features: ["Music theory", "Classical pieces", "Jazz improvisation", "Composition skills"],
-          instructor: "Maria Rodriguez",
-          schedule: "Mon, Wed, Fri - 5:00 PM"
-        },
-        {
-          name: "Drums & Percussion",
-          description: "Develop rhythm and coordination with modern drumming techniques.",
-          image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&h=600&fit=crop",
-          duration: "8 months",
-          price: "₹16,000",
-          level: "Beginner to Intermediate",
-          features: ["Basic rhythms", "Advanced patterns", "Drum fills", "Band coordination"],
-          instructor: "Mike Johnson",
-          schedule: "Tue, Thu, Sat - 7:00 PM"
-        },
-        {
-          name: "Vocals & Singing",
-          description: "Unlock your voice potential with professional vocal training.",
-          image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&h=600&fit=crop",
-          duration: "10 months",
-          price: "₹18,000",
-          level: "Beginner to Advanced",
-          features: ["Vocal techniques", "Breathing exercises", "Performance skills", "Recording sessions"],
-          instructor: "Sarah Wilson",
-          schedule: "Mon, Wed, Fri - 6:00 PM"
-        }
-      ]
-    },
-    {
-      title: "Special Programs",
-      courses: [
-        {
-          name: "Music Production & Audio Engineering",
-          description: "Learn modern music production using industry-standard software and equipment.",
-          image: "/courses/1.jpg",
-          duration: "6 months",
-          price: "₹25,000",
-          level: "Intermediate to Advanced",
-          features: ["DAW training", "Mixing techniques", "Mastering skills", "Studio sessions"],
-          instructor: "Alex Chen",
-          schedule: "Weekends - 10:00 AM"
-        }
-      ]
-    }
-  ];
+     const allCourses: Course[] = [
+     {
+       name: "Tabla",
+       description: "Master the art of Indian percussion with traditional tabla techniques.",
+       image: "/courses/tabla.jpg",
+       duration: "6 months",
+       price: "₹12,000",
+       level: "Beginner to Advanced",
+       features: ["Basic bols and compositions", "Advanced taals and laya", "Performance techniques", "Recording sessions"],
+       instructor: "Pandit Rajesh Kumar",
+       schedule: "Mon, Wed, Fri - 6:00 PM"
+     },
+     {
+       name: "Indian Flute (Bansuri)",
+       description: "Learn the soulful melodies of the bamboo flute.",
+       image: "/courses/flute.webp",
+       duration: "8 months",
+       price: "₹15,000",
+       level: "Beginner to Intermediate",
+       features: ["Breathing techniques", "Raga basics", "Classical compositions", "Solo performances"],
+       instructor: "Ustad Amir Khan",
+       schedule: "Tue, Thu, Sat - 5:00 PM"
+     },
+     {
+       name: "Sitar",
+       description: "Discover the rich heritage of Indian classical music through sitar.",
+       image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&h=600&fit=crop",
+       duration: "12 months",
+       price: "₹20,000",
+       level: "Beginner to Advanced",
+       features: ["String techniques", "Raga exploration", "Classical compositions", "Concert preparation"],
+       instructor: "Vidushi Meera Sharma",
+       schedule: "Mon, Wed, Fri - 7:00 PM"
+     },
+     {
+       name: "Guitar (Acoustic & Electric)",
+       description: "Learn both acoustic and electric guitar from basic chords to advanced solos.",
+       image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&h=600&fit=crop",
+       duration: "10 months",
+       price: "₹18,000",
+       level: "Beginner to Advanced",
+       features: ["Basic chords and strumming", "Fingerpicking techniques", "Electric guitar solos", "Band performance"],
+       instructor: "John Smith",
+       schedule: "Tue, Thu, Sat - 6:00 PM"
+     },
+     {
+       name: "Piano & Keyboard",
+       description: "Master the piano with classical and contemporary styles.",
+       image: "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?w=800&h=600&fit=crop",
+       duration: "12 months",
+       price: "₹22,000",
+       level: "Beginner to Advanced",
+       features: ["Music theory", "Classical pieces", "Jazz improvisation", "Composition skills"],
+       instructor: "Maria Rodriguez",
+       schedule: "Mon, Wed, Fri - 5:00 PM"
+     },
+     {
+       name: "Drums & Percussion",
+       description: "Develop rhythm and coordination with modern drumming techniques.",
+       image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&h=600&fit=crop",
+       duration: "8 months",
+       price: "₹16,000",
+       level: "Beginner to Intermediate",
+       features: ["Basic rhythms", "Advanced patterns", "Drum fills", "Band coordination"],
+       instructor: "Mike Johnson",
+       schedule: "Tue, Thu, Sat - 7:00 PM"
+     }
+   ];
 
   return (
-    <section id="courses" className="py-20 bg-gradient-to-br from-[#FFFDF6] to-[#FAF3DD]">
+    <section id="courses" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-black mb-4 font-['Montserrat']">
-            Our Courses
-          </h2>
+                     <h2 className="text-4xl font-extrabold text-black mb-4 font-['Montserrat']">
+             School of <span className="text-gray-600">Music</span>
+           </h2>
           <p className="text-xl text-[#353535] max-w-3xl mx-auto font-['Nunito'] italic">
             Our courses cover a wide range of instruments, vocals, and production. Every course is led by certified faculty, with opportunities for certifications, stage performances, and recordings.
           </p>
         </div>
 
-        {/* Course Categories */}
-        <div className="space-y-16 sm:space-y-20">
-          {courseCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="mb-16 sm:mb-20">
-              <h3 className="text-2xl sm:text-3xl font-bold text-black mb-6 sm:mb-8 font-['Montserrat'] text-center">
-                {category.title}
-              </h3>
-              
-              <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-${category.title === "Western & Contemporary" ? "4" : "3"} gap-4 sm:gap-6 lg:gap-8`}>
-                {category.courses.map((course, courseIndex) => (
-                  <div
-                    key={courseIndex}
-                    className="group cursor-pointer transition-all duration-500 transform hover:scale-105 active:scale-95"
-                    onClick={() => openModal(course)}
-                  >
-                    {/* Enhanced Card with Better Shadows */}
-                    <div className="bg-white rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl hover:shadow-2xl transition-all duration-500 border border-[#C8F8E4] relative overflow-hidden">
-                      
-                      {/* Gradient Overlay on Hover */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#81E6D9]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl sm:rounded-3xl z-10"></div>
-                      
-                      {/* Image Container */}
-                      <div className="relative h-40 sm:h-48 w-full overflow-hidden rounded-t-2xl sm:rounded-t-3xl">
-                        <Image
-                          src={course.image}
-                          alt={course.name}
-                          fill
-                          className="object-cover group-hover:scale-110 transition-transform duration-700"
-                        />
-                        {/* Image Overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      </div>
-                      
-                      {/* Content */}
-                      <div className="p-4 sm:p-6 relative z-20">
-                        <h4 className="text-lg sm:text-xl font-bold text-black mb-2 sm:mb-3 font-['Montserrat'] group-hover:text-[#81E6D9] transition-colors duration-300">
-                          {course.name}
-                        </h4>
-                        
-                        <p className="text-sm sm:text-base text-[#353535] mb-4 font-['Nunito'] italic leading-relaxed">
-                          {course.description}
-                        </p>
+                 {/* Course Grid */}
+         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-12">
+           {allCourses.map((course, courseIndex) => (
+             <div
+               key={courseIndex}
+               className="group cursor-pointer transition-all duration-500 transform hover:scale-105 active:scale-95"
+               onClick={() => openModal(course)}
+             >
+               {/* Enhanced Card with Better Shadows */}
+               <div className="bg-white rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl hover:shadow-2xl transition-all duration-500 border border-[#C8F8E4] relative overflow-hidden h-full flex flex-col">
+                 
+                 {/* Gradient Overlay on Hover */}
+                 <div className="absolute inset-0 bg-gradient-to-t from-[#81E6D9]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl sm:rounded-3xl z-10"></div>
+                 
+                 {/* Image Container */}
+                 <div className="relative h-48 w-full overflow-hidden rounded-t-2xl sm:rounded-t-3xl">
+                   <Image
+                     src={course.image}
+                     alt={course.name}
+                     fill
+                     className="object-cover group-hover:scale-110 transition-transform duration-700"
+                   />
+                   {/* Image Overlay */}
+                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                 </div>
+                 
+                 {/* Content */}
+                 <div className="p-4 sm:p-6 relative z-20 flex-1 flex flex-col">
+                   <h4 className="text-lg sm:text-xl font-bold text-black mb-2 sm:mb-3 font-['Montserrat'] group-hover:text-[#81E6D9] transition-colors duration-300">
+                     {course.name}
+                   </h4>
+                   
+                   <p className="text-sm sm:text-base text-[#353535] mb-4 font-['Nunito'] italic leading-relaxed flex-1">
+                     {course.description}
+                   </p>
 
-                        {/* CTA Button */}
-                        <button className="w-full bg-[#FFF176] hover:bg-[#FFE066] active:bg-[#FFD54F] text-[#353535] font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 transition-all duration-300 border-2 border-transparent hover:border-[#FFD54F] text-sm sm:text-base">
-                          Learn More
-                        </button>
-                      </div>
+                   {/* CTA Button */}
+                   <button className="w-full bg-gray-500 hover:bg-gray-600 active:bg-gray-700 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 transition-all duration-300 border-2 border-transparent hover:border-[#FFD54F] text-sm sm:text-base mt-auto">
+                     Learn More
+                   </button>
+                 </div>
 
-                      {/* Decorative Elements */}
-                      <div className="absolute top-2 sm:top-4 right-2 sm:right-4 w-2 sm:w-3 h-2 sm:h-3 bg-[#81E6D9] rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 w-1.5 sm:w-2 h-1.5 sm:h-2 bg-[#FFF176] rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
+                 {/* Decorative Elements */}
+                 <div className="absolute top-2 sm:top-4 right-2 sm:right-4 w-2 sm:w-3 h-2 sm:h-3 bg-[#81E6D9] rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+                 <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 w-1.5 sm:w-2 h-1.5 sm:h-2 bg-gray-500 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+               </div>
+             </div>
+           ))}
+         </div>
+
+        {/* Explore More Button */}
+        <div className="text-center">
+          <Link href="/courses">
+            <button className="px-8 py-4 bg-gray-500 hover:bg-gray-600 text-white font-bold text-lg rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-lg font-['Nunito']">
+              Explore More
+            </button>
+          </Link>
         </div>
       </div>
 
@@ -244,7 +204,7 @@ const Courses = () => {
                     <h3 className="text-base sm:text-lg font-semibold text-[#353535] mb-1 sm:mb-2">Duration</h3>
                     <p className="text-xl sm:text-2xl font-bold text-[#81E6D9]">{selectedCourse.duration}</p>
                   </div>
-                  <div className="bg-[#FFF176] rounded-xl sm:rounded-2xl p-4 sm:p-6 text-center">
+                  <div className="bg-gray-500 rounded-xl sm:rounded-2xl p-4 sm:p-6 text-center">
                     <h3 className="text-base sm:text-lg font-semibold text-[#353535] mb-1 sm:mb-2">Price</h3>
                     <p className="text-xl sm:text-2xl font-bold text-[#353535]">{selectedCourse.price}</p>
                   </div>
@@ -281,10 +241,10 @@ const Courses = () => {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                  <button className="flex-1 px-6 sm:px-8 py-3 sm:py-4 bg-[#FFF176] hover:bg-[#FFE066] active:bg-[#FFD54F] text-[#353535] font-bold text-base sm:text-lg rounded-lg sm:rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 hover:shadow-xl active:shadow-inner cursor-pointer">
+                  <button className="flex-1 px-6 sm:px-8 py-3 sm:py-4 bg-gray-500 hover:bg-gray-600 active:bg-gray-700 text-white font-bold text-base sm:text-lg rounded-lg sm:rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 hover:shadow-xl active:shadow-inner cursor-pointer">
                     Enroll Now
                   </button>
-                  <button className="flex-1 px-6 sm:px-8 py-3 sm:py-4 border-2 border-[#FFF176] text-[#353535] hover:bg-[#FFF176] hover:text-[#353535] active:bg-[#FFE066] active:border-[#FFE066] font-bold text-base sm:text-lg rounded-lg sm:rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 cursor-pointer">
+                  <button className="flex-1 px-6 sm:px-8 py-3 sm:py-4 border-2 border-gray-500 text-[#353535] hover:bg-gray-500 hover:text-white active:bg-gray-600 active:border-gray-600 font-bold text-base sm:text-lg rounded-lg sm:rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 cursor-pointer">
                     Download Brochure
                   </button>
                 </div>
