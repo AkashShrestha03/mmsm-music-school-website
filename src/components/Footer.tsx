@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -12,13 +13,13 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-12 h-12 bg-gray-400 rounded-full flex items-center justify-center">
-                                  <span className="text-white text-2xl">🎸</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-2xl font-bold text-white">MOUJ MAALIK</span>
-                <span className="text-sm text-gray-300">SCHOOL OF MUSIC</span>
-              </div>
+              <Image
+                src="/logo.png"
+                alt="Mouj Maalik Music School Logo"
+                width={64}
+                height={64}
+                className="w-16 h-16"
+              />
             </div>
             <p className="text-lg text-gray-200 leading-relaxed mb-6 max-w-md">
               Discover the joy of music through our comprehensive programs, expert instructors, and state-of-the-art facilities.
@@ -44,14 +45,10 @@ const Footer = () => {
                   Courses
                 </Link>
               </li>
-              <li>
-                <Link href="/#gallery" className="text-gray-200 hover:text-[#81E6D9] transition-colors">
-                  Gallery
-                </Link>
-              </li>
+              
               <li>
                 <Link href="/#contact" className="text-gray-200 hover:text-[#81E6D9] transition-colors">
-                  Contact
+                  Contact Us
                 </Link>
               </li>
             </ul>
