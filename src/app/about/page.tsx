@@ -24,7 +24,7 @@ export default function AboutUs() {
             About <span className="text-gray-700">Mouj Maalik School of Music</span>
           </h1>
           <p className="text-xl text-[#353535] max-w-2xl mx-auto font-['Nunito'] leading-relaxed">
-            More than music lessons — we're a movement for creativity, expression, and growth.
+            More than music lessons — we&apos;re a movement for creativity, expression, and growth.
           </p>
         </div>
       </div>
