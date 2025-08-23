@@ -51,16 +51,16 @@ const About = () => {
             <h2 className={`text-4xl font-extrabold text-black mb-4 font-['Montserrat'] transition-all duration-700 delay-200 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}>
-              About <span className="text-gray-600 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Mouj Maalik</span>
+              About <span className="text-gray-600">Mouj Maalik Music School</span>
             </h2>
             <p className={`text-base sm:text-lg text-[#353535] leading-relaxed mb-4 sm:mb-6 font-['Roboto'] transition-all duration-700 delay-300 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}>
               Mouj Maalik is a light, energetic, and inclusive music academy based in Delhi. 
               We blend <span className="text-[#FFAB91] font-semibold">Indian & Western music</span> 
-              traditions with modern teaching. Guided by expert faculty, our studio-driven courses 
+              &nbsp;traditions with modern teaching. Guided by expert faculty, our studio-driven courses 
               create an <span className="text-[#81E6D9] font-semibold">authentic experience</span> 
-              for learners, musicians, and producers alike.
+              &nbsp;for learners, musicians, and producers alike.
             </p>
             <p className={`italic text-[#353535] mb-6 sm:mb-8 font-['Merriweather'] text-sm sm:text-base transition-all duration-700 delay-400 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'

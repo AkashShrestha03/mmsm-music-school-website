@@ -37,7 +37,7 @@ const MusicProduction = () => {
     {
       name: "Audio Equipment Access",
       description: "Access to state-of-the-art professional audio equipment and gear.",
-      image: "/Audio Equipment Access.jpg",
+      image: "/service/Audio Equipment Access.jpg",
       features: ["Microphones", "Mixers", "Monitors", "Professional Standards"],
       highlight: "Every recording session achieves industry-standard quality."
     }

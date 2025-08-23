@@ -77,3 +77,87 @@ body {
   border: none;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
+* Timeline Wrapper */
+.timeline {
+  position: relative;
+  margin: 50px auto;
+  width: 90%;
+  max-width: 1000px;
+}
+
+/* Decorative Vertical Line */
+.timeline-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    #ccc,
+    #ccc 12px,
+    transparent 12px,
+    transparent 24px
+  );
+  border-radius: 10px;
+  transform: translateX(-50%);
+}
+
+/* Dots */
+.timeline-dot {
+  width: 22px;
+  height: 22px;
+  background: #fff;
+  border: 4px solid #333;
+  border-radius: 50%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 40px 0;
+  box-shadow: 0 0 0 6px rgba(0,0,0,0.1);
+}
+
+/* Connector curve */
+.timeline-connector {
+  width: 120px;
+  height: 60px;
+  border: 2px dashed #bbb;
+  border-color: #bbb transparent transparent transparent;
+  border-radius: 80% / 40%;
+  position: absolute;
+}
+
+/* Left card connector */
+.timeline .left .timeline-connector {
+  right: 50%;
+  top: 10px;
+  transform: translateX(50%) rotate(180deg);
+}
+
+/* Right card connector */
+.timeline .right .timeline-connector {
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+}
+
+/* Cards */
+.timeline-card {
+  background: #fffdf6;
+  padding: 1rem 1.5rem;
+  border-radius: 18px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  max-width: 300px;
+  position: relative;
+}
+
+.timeline .left .timeline-card {
+  margin-right: auto;
+  border-left: 6px solid #ff6b6b;
+}
+
+.timeline .right .timeline-card {
+  margin-left: auto;
+  border-right: 6px solid #ff922b;
+}

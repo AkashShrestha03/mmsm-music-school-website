@@ -488,12 +488,6 @@ const Courses = () => {
                       {isDiplomaMode ? "Mon, Wed, Fri - 9:00 AM to 12:00 PM" : selectedCourse.schedule}
                     </p>
                   </div>
-                  <div className="bg-[#E6F3FF] rounded-xl sm:rounded-2xl p-4 sm:p-6 text-center sm:col-span-2 lg:col-span-1">
-                    <h3 className="text-base sm:text-lg font-semibold text-[#1E3A8A] mb-1 sm:mb-2">Course Period</h3>
-                    <p className="text-xl sm:text-2xl font-bold text-[#1E3A8A]">
-                      {isDiplomaMode ? "1 Year" : "6 Months"}
-                    </p>
-                  </div>
                 </div>
 
                 {/* Features */}

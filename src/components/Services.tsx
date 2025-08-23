@@ -29,7 +29,7 @@ const services = [
       "Monitors – accurate sound playback for editing & mixing"
     ],
     highlight: "Every recording session achieves industry-standard quality.",
-    img: "/Audio Equipment Access.jpg"
+    img: "/service/Audio Equipment Access.jpg"
   },
   {
     title: "Acoustic Treatment",

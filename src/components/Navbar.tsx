@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,13 +22,15 @@ const Navbar = () => {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <div className="flex items-center">
-              <Link href="/" className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-gray-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-2xl">🎸</span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-2xl font-bold text-white">MOUJ MAALIK</span>
-                  <span className="text-sm text-gray-300">SCHOOL OF MUSIC</span>
+              <Link href="/" className="flex items-center">
+                <div className="w-20 h-20 rounded-full flex items-center justify-center overflow-hidden">
+                  <Image 
+                    src="/logo.png" 
+                    alt="Mouj Maalik Logo" 
+                    width={80} 
+                    height={80}
+                    className="object-cover"
+                  />
                 </div>
               </Link>
             </div>
@@ -57,13 +60,15 @@ const Navbar = () => {
           <div className={`fixed top-0 right-0 h-full w-80 bg-gray-700 shadow-2xl z-50 transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
             {/* Sidebar Header */}
             <div className="flex items-center justify-between p-6 border-b border-gray-600">
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-gray-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-xl">🎸</span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-lg font-bold text-white">MOUJ MAALIK</span>
-                  <span className="text-xs text-gray-300">SCHOOL OF MUSIC</span>
+              <div className="flex items-center">
+                <div className="w-16 h-16 rounded-full flex items-center justify-center overflow-hidden">
+                  <Image 
+                    src="/logo.png" 
+                    alt="Mouj Maalik Logo" 
+                    width={64} 
+                    height={64}
+                    className="object-cover"
+                  />
                 </div>
               </div>
               <button
@@ -102,13 +107,7 @@ const Navbar = () => {
                   Courses
                 </Link>
 
-                <Link 
-                  href="/#contact" 
-                  onClick={closeMenu}
-                  className="block py-3 px-4 text-lg text-gray-200 hover:text-white hover:bg-gray-600 rounded-lg transition-colors duration-200"
-                >
-                  Contact
-                </Link>
+                
                 <Link 
                   href="/holidays" 
                   onClick={closeMenu}
@@ -122,6 +121,13 @@ const Navbar = () => {
                   className="block py-3 px-4 text-lg text-gray-200 hover:text-white hover:bg-gray-600 rounded-lg transition-colors duration-200"
                 >
                   Rules & Regulations
+                </Link>
+                <Link 
+                  href="/#contact" 
+                  onClick={closeMenu}
+                  className="block py-3 px-4 text-lg text-gray-200 hover:text-white hover:bg-gray-600 rounded-lg transition-colors duration-200"
+                >
+                  Contact Us
                 </Link>
               </nav>
             </div>
