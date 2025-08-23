@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { playButtonSound, playRagaHoverSound } from '../utils/soundEffects';
 
 const Specials = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
@@ -94,7 +95,11 @@ const Specials = () => {
               </div>
 
               {/* CTA Button */}
-              <button className="w-full py-3 bg-gray-500 hover:bg-gray-600 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg font-['Nunito']">
+              <button 
+                className="w-full py-3 bg-gray-500 hover:bg-gray-600 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:-translate-y-1 border-2 border-transparent hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-opacity-50 font-['Nunito']"
+                onClick={playButtonSound}
+                onMouseEnter={playRagaHoverSound}
+              >
                 Enroll Now
               </button>
 
@@ -111,7 +116,11 @@ const Specials = () => {
                      <p className="text-[#353535]/80 text-lg mb-6 font-['Nunito'] italic">
              Ready to take your music to the next level?
            </p>
-          <button className="px-8 py-4 bg-gray-500 hover:bg-gray-600 text-white font-bold text-lg rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-lg font-['Nunito']">
+          <button 
+            className="px-8 py-4 bg-gray-500 hover:bg-gray-600 text-white font-bold text-lg rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:-translate-y-1 border-2 border-transparent hover:border-gray-400 focus:outline-none focus:ring-4 focus:ring-gray-300 focus:ring-opacity-50 shadow-lg font-['Nunito']"
+            onClick={playButtonSound}
+            onMouseEnter={playRagaHoverSound}
+          >
             View All Programs
           </button>
         </div>

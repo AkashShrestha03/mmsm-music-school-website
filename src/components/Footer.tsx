@@ -63,15 +63,18 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <span className="text-[#81E6D9] text-lg">📍</span>
-                <span className="text-gray-200">123 Music Street, Harmony City</span>
+                <div className="text-gray-200">
+                  <div>G-8, Basement Block G, Lajpat Nagar I</div>
+                  <div>New Delhi – 110024</div>
+                </div>
               </li>
               <li className="flex items-start space-x-3">
                 <span className="text-[#81E6D9] text-lg">📞</span>
-                <span className="text-gray-200">+1 (555) 123-4567</span>
+                <span className="text-gray-200">+91 9711807406 | +91 9910014840</span>
               </li>
               <li className="flex items-start space-x-3">
                 <span className="text-[#81E6D9] text-lg">📧</span>
-                <span className="text-gray-200">info@moujmaalik.com</span>
+                <span className="text-gray-200">moujmaalikmusic@gmail.com</span>
               </li>
               <li className="flex items-start space-x-3">
                 <span className="text-[#81E6D9] text-lg">🕒</span>
@@ -87,17 +90,14 @@ const Footer = () => {
             <p className="text-gray-300 text-sm mb-4 md:mb-0">
               © 2025 MOUJ MAALIK. All rights reserved.
             </p>
-            <div className="flex space-x-6 text-sm">
-              <Link href="#" className="text-gray-300 hover:text-[#81E6D9] transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="#" className="text-gray-300 hover:text-[#81E6D9] transition-colors">
-                Terms of Service
-              </Link>
-              <Link href="#" className="text-gray-300 hover:text-[#81E6D9] transition-colors">
-                Cookie Policy
-              </Link>
-            </div>
+                         <div className="flex space-x-6 text-sm">
+               <Link href="/holidays" className="text-gray-300 hover:text-[#81E6D9] transition-colors">
+                 Holiday 
+               </Link>
+               <Link href="/rules" className="text-gray-300 hover:text-[#81E6D9] transition-colors">
+               Rules & Regulation
+               </Link>
+             </div>
           </div>
         </div>
       </div>

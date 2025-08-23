@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { playButtonSound } from '../utils/soundEffects';
 
 const Testimonials = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -40,7 +41,7 @@ const Testimonials = () => {
 
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-purple-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Two Column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -102,7 +103,10 @@ const Testimonials = () => {
                         ? 'border-purple-500 scale-110' 
                         : 'border-purple-300 hover:border-purple-400'
                     }`}
-                    onClick={() => setActiveTestimonial(index)}
+                    onClick={() => {
+                      setActiveTestimonial(index);
+                      playButtonSound();
+                    }}
                   >
                     <div className="w-full h-full rounded-full bg-gray-200 flex items-center justify-center">
                       <span className="text-gray-600 font-semibold text-lg">
@@ -132,8 +136,11 @@ const Testimonials = () => {
           {testimonials.map((_, index) => (
             <button
               key={index}
-              onClick={() => setActiveTestimonial(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              onClick={() => {
+                setActiveTestimonial(index);
+                playButtonSound();
+              }}
+              className={`w-3 h-3 rounded-full transition-all duration-300 hover:scale-125 ${
                 index === activeTestimonial ? 'bg-purple-500' : 'bg-gray-300'
               }`}
             />

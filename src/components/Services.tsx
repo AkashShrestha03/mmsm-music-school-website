@@ -1,135 +1,105 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
+import Image from "next/image";
 
-const Services = () => {
+const services = [
+  {
+    title: "Studio Rental",
+    subtitle: "Flexible Bookings",
+    description: "Rent professional studios for music recording, podcasting, and voice-overs.",
+    points: ["Music Recording", "Podcasting", "Voice-Overs"],
+    highlight: "Controlled Environment – acoustically treated for clear, high-quality sound.",
+    img: "/service/studio rental.jpg"
+  },
+  {
+    title: "Soundproofing Consultation",
+    subtitle: "Expert Guidance",
+    description: "Professional consultation to design or upgrade spaces.",
+    points: ["Tailored Solutions", "Home studios & commercial venues", "Auditoriums & theatres"],
+    highlight: "Cost-Effective Approach – best sound within your budget.",
+    img: "/guitars.jpg"
+  },
+  {
+    title: "Audio Equipment Access",
+    subtitle: "State-of-the-Art Gear",
+    description: "Our studios are equipped with professional gear to deliver industry-standard results.",
+    points: [
+      "Microphones – crystal-clear vocal & instrument capture",
+      "Mixers – precision control for balanced sound",
+      "Monitors – accurate sound playback for editing & mixing"
+    ],
+    highlight: "Every recording session achieves industry-standard quality.",
+    img: "/Audio Equipment Access.jpg"
+  },
+  {
+    title: "Acoustic Treatment",
+    subtitle: "Sound Optimization",
+    description: "Professional acoustic treatment for optimal sound quality in any space.",
+    points: [
+      "Reverb Control – minimize excessive reflections",
+      "Echo Elimination – clean, tight, studio-grade sound",
+      "Sound Isolation – external noise blocked"
+    ],
+    highlight: "Optimized Spaces – perfect for recording, mixing, and mastering.",
+    img: "/service/Acoustic Treatment.jpg"
+  }
+];
 
-
-  const services = [
-    {
-      id: 1,
-      title: "Studio Rental",
-      subtitle: "Flexible Bookings",
-      description: "Rent professional studios for music recording, podcasting, and voice-overs.",
-      features: ["Music Recording", "Podcasting", "Voice-Overs"],
-      details: "Controlled Environment – acoustically treated for clear, high-quality sound.",
-      borderColor: "border-blue-400",
-      accentColor: "text-blue-600",
-      image: "/service/studio rental.jpg"
-    },
-    {
-      id: 2,
-      title: "Soundproofing Consultation",
-      subtitle: "Expert Guidance",
-      description: "Professional consultation to design or upgrade spaces.",
-      features: ["Tailored Solutions", "Home studios & commercial venues", "Auditoriums & theatres"],
-      details: "Cost-Effective Approach – best sound within your budget.",
-             borderColor: "border-teal-400",
-       accentColor: "text-teal-600",
-      image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&h=600&fit=crop"
-    },
-    {
-      id: 3,
-      title: "Audio Equipment Access",
-      subtitle: "State-of-the-Art Gear",
-      description: "Our studios are equipped with professional gear to deliver industry-standard results.",
-      features: ["Microphones – crystal-clear capture", "Mixers – precision control", "Monitors – accurate sound playback"],
-      details: "Every recording session achieves industry-standard quality.",
-      borderColor: "border-purple-400",
-      accentColor: "text-purple-600",
-      image: "/Audio Equipment Access.jpg"
-    },
-    {
-      id: 4,
-      title: "Acoustic Treatment",
-      subtitle: "Professional Sound Quality",
-      description: "Optimize your space for the best audio experience.",
-      features: ["Reverb Control", "Echo Elimination", "Sound Isolation"],
-      details: "Optimized spaces – perfect for recording, mixing, and mastering.",
-             borderColor: "border-indigo-400",
-       accentColor: "text-indigo-600",
-      image: "/service/Acoustic Treatment.jpg"
-    }
-  ];
-
+export default function Services() {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-white py-20">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-extrabold text-black mb-4 font-['Montserrat']">
+          <h2 className="text-4xl font-bold text-black font-['Montserrat']">
             Our <span className="text-gray-600">Services</span>
           </h2>
-          <p className="text-lg text-[#353535] max-w-3xl mx-auto font-['Nunito'] leading-relaxed">
+          <p className="text-lg text-[#353535] mt-4 max-w-3xl mx-auto font-['Nunito'] leading-relaxed">
             At MMSM, we don&apos;t just teach music — we provide end-to-end solutions for learners, musicians, producers, and creators.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20">
+        <div className="grid md:grid-cols-2 gap-10">
           {services.map((service, index) => (
             <div
-              key={service.id}
-              className="group cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+              key={index}
+              className="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-200"
             >
-                             <div className={`bg-white rounded-2xl shadow-lg hover:shadow-2xl overflow-hidden flex flex-col h-full transition-all duration-300 relative group border-2 ${service.borderColor} hover:border-4 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]`}>
-                {/* Image */}
-                                 <div className="relative w-full h-52 overflow-hidden rounded-t-2xl shadow-inner">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-black/20"></div>
-                </div>
+              {/* Image */}
+              <div className="overflow-hidden relative">
+                <Image
+                  src={service.img}
+                  alt={service.title}
+                  width={600}
+                  height={350}
+                  className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                {/* Ribbon Badge */}
+                <span className="absolute top-4 left-4 bg-purple-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
+                  {service.subtitle}
+                </span>
+              </div>
 
-                {/* Content */}
-                <div className="p-6 flex-1 flex flex-col">
-                  <h3 className="text-xl font-bold text-black mb-1 font-['Montserrat']">{service.title}</h3>
-                  <p className={`text-sm font-semibold ${service.accentColor} mb-3`}>{service.subtitle}</p>
-                  <p className="text-[#353535] text-sm mb-4">{service.description}</p>
-
-                  {/* Features */}
-                  <ul className="space-y-2 text-sm mb-4 flex-1">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start">
-                        <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 mr-2"></span>
-                        <span className="text-[#353535]">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* Floating Key Benefit */}
-                  <div className="mt-auto">
-                                         <div className={`inline-block px-4 py-2 text-xs font-semibold rounded-full border-2 ${service.borderColor} ${service.accentColor} bg-white/95 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 hover:border-4`}>
-                      {service.details}
-                    </div>
-                  </div>
-                </div>
+              {/* Content */}
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-black mb-2 font-['Montserrat'] group-hover:text-purple-600 transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-gray-700 mb-4 leading-relaxed">{service.description}</p>
+                <ul className="list-disc list-inside mb-4 text-gray-700 space-y-1">
+                  {service.points.map((point, i) => (
+                    <li key={i} className="text-sm">{point}</li>
+                  ))}
+                </ul>
+                <p className="text-sm font-medium text-purple-700 italic border-l-4 border-purple-500 pl-3">
+                  {service.highlight}
+                </p>
               </div>
             </div>
           ))}
         </div>
-
-        {/* CTA */}
-        <div className="text-center">
-                     <div className="bg-white rounded-2xl p-10 shadow-lg hover:shadow-xl border border-gray-200 max-w-3xl mx-auto transition-all duration-300">
-            <h3 className="text-2xl font-bold text-black mb-4 font-['Montserrat']">
-              Ready to Experience Professional Music Services?
-            </h3>
-            <p className="text-lg text-[#353535] mb-6 max-w-2xl mx-auto leading-relaxed">
-              Whether you need studio time, equipment access, or acoustic consultation, we&apos;ve got you covered with professional-grade solutions.
-            </p>
-            <button className="px-8 py-4 bg-gray-500 hover:bg-gray-600 text-white font-semibold text-lg rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
-              Get Started Today
-            </button>
-          </div>
-        </div>
       </div>
-    </section>
+    </div>
   );
-};
-
-export default Services;
+}
