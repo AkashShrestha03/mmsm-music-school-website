@@ -12,21 +12,13 @@ export default function AboutUs() {
       <Navbar />
       <section className="bg-amber-50">
       {/* Hero Section */}
-      <div className="relative h-[60vh] flex items-center justify-center text-center overflow-hidden">
+      <div className="relative h-[60vh] overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200&h=800&fit=crop"
+          src="/about banner.png"
           alt="About Mouj Maalik School of Music"
           fill
-          className="object-cover opacity-40"
+          className="object-cover"
         />
-        <div className="relative z-10 px-6">
-          <h1 className="text-5xl font-extrabold text-black mb-4 font-['Montserrat']">
-            About <span className="text-gray-700">Mouj Maalik School of Music</span>
-          </h1>
-          <p className="text-xl text-[#353535] max-w-2xl mx-auto font-['Nunito'] leading-relaxed">
-            More than music lessons — we&apos;re a movement for creativity, expression, and growth.
-          </p>
-        </div>
       </div>
 
       {/* Our Story */}

@@ -8,7 +8,7 @@ const Banner = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/banner.png"
+          src="/Banner 1.png"
           alt="MOUJ MAALIK Banner"
           fill
           priority
