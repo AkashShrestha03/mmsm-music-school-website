@@ -4,27 +4,25 @@ import Image from 'next/image';
 
 const Banner = () => {
   return (
-    <section className="relative w-full min-h-[70vh] sm:min-h-[80vh] lg:min-h-screen">
+    <section className="relative w-full bg-black pt-16 md:pt-20 lg:pt-24">
       {/* Background Image */}
-      <div className="absolute inset-0">
+      <div className="relative w-full">
         <Image
-          src="/Banner 1.png"
+          src="/banner-1.png"
           alt="MOUJ MAALIK Banner"
-          fill
+          width={1920}
+          height={1080}
           priority
           sizes="100vw"
-          className="object-cover object-center sm:object-top"
+          className="w-full h-auto object-contain"
         />
       </div>
 
-      {/* Overlay content (optional, e.g. text / CTA) */}
-      <div className="relative z-10 flex items-center justify-center h-full px-4">
-        <h1 className="text-white text-3xl sm:text-4xl lg:text-6xl font-bold text-center drop-shadow-lg">
-          Welcome to MOUJ MAALIK
-        </h1>
-      </div>
+
     </section>
   );
 };
 
 export default Banner;
+
+
