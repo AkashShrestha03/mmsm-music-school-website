@@ -50,7 +50,7 @@ const Contact = () => {
             Get in <span className="text-gray-600">Touch</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto font-['Nunito']">
-            Ready to start your musical journey? We'd love to hear from you and help you discover your passion for music.
+            Ready to start your musical journey? We&apos;d love to hear from you and help you discover your passion for music.
           </p>
         </div>
 
@@ -143,7 +143,7 @@ const Contact = () => {
                     </svg>
                   </div>
                   <h4 className="text-2xl font-bold text-gray-800 mb-3 font-['Montserrat']">Message Sent Successfully!</h4>
-                  <p className="text-gray-600 font-['Nunito']">Thank you for contacting us. We'll get back to you within 24 hours!</p>
+                  <p className="text-gray-600 font-['Nunito']">Thank you for contacting us. We&apos;ll get back to you within 24 hours!</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -233,16 +233,7 @@ const Contact = () => {
         <div className="mt-16 text-center">
           <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 border border-white/20 shadow-lg">
             <h3 className="text-2xl font-bold text-gray-800 mb-6 font-['Montserrat']">Ready to Start Your Musical Journey?</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="flex flex-col items-center space-y-3">
-                                 <div className="w-12 h-12 bg-gray-500 rounded-xl flex items-center justify-center">
-                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                   </svg>
-                 </div>
-                 <h4 className="font-semibold text-gray-800 font-['Montserrat']">Flexible Timing</h4>
-                 <p className="text-gray-600 text-sm font-['Nunito']">Choose from morning, afternoon, or evening sessions</p>
-               </div>
+                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                <div className="flex flex-col items-center space-y-3">
                  <div className="w-12 h-12 bg-gray-500 rounded-xl flex items-center justify-center">
                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
