@@ -33,6 +33,20 @@ interface Course {
     };
     universities: string[];
   };
+  westernPricingDetails?: {
+    individual: {
+      monthly: string;
+      registration: string;
+    };
+    quarterly: {
+      initial: string;
+      grade1to3: string;
+      grade4to6: string;
+      grade7: string;
+      grade8: string;
+    };
+    universities: string[];
+  };
 }
 
 const Courses = () => {
@@ -219,6 +233,20 @@ const Courses = () => {
           baMusic: "₹10,500"
         },
         universities: ["Prayag Sangeet Samiti Allahabad"]
+      },
+      westernPricingDetails: {
+        individual: {
+          monthly: "₹3,000",
+          registration: "₹500 (first time)"
+        },
+        quarterly: {
+          initial: "₹9,000",
+          grade1to3: "₹10,500",
+          grade4to6: "₹12,000",
+          grade7: "₹13,500",
+          grade8: "₹15,000"
+        },
+        universities: ["Trinity College London (TCL)", "Music Teachers Board (MTB)", "Rock School London (RSL)"]
       }
     },
     {
@@ -436,26 +464,34 @@ const Courses = () => {
                   <div className="mb-8">
                     <h3 className="text-2xl font-bold text-black mb-6 text-center">Course Pricing Details</h3>
                     
-                    {/* Monthly Pricing - Show only in Normal Course mode */}
-                    {!isDiplomaMode && (
-                      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 mb-6 border-2 border-blue-200">
-                        <h4 className="text-xl font-bold text-blue-800 mb-4 text-center">Monthly Fees</h4>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          <div className="bg-white rounded-xl p-4 shadow-md">
-                            <h5 className="font-semibold text-blue-700 mb-2">Individual Classes</h5>
-                            <p className="text-2xl font-bold text-blue-800">{selectedCourse.pricingDetails.individual.monthly}</p>
-                            <p className="text-sm text-gray-600">Registration: {selectedCourse.pricingDetails.individual.registration}</p>
-                          </div>
-                          {selectedCourse.pricingDetails.group && (
-                            <div className="bg-white rounded-xl p-4 shadow-md">
-                              <h5 className="font-semibold text-blue-700 mb-2">Group Classes</h5>
-                              <p className="text-2xl font-bold text-blue-800">{selectedCourse.pricingDetails.group.monthly}</p>
-                              <p className="text-sm text-gray-600">Registration: {selectedCourse.pricingDetails.group.registration}</p>
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                    )}
+                                         {/* Monthly Pricing - Show only in Normal Course mode */}
+                     {!isDiplomaMode && (
+                       <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 mb-6 border-2 border-blue-200">
+                         <h4 className="text-xl font-bold text-blue-800 mb-4 text-center">Monthly Fees</h4>
+                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                           <div className="bg-white rounded-xl p-4 shadow-md">
+                             <h5 className="font-semibold text-blue-700 mb-2">Individual Classes</h5>
+                             <p className="text-2xl font-bold text-blue-800">
+                               {selectedCourse.name === "Vocal" && vocalStyle === 'western' && selectedCourse.westernPricingDetails 
+                                 ? selectedCourse.westernPricingDetails.individual.monthly 
+                                 : selectedCourse.pricingDetails.individual.monthly}
+                             </p>
+                             <p className="text-sm text-gray-600">Registration: 
+                               {selectedCourse.name === "Vocal" && vocalStyle === 'western' && selectedCourse.westernPricingDetails 
+                                 ? selectedCourse.westernPricingDetails.individual.registration 
+                                 : selectedCourse.pricingDetails.individual.registration}
+                             </p>
+                           </div>
+                           {selectedCourse.pricingDetails.group && vocalStyle !== 'western' && (
+                             <div className="bg-white rounded-xl p-4 shadow-md">
+                               <h5 className="font-semibold text-blue-700 mb-2">Group Classes</h5>
+                               <p className="text-2xl font-bold text-blue-800">{selectedCourse.pricingDetails.group.monthly}</p>
+                               <p className="text-sm text-gray-600">Registration: {selectedCourse.pricingDetails.group.registration}</p>
+                             </div>
+                           )}
+                         </div>
+                       </div>
+                     )}
 
                     {/* Quarterly Pricing for University Courses - Only in Diploma mode */}
                     {isDiplomaMode && (
@@ -463,69 +499,103 @@ const Courses = () => {
                         <h4 className="text-xl font-bold text-green-800 mb-4 text-center">Quarterly Fees (University Recognition)</h4>
                         <p className="text-center text-green-700 mb-4">Students pursuing courses from recognized universities</p>
                         
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                          {/* Show different pricing structures based on course */}
-                          {selectedCourse.pricingDetails.quarterly.initial ? (
-                            // Western University Structure (Guitar, Keyboard, Piano, Drums, Western Vocal, Online Sessions)
-                            <>
-                              <div className="bg-white rounded-xl p-4 shadow-md text-center">
-                                <h5 className="font-semibold text-green-700 mb-2">Grade Initial</h5>
-                                <p className="text-2xl font-bold text-green-800">{selectedCourse.pricingDetails.quarterly.initial}</p>
-                              </div>
-                              <div className="bg-white rounded-xl p-4 shadow-md text-center">
-                                <h5 className="font-semibold text-green-700 mb-2">Grade 1-3</h5>
-                                <p className="text-2xl font-bold text-green-800">{selectedCourse.pricingDetails.quarterly.grade1to3}</p>
-                              </div>
-                              <div className="bg-white rounded-xl p-4 shadow-md text-center">
-                                <h5 className="font-semibold text-green-700 mb-2">Grade 4-6</h5>
-                                <p className="text-2xl font-bold text-green-800">{selectedCourse.pricingDetails.quarterly.grade4to6}</p>
-                              </div>
-                              <div className="bg-white rounded-xl p-4 shadow-md text-center">
-                                <h5 className="font-semibold text-green-700 mb-2">Grade 7</h5>
-                                <p className="text-2xl font-bold text-green-800">{selectedCourse.pricingDetails.quarterly.grade7}</p>
-                              </div>
-                              <div className="bg-white rounded-xl p-4 shadow-md text-center">
-                                <h5 className="font-semibold text-green-700 mb-2">Grade 8</h5>
-                                <p className="text-2xl font-bold text-green-800">{selectedCourse.pricingDetails.quarterly.grade8}</p>
-                              </div>
-                            </>
-                          ) : (
-                            // Indian University Structure (Vocal, Tabla, Indian Flute)
-                            <>
-                              <div className="bg-white rounded-xl p-4 shadow-md text-center">
-                                <h5 className="font-semibold text-green-700 mb-2">Praveshika till Junior Diploma (2nd year) and 3rd year</h5>
-                                <p className="text-2xl font-bold text-green-800">{selectedCourse.pricingDetails.quarterly.praveshika}</p>
-                              </div>
-                              <div className="bg-white rounded-xl p-4 shadow-md text-center">
-                                <h5 className="font-semibold text-green-700 mb-2">Senior Diploma (4th year) & 5th year</h5>
-                                <p className="text-2xl font-bold text-green-800">{selectedCourse.pricingDetails.quarterly.seniorDiploma}</p>
-                              </div>
-                              <div className="bg-white rounded-xl p-4 shadow-md text-center">
-                                <h5 className="font-semibold text-green-700 mb-2">BA in Music 6th year</h5>
-                                <p className="text-2xl font-bold text-green-800">{selectedCourse.pricingDetails.quarterly.baMusic}</p>
-                              </div>
-                            </>
-                          )}
-                        </div>
+                                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                           {/* Show different pricing structures based on course and vocal style */}
+                           {(selectedCourse.name === "Vocal" && vocalStyle === 'western' && selectedCourse.westernPricingDetails) ? (
+                             // Western Vocal Structure
+                             <>
+                               <div className="bg-white rounded-xl p-4 shadow-md text-center">
+                                 <h5 className="font-semibold text-green-700 mb-2">Grade Initial</h5>
+                                 <p className="text-2xl font-bold text-green-800">{selectedCourse.westernPricingDetails.quarterly.initial}</p>
+                               </div>
+                               <div className="bg-white rounded-xl p-4 shadow-md text-center">
+                                 <h5 className="font-semibold text-green-700 mb-2">Grade 1-3</h5>
+                                 <p className="text-2xl font-bold text-green-800">{selectedCourse.westernPricingDetails.quarterly.grade1to3}</p>
+                               </div>
+                               <div className="bg-white rounded-xl p-4 shadow-md text-center">
+                                 <h5 className="font-semibold text-green-700 mb-2">Grade 4-6</h5>
+                                 <p className="text-2xl font-bold text-green-800">{selectedCourse.westernPricingDetails.quarterly.grade4to6}</p>
+                               </div>
+                               <div className="bg-white rounded-xl p-4 shadow-md text-center">
+                                 <h5 className="font-semibold text-green-700 mb-2">Grade 7</h5>
+                                 <p className="text-2xl font-bold text-green-800">{selectedCourse.westernPricingDetails.quarterly.grade7}</p>
+                               </div>
+                               <div className="bg-white rounded-xl p-4 shadow-md text-center">
+                                 <h5 className="font-semibold text-green-700 mb-2">Grade 8</h5>
+                                 <p className="text-2xl font-bold text-green-800">{selectedCourse.westernPricingDetails.quarterly.grade8}</p>
+                               </div>
+                             </>
+                           ) : selectedCourse.pricingDetails.quarterly.initial ? (
+                             // Western University Structure (Guitar, Keyboard, Piano, Drums, Online Sessions)
+                             <>
+                               <div className="bg-white rounded-xl p-4 shadow-md text-center">
+                                 <h5 className="font-semibold text-green-700 mb-2">Grade Initial</h5>
+                                 <p className="text-2xl font-bold text-green-800">{selectedCourse.pricingDetails.quarterly.initial}</p>
+                               </div>
+                               <div className="bg-white rounded-xl p-4 shadow-md text-center">
+                                 <h5 className="font-semibold text-green-700 mb-2">Grade 1-3</h5>
+                                 <p className="text-2xl font-bold text-green-800">{selectedCourse.pricingDetails.quarterly.grade1to3}</p>
+                               </div>
+                               <div className="bg-white rounded-xl p-4 shadow-md text-center">
+                                 <h5 className="font-semibold text-green-700 mb-2">Grade 4-6</h5>
+                                 <p className="text-2xl font-bold text-green-800">{selectedCourse.pricingDetails.quarterly.grade4to6}</p>
+                               </div>
+                               <div className="bg-white rounded-xl p-4 shadow-md text-center">
+                                 <h5 className="font-semibold text-green-700 mb-2">Grade 7</h5>
+                                 <p className="text-2xl font-bold text-green-800">{selectedCourse.pricingDetails.quarterly.grade7}</p>
+                               </div>
+                               <div className="bg-white rounded-xl p-4 shadow-md text-center">
+                                 <h5 className="font-semibold text-green-700 mb-2">Grade 8</h5>
+                                 <p className="text-2xl font-bold text-green-800">{selectedCourse.pricingDetails.quarterly.grade8}</p>
+                               </div>
+                             </>
+                           ) : (
+                             // Indian University Structure (Vocal Indian, Tabla, Indian Flute)
+                             <>
+                               <div className="bg-white rounded-xl p-4 shadow-md text-center">
+                                 <h5 className="font-semibold text-green-700 mb-2">Praveshika till Junior Diploma (2nd year) and 3rd year</h5>
+                                 <p className="text-2xl font-bold text-green-800">{selectedCourse.pricingDetails.quarterly.praveshika}</p>
+                               </div>
+                               <div className="bg-white rounded-xl p-4 shadow-md text-center">
+                                 <h5 className="font-semibold text-green-700 mb-2">Senior Diploma (4th year) & 5th year</h5>
+                                 <p className="text-2xl font-bold text-green-800">{selectedCourse.pricingDetails.quarterly.seniorDiploma}</p>
+                               </div>
+                               <div className="bg-white rounded-xl p-4 shadow-md text-center">
+                                 <h5 className="font-semibold text-green-700 mb-2">BA in Music 6th year</h5>
+                                 <p className="text-2xl font-bold text-green-800">{selectedCourse.pricingDetails.quarterly.baMusic}</p>
+                               </div>
+                             </>
+                           )}
+                         </div>
                       </div>
                     )}
 
-                    {/* Recognized Universities - Only in Diploma mode */}
-                    {isDiplomaMode && (
-                      <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-6 border-2 border-purple-200">
-                        <h4 className="text-xl font-bold text-purple-800 mb-4 text-center">Recognized Universities</h4>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                          {selectedCourse.pricingDetails.universities.map((university, index) => (
-                            <div key={index} className="bg-white rounded-xl p-4 shadow-md text-center">
-                              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                                <span className="text-2xl">🎓</span>
-                              </div>
-                              <p className="font-semibold text-purple-800">{university}</p>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
+                                         {/* Recognized Universities - Only in Diploma mode */}
+                     {isDiplomaMode && (
+                       <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-6 border-2 border-purple-200">
+                         <h4 className="text-xl font-bold text-purple-800 mb-4 text-center">Recognized Universities</h4>
+                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                           {(selectedCourse.name === "Vocal" && vocalStyle === 'western' && selectedCourse.westernPricingDetails) 
+                             ? selectedCourse.westernPricingDetails.universities.map((university, index) => (
+                                 <div key={index} className="bg-white rounded-xl p-4 shadow-md text-center">
+                                   <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                     <span className="text-2xl">🎓</span>
+                                   </div>
+                                   <p className="font-semibold text-purple-800">{university}</p>
+                                 </div>
+                               ))
+                             : selectedCourse.pricingDetails.universities.map((university, index) => (
+                                 <div key={index} className="bg-white rounded-xl p-4 shadow-md text-center">
+                                   <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                     <span className="text-2xl">🎓</span>
+                                   </div>
+                                   <p className="font-semibold text-purple-800">{university}</p>
+                                 </div>
+                               ))
+                           }
+                         </div>
+                       </div>
+                     )}
                   </div>
                 )}
 
@@ -560,31 +630,34 @@ const Courses = () => {
                              </div>
                            </div>
                          </div>
-                       ) : (
-                         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 border-2 border-blue-200 mb-4">
-                           <h4 className="text-lg font-bold text-blue-800 mb-3 text-center">Western Contemporary Vocal</h4>
-                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                             <div className="bg-white rounded-xl p-4 shadow-md">
-                               <h5 className="font-semibold text-blue-700 mb-2">Core Techniques</h5>
-                               <ul className="text-sm text-blue-600 space-y-1">
-                                 <li>• Contemporary vocal styles</li>
-                                 <li>• Pop, rock, jazz techniques</li>
-                                 <li>• Harmony & backing vocals</li>
-                                 <li>• Modern music theory</li>
-                               </ul>
-                             </div>
-                             <div className="bg-white rounded-xl p-4 shadow-md">
-                               <h5 className="font-semibold text-blue-700 mb-2">Performance Skills</h5>
-                               <ul className="text-sm text-blue-600 space-y-1">
-                                 <li>• Stage performance</li>
-                                 <li>• Band coordination</li>
-                                 <li>• Recording techniques</li>
-                                 <li>• Music production basics</li>
-                               </ul>
-                             </div>
-                           </div>
-                         </div>
-                       )}
+                                               ) : (
+                          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 border-2 border-blue-200 mb-4">
+                            <h4 className="text-lg font-bold text-blue-800 mb-3 text-center">Western Contemporary Vocal</h4>
+                            
+                            
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                              <div className="bg-white rounded-xl p-4 shadow-md">
+                                <h5 className="font-semibold text-blue-700 mb-2">Core Techniques</h5>
+                                <ul className="text-sm text-blue-600 space-y-1">
+                                  <li>• Contemporary vocal styles</li>
+                                  <li>• Pop, rock, jazz techniques</li>
+                                  <li>• Harmony & backing vocals</li>
+                                  <li>• Modern music theory</li>
+                                </ul>
+                              </div>
+                              <div className="bg-white rounded-xl p-4 shadow-md">
+                                <h5 className="font-semibold text-blue-700 mb-2">Performance Skills</h5>
+                                <ul className="text-sm text-blue-600 space-y-1">
+                                  <li>• Stage performance</li>
+                                  <li>• Band coordination</li>
+                                  <li>• Recording techniques</li>
+                                  <li>• Music production basics</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        )}
                        
                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                          {selectedCourse.features.map((feature, index) => (
