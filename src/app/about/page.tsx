@@ -12,14 +12,15 @@ export default function AboutUs() {
       <Navbar />
       <section className="bg-amber-50">
       {/* Hero Section */}
-      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[90vh] overflow-hidden">
+      <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[650px] overflow-hidden">
         <Image
           src="/about banner.png"
           alt="About Mouj Maalik School of Music"
           fill
-          className="object-cover object-center"
+          className="object-contain sm:object-cover object-center"
           sizes="100vw"
           priority
+          style={{ width: '100%', height: '100%' }}
         />
       </div>
 
