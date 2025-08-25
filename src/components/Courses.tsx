@@ -343,37 +343,71 @@ const Courses = () => {
 
               {/* Course Details */}
               <div className="p-4 sm:p-6 lg:p-8">
-                {/* Course Type Toggle */}
-                <div className="flex justify-center mb-6">
-                  <div className="bg-gray-100 rounded-full p-1 flex items-center">
-                    <button
-                      onClick={() => {
-                        setIsDiplomaMode(false);
-                        playButtonSound();
-                      }}
-                      className={`px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 hover:scale-105 ${
-                        !isDiplomaMode
-                          ? 'bg-white text-gray-800 shadow-md'
-                          : 'text-gray-600 hover:text-gray-800'
-                      }`}
-                    >
-                      Normal Course
-                    </button>
-                    <button
-                      onClick={() => {
-                        setIsDiplomaMode(true);
-                        playButtonSound();
-                      }}
-                      className={`px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 hover:scale-105 ${
-                        isDiplomaMode
-                          ? 'bg-white text-gray-800 shadow-md'
-                          : 'text-gray-600 hover:text-gray-800'
-                      }`}
-                    >
-                      Diploma Course
-                    </button>
-                  </div>
-                </div>
+                                 {/* Course Type Toggle */}
+                 <div className="flex justify-center mb-6">
+                   <div className="bg-gray-100 rounded-full p-1 flex items-center">
+                     <button
+                       onClick={() => {
+                         setIsDiplomaMode(false);
+                         playButtonSound();
+                       }}
+                       className={`px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 hover:scale-105 ${
+                         !isDiplomaMode
+                           ? 'bg-white text-gray-800 shadow-md'
+                           : 'text-gray-600 hover:text-gray-800'
+                       }`}
+                     >
+                       Normal Course
+                     </button>
+                     <button
+                       onClick={() => {
+                         setIsDiplomaMode(true);
+                         playButtonSound();
+                       }}
+                       className={`px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 hover:scale-105 ${
+                         isDiplomaMode
+                           ? 'bg-white text-gray-800 shadow-md'
+                           : 'text-gray-600 hover:text-gray-800'
+                       }`}
+                     >
+                       Diploma Course
+                     </button>
+                   </div>
+                 </div>
+
+                 {/* Vocal Style Toggle - Only for Vocal course */}
+                 {selectedCourse.name === "Vocal" && (
+                   <div className="flex justify-center mb-6">
+                     <div className="bg-blue-100 rounded-full p-1 flex items-center">
+                       <button
+                         onClick={() => {
+                           setVocalStyle('indian');
+                           playButtonSound();
+                         }}
+                         className={`px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 hover:scale-105 ${
+                           vocalStyle === 'indian'
+                             ? 'bg-white text-blue-800 shadow-md'
+                             : 'text-blue-600 hover:text-blue-800'
+                         }`}
+                       >
+                         Indian Classical
+                       </button>
+                       <button
+                         onClick={() => {
+                           setVocalStyle('western');
+                           playButtonSound();
+                         }}
+                         className={`px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 hover:scale-105 ${
+                           vocalStyle === 'western'
+                             ? 'bg-white text-blue-800 shadow-md'
+                             : 'text-blue-600 hover:text-blue-800'
+                         }`}
+                       >
+                         Western Contemporary
+                       </button>
+                     </div>
+                   </div>
+                 )}
 
                 {/* Quick Info Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
