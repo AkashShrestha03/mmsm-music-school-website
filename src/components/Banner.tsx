@@ -6,15 +6,14 @@ const Banner = () => {
   return (
     <section className="relative w-full bg-black pt-16 md:pt-20 lg:pt-24">
       {/* Background Image */}
-      <div className="relative w-full">
+      <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
         <Image
           src="/banner-1.png"
           alt="MOUJ MAALIK Banner"
-          width={1920}
-          height={1080}
+          fill
           priority
           sizes="100vw"
-          className="w-full h-auto object-contain"
+          className="object-cover object-center"
         />
       </div>
 
