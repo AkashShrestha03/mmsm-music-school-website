@@ -529,18 +529,83 @@ const Courses = () => {
                   </div>
                 )}
 
-                {/* Features */}
-                <div className="mb-6 sm:mb-8">
-                  <h3 className="text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">What You&apos;ll Learn</h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
-                    {selectedCourse.features.map((feature, index) => (
-                      <div key={index} className="flex items-center space-x-2 sm:space-x-3">
-                        <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-[#81E6D9] rounded-full flex-shrink-0"></div>
-                        <span className="text-sm sm:text-base text-[#353535]">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                                 {/* Features */}
+                 <div className="mb-6 sm:mb-8">
+                   <h3 className="text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">What You&apos;ll Learn</h3>
+                   
+                   {/* Conditional content for Vocal course based on style */}
+                   {selectedCourse.name === "Vocal" ? (
+                     <div>
+                       {vocalStyle === 'indian' ? (
+                         <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl p-6 border-2 border-orange-200 mb-4">
+                           <h4 className="text-lg font-bold text-orange-800 mb-3 text-center">Indian Classical Vocal</h4>
+                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                             <div className="bg-white rounded-xl p-4 shadow-md">
+                               <h5 className="font-semibold text-orange-700 mb-2">Core Techniques</h5>
+                               <ul className="text-sm text-orange-600 space-y-1">
+                                 <li>• Breathing techniques (Pranayam)</li>
+                                 <li>• Raga exploration & development</li>
+                                 <li>• Classical compositions (Khayal, Dhrupad)</li>
+                                 <li>• Taal & laya understanding</li>
+                               </ul>
+                             </div>
+                             <div className="bg-white rounded-xl p-4 shadow-md">
+                               <h5 className="font-semibold text-orange-700 mb-2">Performance Skills</h5>
+                               <ul className="text-sm text-orange-600 space-y-1">
+                                 <li>• Traditional performance style</li>
+                                 <li>• Microphone techniques</li>
+                                 <li>• Stage presence & confidence</li>
+                                 <li>• Recording & studio skills</li>
+                               </ul>
+                             </div>
+                           </div>
+                         </div>
+                       ) : (
+                         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 border-2 border-blue-200 mb-4">
+                           <h4 className="text-lg font-bold text-blue-800 mb-3 text-center">Western Contemporary Vocal</h4>
+                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                             <div className="bg-white rounded-xl p-4 shadow-md">
+                               <h5 className="font-semibold text-blue-700 mb-2">Core Techniques</h5>
+                               <ul className="text-sm text-blue-600 space-y-1">
+                                 <li>• Contemporary vocal styles</li>
+                                 <li>• Pop, rock, jazz techniques</li>
+                                 <li>• Harmony & backing vocals</li>
+                                 <li>• Modern music theory</li>
+                               </ul>
+                             </div>
+                             <div className="bg-white rounded-xl p-4 shadow-md">
+                               <h5 className="font-semibold text-blue-700 mb-2">Performance Skills</h5>
+                               <ul className="text-sm text-blue-600 space-y-1">
+                                 <li>• Stage performance</li>
+                                 <li>• Band coordination</li>
+                                 <li>• Recording techniques</li>
+                                 <li>• Music production basics</li>
+                               </ul>
+                             </div>
+                           </div>
+                         </div>
+                       )}
+                       
+                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
+                         {selectedCourse.features.map((feature, index) => (
+                           <div key={index} className="flex items-center space-x-2 sm:space-x-3">
+                             <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-[#81E6D9] rounded-full flex-shrink-0"></div>
+                             <span className="text-sm sm:text-base text-[#353535]">{feature}</span>
+                           </div>
+                         ))}
+                       </div>
+                     </div>
+                   ) : (
+                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
+                       {selectedCourse.features.map((feature, index) => (
+                         <div key={index} className="flex items-center space-x-2 sm:space-x-3">
+                           <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-[#81E6D9] rounded-full flex-shrink-0"></div>
+                           <span className="text-sm sm:text-base text-[#353535]">{feature}</span>
+                         </div>
+                       ))}
+                     </div>
+                   )}
+                 </div>
 
                 {/* CTA Button */}
                 <div className="text-center">
