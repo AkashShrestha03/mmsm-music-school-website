@@ -93,11 +93,11 @@ const Navbar = () => {
                   Home
                 </Link>
                 <Link 
-                  href="/#about" 
+                  href="/about" 
                   onClick={closeMenu}
                   className="block py-3 px-4 text-lg text-gray-200 hover:text-white hover:bg-gray-600 rounded-lg transition-colors duration-200"
                 >
-                  About
+                  About Us
                 </Link>
                 <Link 
                   href="/#courses" 
