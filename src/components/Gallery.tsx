@@ -69,25 +69,25 @@ const Gallery = () => {
     : galleryItems.filter(item => item.category === activeFilter);
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 md:py-16 lg:py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-4xl font-extrabold text-black mb-4 font-['Montserrat']">
+        <div className="text-center mb-8 md:mb-12 lg:mb-16">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-black mb-4 font-['Montserrat']">
             Our <span className="text-gray-600">Gallery</span>
           </h2>
-          <p className="text-lg sm:text-xl text-[#353535]/80 max-w-3xl mx-auto font-['Nunito'] px-4">
+          <p className="text-base md:text-lg lg:text-xl text-[#353535]/80 max-w-3xl mx-auto font-['Nunito'] px-4">
             Take a glimpse into the vibrant world of music education at MOUJ MAALIK
           </p>
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 px-4">
+        <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-8 md:mb-12 px-4">
           {filters.map((filter) => (
             <button
               key={filter.key}
               onClick={() => setActiveFilter(filter.key)}
-              className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 active:scale-95 font-['Nunito'] text-sm sm:text-base ${
+              className={`px-4 md:px-6 py-2 md:py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 active:scale-95 font-['Nunito'] text-sm md:text-base ${
                 activeFilter === filter.key
                   ? 'bg-gray-500 text-white shadow-lg'
                   : 'bg-white text-[#353535] hover:bg-gray-100 border-2 border-gray-300 hover:border-gray-500'
@@ -99,11 +99,11 @@ const Gallery = () => {
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 px-4">
           {filteredItems.map((item) => (
             <div
               key={item.id}
-              className="group relative bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:scale-105 active:scale-95 cursor-pointer"
+              className="group relative bg-white rounded-xl md:rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-500 transform hover:scale-105 active:scale-95 cursor-pointer"
               onClick={() => setSelectedImage(item.id)}
             >
               {/* Image Container */}
@@ -120,8 +120,8 @@ const Gallery = () => {
         </div>
 
         {/* Load More Button */}
-        <div className="text-center mt-8 sm:mt-12 px-4">
-          <button className="px-6 sm:px-8 py-3 sm:py-4 bg-gray-500 hover:bg-gray-600 active:bg-gray-700 text-white font-bold text-base sm:text-lg rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 transition-all duration-300 font-['Nunito']">
+        <div className="text-center mt-8 md:mt-12 px-4">
+          <button className="px-6 md:px-8 py-3 md:py-4 bg-gray-500 hover:bg-gray-600 active:bg-gray-700 text-white font-bold text-base md:text-lg rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 transition-all duration-300 font-['Nunito']">
             View More Photos
           </button>
         </div>

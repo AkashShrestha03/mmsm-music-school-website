@@ -71,7 +71,7 @@ const Courses = () => {
     {
       name: "Guitar",
       description: "Learn acoustic, electric, classical and bass guitar from basic chords to advanced solos.",
-      image: "/courses/piano.jpg",
+      image: "/courses/guitar.jpg",
       price: "₹2,500",
       level: "Beginner to Advanced",
       features: ["Basic chords and strumming", "Fingerpicking techniques", "Electric guitar solos", "Band performance"],
@@ -98,7 +98,7 @@ const Courses = () => {
     {
       name: "Keyboard",
       description: "Master the keyboard with classical and contemporary styles.",
-      image: "/courses/piano.jpg",
+      image: "/courses/keyboard.jpg",
       price: "₹2,500",
       level: "Beginner to Advanced",
       features: ["Music theory", "Classical pieces", "Jazz improvisation", "Composition skills"],
@@ -275,19 +275,19 @@ const Courses = () => {
   ];
 
   return (
-    <section id="courses" className="py-20 bg-pink-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-extrabold text-black mb-4 font-['Montserrat']">
+    <section id="courses" className="py-12 md:py-16 lg:py-20 bg-pink-50">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+        <div className="text-center mb-8 md:mb-12 lg:mb-16">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-black mb-4 font-['Montserrat']">
             School of <span className="text-gray-600">Music</span>
           </h2>
-          <p className="text-xl text-[#353535] max-w-3xl mx-auto font-['Nunito'] italic">
+          <p className="text-base md:text-lg lg:text-xl text-[#353535] max-w-3xl mx-auto font-['Nunito'] italic px-4">
             Our courses cover a wide range of instruments, vocals, and production. Every course is led by certified faculty, with opportunities for certifications, stage performances, and recordings.
           </p>
         </div>
 
         {/* Course Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 xl:gap-8 mb-12">
           {allCourses.map((course, courseIndex) => (
             <div
               key={courseIndex}
@@ -295,13 +295,13 @@ const Courses = () => {
               onClick={() => openModal(course)}
             >
               {/* Enhanced Card with Better Shadows */}
-              <div className="bg-white rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl hover:shadow-2xl transition-all duration-500 border border-[#C8F8E4] relative overflow-hidden h-full flex flex-col">
+              <div className="bg-white rounded-xl md:rounded-2xl lg:rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-[#C8F8E4] relative overflow-hidden h-full flex flex-col">
                 
                 {/* Gradient Overlay on Hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#81E6D9]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl sm:rounded-3xl z-10"></div>
                 
                 {/* Image Container */}
-                <div className="relative h-48 w-full overflow-hidden rounded-t-2xl sm:rounded-t-3xl">
+                <div className="relative h-40 md:h-48 w-full overflow-hidden rounded-t-xl md:rounded-t-2xl lg:rounded-t-3xl">
                   <Image
                     src={course.image}
                     alt={course.name}
@@ -313,7 +313,7 @@ const Courses = () => {
                 </div>
                 
                 {/* Content */}
-                <div className="p-4 sm:p-6 relative z-20 flex-1 flex flex-col">
+                <div className="p-3 md:p-4 lg:p-6 relative z-20 flex-1 flex flex-col">
                   <h4 className="text-lg sm:text-xl font-bold text-black mb-2 sm:mb-3 font-['Montserrat'] group-hover:text-[#81E6D9] transition-colors duration-300">
                     {course.name}
                   </h4>

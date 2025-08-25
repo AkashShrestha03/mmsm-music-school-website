@@ -35,7 +35,7 @@ const AcousticsSolutions = () => {
     {
       name: "Soundproofing Consultation",
       description: "Expert guidance to design or upgrade spaces for optimal acoustic performance.",
-      image: "/service/Acoustic Treatment.jpg",
+      image: "/service/sound.jpg",
       duration: "Flexible",
       price: "Consultation Based",
       level: "All Levels",
@@ -59,33 +59,33 @@ const AcousticsSolutions = () => {
   ];
 
   return (
-    <section id="acoustics-solutions" className="py-20 bg-pink-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-extrabold text-black mb-4 font-['Montserrat']">
-            Acoustics & <span className="text-gray-600">Soundproofing Solutions</span>
-          </h2>
-          <p className="text-xl text-[#353535] max-w-3xl mx-auto font-['Nunito'] italic">
-            Transform your space into an acoustically perfect environment with our professional consultation and treatment services.
-          </p>
-        </div>
+         <section id="acoustics-solutions" className="py-12 md:py-16 lg:py-20 bg-pink-50">
+       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+         <div className="text-center mb-8 md:mb-12 lg:mb-16">
+           <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-black mb-4 font-['Montserrat']">
+             Acoustics & <span className="text-gray-600">Soundproofing Solutions</span>
+           </h2>
+           <p className="text-base md:text-lg lg:text-xl text-[#353535] max-w-3xl mx-auto font-['Nunito'] italic px-4">
+             Transform your space into an acoustically perfect environment with our professional consultation and treatment services.
+           </p>
+         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-12">
+                 {/* Services Grid */}
+         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 xl:gap-8 mb-12">
           {acousticsServices.map((service, serviceIndex) => (
             <div
               key={serviceIndex}
               className="group cursor-pointer transition-all duration-500 transform hover:scale-105 active:scale-95"
               onClick={() => openModal(service)}
             >
-              {/* Enhanced Card with Better Shadows */}
-              <div className="bg-white rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl hover:shadow-2xl transition-all duration-500 border border-[#C8F8E4] relative overflow-hidden h-full flex flex-col">
+                             {/* Enhanced Card with Better Shadows */}
+               <div className="bg-white rounded-xl md:rounded-2xl lg:rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-[#C8F8E4] relative overflow-hidden h-full flex flex-col">
                 
-                {/* Gradient Overlay on Hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#81E6D9]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl sm:rounded-3xl z-10"></div>
+                                 {/* Gradient Overlay on Hover */}
+                 <div className="absolute inset-0 bg-gradient-to-t from-[#81E6D9]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl md:rounded-2xl lg:rounded-3xl z-10"></div>
                 
-                {/* Image Container */}
-                <div className="relative h-48 w-full overflow-hidden rounded-t-2xl sm:rounded-t-3xl">
+                                 {/* Image Container */}
+                 <div className="relative h-40 md:h-48 w-full overflow-hidden rounded-t-xl md:rounded-t-2xl lg:rounded-t-3xl">
                   <Image
                     src={service.image}
                     alt={service.name}
@@ -96,28 +96,28 @@ const AcousticsSolutions = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
                 
-                {/* Content */}
-                <div className="p-4 sm:p-6 relative z-20 flex-1 flex flex-col">
-                  <h4 className="text-lg sm:text-xl font-bold text-black mb-2 sm:mb-3 font-['Montserrat'] group-hover:text-[#81E6D9] transition-colors duration-300">
-                    {service.name}
-                  </h4>
-                  
-                  <p className="text-sm sm:text-base text-[#353535] mb-4 font-['Nunito'] italic leading-relaxed flex-1">
-                    {service.description}
-                  </p>
+                                 {/* Content */}
+                 <div className="p-3 md:p-4 lg:p-6 relative z-20 flex-1 flex flex-col">
+                                     <h4 className="text-base md:text-lg lg:text-xl font-bold text-black mb-2 md:mb-3 font-['Montserrat'] group-hover:text-[#81E6D9] transition-colors duration-300">
+                     {service.name}
+                   </h4>
+                   
+                   <p className="text-xs md:text-sm lg:text-base text-[#353535] mb-4 font-['Nunito'] italic leading-relaxed flex-1">
+                     {service.description}
+                   </p>
 
-                  {/* CTA Button */}
-                  <button 
-                    className="w-full bg-gray-500 hover:bg-gray-600 active:bg-gray-700 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 hover:-translate-y-1 transition-all duration-300 border-2 border-transparent hover:border-[#FFD54F] focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-opacity-50 text-sm sm:text-base mt-auto"
-                    onClick={playButtonSound}
-                  >
-                    Learn More
-                  </button>
+                                     {/* CTA Button */}
+                   <button 
+                     className="w-full bg-gray-500 hover:bg-gray-600 active:bg-gray-700 text-white font-bold py-2 md:py-3 px-4 md:px-6 rounded-lg md:rounded-xl shadow-md hover:shadow-xl transform hover:scale-105 active:scale-95 hover:-translate-y-1 transition-all duration-300 border-2 border-transparent hover:border-[#FFD54F] focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-opacity-50 text-xs md:text-sm lg:text-base mt-auto"
+                     onClick={playButtonSound}
+                   >
+                     Learn More
+                   </button>
                 </div>
 
-                {/* Decorative Elements */}
-                <div className="absolute top-2 sm:top-4 right-2 sm:right-4 w-2 sm:w-3 h-2 sm:h-3 bg-[#81E6D9] rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 w-1.5 sm:w-2 h-1.5 sm:h-2 bg-gray-500 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                 {/* Decorative Elements */}
+                 <div className="absolute top-2 md:top-4 right-2 md:right-4 w-2 md:w-3 h-2 md:h-3 bg-[#81E6D9] rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+                 <div className="absolute bottom-2 md:bottom-4 left-2 md:left-4 w-1.5 md:w-2 h-1.5 md:h-2 bg-gray-500 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </div>
           ))}

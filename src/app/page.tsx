@@ -41,14 +41,7 @@ export default function Home() {
           <About />
         </motion.div>
         
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={fadeInUp}
-        >
-          <Courses />
-        </motion.div>
+        <Courses />
         
         <motion.div
           initial="hidden"
