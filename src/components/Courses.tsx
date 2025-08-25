@@ -12,6 +12,27 @@ interface Course {
   level: string;
   features: string[];
   schedule: string;
+  pricingDetails?: {
+    individual: {
+      monthly: string;
+      registration: string;
+    };
+    group?: {
+      monthly: string;
+      registration: string;
+    };
+    quarterly: {
+      initial?: string;
+      grade1to3?: string;
+      grade4to6?: string;
+      grade7?: string;
+      grade8?: string;
+      praveshika?: string;
+      seniorDiploma?: string;
+      baMusic?: string;
+    };
+    universities: string[];
+  };
 }
 
 const Courses = () => {
@@ -23,8 +44,8 @@ const Courses = () => {
   const openModal = (course: Course) => {
     setSelectedCourse(course);
     setIsModalOpen(true);
-    setIsDiplomaMode(false); // Reset to normal course mode
-    setVocalStyle('indian'); // Reset to Indian style
+    setIsDiplomaMode(false);
+    setVocalStyle('indian');
   };
 
   const closeModal = () => {
@@ -34,59 +55,195 @@ const Courses = () => {
 
   const allCourses: Course[] = [
     {
+      name: "Guitar",
+      description: "Learn acoustic, electric, classical and bass guitar from basic chords to advanced solos.",
+      image: "/courses/piano.jpg",
+      price: "₹2,500",
+      level: "Beginner to Advanced",
+      features: ["Basic chords and strumming", "Fingerpicking techniques", "Electric guitar solos", "Band performance"],
+      schedule: "Group: 2 days/week for 1hr each | Individual: Once a week for 40 mins",
+      pricingDetails: {
+        individual: {
+          monthly: "₹2,500",
+          registration: "₹500 (first time)"
+        },
+        group: {
+          monthly: "₹2,500",
+          registration: "₹500 (first time)"
+        },
+        quarterly: {
+          initial: "₹7,500",
+          grade1to3: "₹9,000",
+          grade4to6: "₹10,500",
+          grade7: "₹12,000",
+          grade8: "₹13,500"
+        },
+        universities: ["Trinity College London (TCL)", "Music Teachers Board (MTB)", "Rock School London (RSL)"]
+      }
+    },
+    {
+      name: "Keyboard",
+      description: "Master the keyboard with classical and contemporary styles.",
+      image: "/courses/piano.jpg",
+      price: "₹2,500",
+      level: "Beginner to Advanced",
+      features: ["Music theory", "Classical pieces", "Jazz improvisation", "Composition skills"],
+      schedule: "Once a week for 40 mins",
+      pricingDetails: {
+        individual: {
+          monthly: "₹2,500",
+          registration: "₹500 (first time)"
+        },
+        quarterly: {
+          initial: "₹7,500",
+          grade1to3: "₹9,000",
+          grade4to6: "₹10,500",
+          grade7: "₹12,000",
+          grade8: "₹13,500"
+        },
+        universities: ["Trinity College London (TCL)", "Music Teachers Board (MTB)", "Rock School London (RSL)"]
+      }
+    },
+    {
+      name: "Piano",
+      description: "Master the piano with classical and contemporary styles.",
+      image: "/courses/piano.jpg",
+      price: "₹3,000",
+      level: "Beginner to Advanced",
+      features: ["Music theory", "Classical pieces", "Jazz improvisation", "Composition skills"],
+      schedule: "Once a week for 40 mins",
+      pricingDetails: {
+        individual: {
+          monthly: "₹3,000",
+          registration: "₹500 (first time)"
+        },
+        quarterly: {
+          initial: "₹9,000",
+          grade1to3: "₹10,500",
+          grade4to6: "₹12,000",
+          grade7: "₹13,500",
+          grade8: "₹15,000"
+        },
+        universities: ["Trinity College London (TCL)", "Music Teachers Board (MTB)", "Rock School London (RSL)"]
+      }
+    },
+    {
+      name: "Drums",
+      description: "Develop rhythm and coordination with modern drumming techniques.",
+      image: "/courses/drum.jpg",
+      price: "₹2,500",
+      level: "Beginner to Intermediate",
+      features: ["Basic rhythms", "Advanced patterns", "Drum fills", "Band coordination"],
+      schedule: "Once a week for 40 mins",
+      pricingDetails: {
+        individual: {
+          monthly: "₹2,500",
+          registration: "₹500 (first time)"
+        },
+        quarterly: {
+          initial: "₹7,500",
+          grade1to3: "₹9,000",
+          grade4to6: "₹10,500",
+          grade7: "₹12,000",
+          grade8: "₹13,500"
+        },
+        universities: ["Trinity College London (TCL)", "Music Teachers Board (MTB)", "Rock School London (RSL)"]
+      }
+    },
+    {
       name: "Tabla",
       description: "Master the art of Indian percussion with traditional tabla techniques.",
       image: "/courses/tabla.jpg",
-      price: "₹12,000",
+      price: "₹2,500",
       level: "Beginner to Advanced",
       features: ["Basic bols and compositions", "Advanced taals and laya", "Performance techniques", "Recording sessions"],
-      schedule: "Mon, Wed, Fri - 6:00 PM"
+      schedule: "Group: 2 days/week for 1hr each",
+      pricingDetails: {
+        individual: {
+          monthly: "₹2,500",
+          registration: "₹500 (first time)"
+        },
+        group: {
+          monthly: "₹2,500",
+          registration: "₹500 (first time)"
+        },
+        quarterly: {
+          praveshika: "₹7,500",
+          seniorDiploma: "₹9,000",
+          baMusic: "₹10,500"
+        },
+        universities: ["Prayag Sangeet Samiti Allahabad"]
+      }
     },
     {
       name: "Indian Flute (Bansuri)",
       description: "Learn the soulful melodies of the bamboo flute.",
       image: "/courses/flute.webp",
-      price: "₹15,000",
+      price: "₹3,000",
       level: "Beginner to Intermediate",
       features: ["Breathing techniques", "Raga basics", "Classical compositions", "Solo performances"],
-      schedule: "Tue, Thu, Sat - 5:00 PM"
+      schedule: "Once a week for 40 mins",
+      pricingDetails: {
+        individual: {
+          monthly: "₹3,000",
+          registration: "₹500 (first time)"
+        },
+        quarterly: {
+          praveshika: "₹9,000",
+          seniorDiploma: "₹10,500",
+          baMusic: "₹13,000"
+        },
+        universities: ["Prayag Sangeet Samiti Allahabad"]
+      }
     },
-         {
-       name: "Vocal",
-       description: "Master the art of Indian classical and contemporary vocal music.",
-       image: "/courses/vocal.jpg",
-       price: "₹20,000",
-       level: "Beginner to Advanced",
-       features: ["Breathing techniques", "Raga exploration", "Classical compositions", "Concert preparation"],
-       schedule: "Mon, Wed, Fri - 7:00 PM"
-     },
     {
-      name: "Guitar",
-      description: "Learn both acoustic and electric guitar from basic chords to advanced solos.",
-      image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&h=600&fit=crop",
-      price: "₹18,000",
+      name: "Vocal",
+      description: "Master both Indian classical and Western contemporary vocal techniques with flexible style switching.",
+      image: "/courses/vocal.jpg",
+      price: "₹2,500",
       level: "Beginner to Advanced",
-      features: ["Basic chords and strumming", "Fingerpicking techniques", "Electric guitar solos", "Band performance"],
-      schedule: "Tue, Thu, Sat - 6:00 PM"
+      features: ["Breathing techniques", "Raga exploration", "Classical compositions", "Performance skills", "Style flexibility"],
+      schedule: "Group: 2 days/week for 1hr each | Individual: Once a week for 40 mins",
+      pricingDetails: {
+        individual: {
+          monthly: "₹2,500",
+          registration: "₹500 (first time)"
+        },
+        group: {
+          monthly: "₹2,500",
+          registration: "₹500 (first time)"
+        },
+        quarterly: {
+          praveshika: "₹7,500",
+          seniorDiploma: "₹9,000",
+          baMusic: "₹10,500"
+        },
+        universities: ["Prayag Sangeet Samiti Allahabad"]
+      }
     },
-         {
-       name: "Piano & Keyboard",
-       description: "Master the piano with classical and contemporary styles.",
-       image: "/courses/piano.jpg",
-       price: "₹22,000",
-       level: "Beginner to Advanced",
-       features: ["Music theory", "Classical pieces", "Jazz improvisation", "Composition skills"],
-       schedule: "Mon, Wed, Fri - 5:00 PM"
-     },
-         {
-       name: "Drums",
-       description: "Develop rhythm and coordination with modern drumming techniques.",
-       image: "/courses/drum.jpg",
-       price: "₹16,000",
-       level: "Beginner to Intermediate",
-       features: ["Basic rhythms", "Advanced patterns", "Drum fills", "Band coordination"],
-       schedule: "Tue, Thu, Sat - 7:00 PM"
-     }
+    {
+      name: "Online Sessions",
+      description: "Learn music from anywhere with our comprehensive online courses covering multiple instruments and vocals.",
+      image: "/courses/online.jpg",
+      price: "₹4,000",
+      level: "Beginner to Advanced",
+      features: ["Guitar, Keyboard, Piano, Drums, Western Vocals", "Flexible scheduling", "Recorded sessions", "Digital resources"],
+      schedule: "Individual: Once a week for 40 mins",
+      pricingDetails: {
+        individual: {
+          monthly: "₹4,000",
+          registration: "₹500 (first time)"
+        },
+        quarterly: {
+          initial: "₹12,000",
+          grade1to3: "₹13,500",
+          grade4to6: "₹16,000",
+          grade7: "₹17,500",
+          grade8: "₹19,000"
+        },
+        universities: ["Trinity College London (TCL)", "Music Teachers Board (MTB)", "Rock School London (RSL)"]
+      }
+    }
   ];
 
   return (
@@ -218,256 +375,6 @@ const Courses = () => {
                   </div>
                 </div>
 
-                                 {/* Special Vocal Types Section - Only for Vocal Course */}
-                 {selectedCourse.name === "Vocal" && (
-                   <div className="mb-8">
-                     <h3 className="text-2xl font-bold text-black mb-6 text-center">Choose Your Vocal Style</h3>
-                     
-                     {/* Vocal Style Toggle Switch */}
-                     <div className="flex justify-center mb-6">
-                       <div className="bg-gradient-to-r from-[#E6E6FA] to-[#E6F3FF] rounded-full p-1 flex items-center shadow-lg">
-                         <button
-                           onClick={() => {
-                             setVocalStyle('indian');
-                             playButtonSound();
-                           }}
-                           className={`px-8 py-3 rounded-full font-semibold text-sm transition-all duration-300 flex items-center space-x-2 hover:scale-105 ${
-                             vocalStyle === 'indian'
-                               ? 'bg-[#6B46C1] text-white shadow-md transform scale-105'
-                               : 'text-[#553C9A] hover:text-[#6B46C1]'
-                           }`}
-                         >
-                           <span className="text-lg">🎵</span>
-                           <span>Indian Classical</span>
-                         </button>
-                         <button
-                           onClick={() => {
-                             setVocalStyle('western');
-                             playButtonSound();
-                           }}
-                           className={`px-8 py-3 rounded-full font-sm transition-all duration-300 flex items-center space-x-2 hover:scale-105 ${
-                             vocalStyle === 'western'
-                               ? 'bg-[#0066CC] text-white shadow-md transform scale-105'
-                               : 'text-[#003366] hover:text-[#0066CC]'
-                           }`}
-                         >
-                           <span className="text-lg">🎤</span>
-                           <span>Western Contemporary</span>
-                         </button>
-                       </div>
-                     </div>
-
-                     {/* Dynamic Vocal Style Content */}
-                     <div className="transition-all duration-500">
-                       {vocalStyle === 'indian' ? (
-                         /* Indian Classical Vocal */
-                         <div className="bg-gradient-to-br from-[#E6E6FA] to-[#C7D2FE] rounded-2xl p-8 border-2 border-[#6B46C1] shadow-lg">
-                           <div className="text-center mb-6">
-                             <div className="w-20 h-20 bg-[#6B46C1] rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
-                               <span className="text-3xl">🎵</span>
-                             </div>
-                             <h4 className="text-2xl font-bold text-[#553C9A] mb-3">Indian Classical Vocal</h4>
-                             <p className="text-[#553C9A] text-lg mb-4">Master the ancient art of traditional ragas & compositions</p>
-                           </div>
-                           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                             <div className="space-y-3">
-                               <h5 className="font-semibold text-[#553C9A] text-lg mb-3">Core Techniques:</h5>
-                               <div className="space-y-2">
-                                 <div className="flex items-center space-x-3">
-                                   <span className="w-3 h-3 bg-[#6B46C1] rounded-full"></span>
-                                   <span className="text-[#553C9A]">Raga exploration & mastery</span>
-                                 </div>
-                                 <div className="flex items-center space-x-3">
-                                   <span className="w-3 h-3 bg-[#6B46C1] rounded-full"></span>
-                                   <span className="text-[#553C9A]">Classical compositions</span>
-                                 </div>
-                                 <div className="flex items-center space-x-3">
-                                   <span className="w-3 h-3 bg-[#6B46C1] rounded-full"></span>
-                                   <span className="text-[#553C9A]">Traditional breathing methods</span>
-                                 </div>
-                               </div>
-                             </div>
-                             <div className="space-y-3">
-                               <h5 className="font-semibold text-[#553C9A] text-lg mb-3">Advanced Skills:</h5>
-                               <div className="space-y-2">
-                                 <div className="flex items-center space-x-3">
-                                   <span className="w-3 h-3 bg-[#6B46C1] rounded-full"></span>
-                                   <span className="text-[#553C9A]">Microtonal precision</span>
-                                 </div>
-                                 <div className="flex items-center space-x-3">
-                                   <span className="w-3 h-3 bg-[#6B46C1] rounded-full"></span>
-                                   <span className="text-[#553C9A]">Taal & laya mastery</span>
-                                 </div>
-                                 <div className="flex items-center space-x-3">
-                                   <span className="w-3 h-3 bg-[#6B46C1] rounded-full"></span>
-                                   <span className="text-[#553C9A]">Concert performance</span>
-                                 </div>
-                               </div>
-                             </div>
-                           </div>
-                         </div>
-                       ) : (
-                         /* Western Contemporary Vocal */
-                         <div className="bg-gradient-to-br from-[#E6F3FF] to-[#B3D9FF] rounded-2xl p-8 border-2 border-[#0066CC] shadow-lg">
-                           <div className="text-center mb-6">
-                             <div className="w-20 h-20 bg-[#0066CC] rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
-                               <span className="text-3xl">🎤</span>
-                             </div>
-                             <h4 className="text-2xl font-bold text-[#003366] mb-3">Western Contemporary Vocal</h4>
-                             <p className="text-[#003366] text-lg mb-4">Develop modern vocal techniques for pop, rock & jazz</p>
-                           </div>
-                           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                             <div className="space-y-3">
-                               <h5 className="font-semibold text-[#003366] text-lg mb-3">Modern Techniques:</h5>
-                               <div className="space-y-2">
-                                 <div className="flex items-center space-x-3">
-                                   <span className="w-3 h-3 bg-[#0066CC] rounded-full"></span>
-                                   <span className="text-[#003366]">Contemporary vocal styles</span>
-                                 </div>
-                                 <div className="flex items-center space-x-3">
-                                   <span className="w-3 h-3 bg-[#0066CC] rounded-full"></span>
-                                   <span className="text-[#003366]">Performance skills</span>
-                                 </div>
-                                 <div className="flex items-center space-x-3">
-                                   <span className="w-3 h-3 bg-[#0066CC] rounded-full"></span>
-                                   <span className="text-[#003366]">Stage presence & confidence</span>
-                                 </div>
-                               </div>
-                             </div>
-                             <div className="space-y-3">
-                               <h5 className="font-semibold text-[#003366] text-lg mb-3">Performance Skills:</h5>
-                               <div className="space-y-2">
-                                 <div className="flex items-center space-x-3">
-                                   <span className="w-3 h-3 bg-[#0066CC] rounded-full"></span>
-                                   <span className="text-[#003366]">Microphone techniques</span>
-                                 </div>
-                                 <div className="flex items-center space-x-3">
-                                   <span className="w-3 h-3 bg-[#0066CC] rounded-full"></span>
-                                   <span className="text-[#003366]">Band coordination</span>
-                                 </div>
-                                 <div className="flex items-center space-x-3">
-                                   <span className="w-3 h-3 bg-[#0066CC] rounded-full"></span>
-                                   <span className="text-[#003366]">Recording studio skills</span>
-                                 </div>
-                               </div>
-                             </div>
-                           </div>
-                         </div>
-                       )}
-                     </div>
-                   </div>
-                 )}
-
-                 {/* Special Guitar Types Section - Only for Guitar Course */}
-                 {selectedCourse.name === "Guitar" && (
-                   <div className="mb-8">
-                     <h3 className="text-2xl font-bold text-black mb-6 text-center">Choose Your Guitar Style</h3>
-                     
-                     {/* Guitar Types Grid */}
-                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                       {/* Acoustic Guitar */}
-                       <div className="bg-gradient-to-br from-[#FEF3C7] to-[#FDE68A] rounded-2xl p-6 border-2 border-[#F59E0B] shadow-lg hover:shadow-xl transition-all duration-300 group">
-                         <div className="text-center mb-4">
-                           <div className="w-16 h-16 bg-[#F59E0B] rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                             <span className="text-2xl">🎸</span>
-                           </div>
-                           <h4 className="text-xl font-bold text-[#92400E] mb-2">Acoustic Guitar</h4>
-                           <p className="text-[#92400E] text-sm">Classic strumming & fingerpicking</p>
-                         </div>
-                         <div className="space-y-2">
-                           <div className="flex items-center space-x-2">
-                             <span className="w-2 h-2 bg-[#F59E0B] rounded-full"></span>
-                             <span className="text-[#92400E] text-sm">Folk & country styles</span>
-                           </div>
-                           <div className="flex items-center space-x-2">
-                             <span className="w-2 h-2 bg-[#F59E0B] rounded-full"></span>
-                             <span className="text-[#92400E] text-sm">Unplugged performances</span>
-                           </div>
-                           <div className="flex items-center space-x-2">
-                             <span className="w-2 h-2 bg-[#F59E0B] rounded-full"></span>
-                             <span className="text-[#92400E] text-sm">Portable & versatile</span>
-                           </div>
-                         </div>
-                       </div>
-
-                       {/* Electric Guitar */}
-                       <div className="bg-gradient-to-br from-[#DBEAFE] to-[#93C5FD] rounded-2xl p-6 border-2 border-[#2563EB] shadow-lg hover:shadow-xl transition-all duration-300 group">
-                         <div className="text-center mb-4">
-                           <div className="w-16 h-16 bg-[#2563EB] rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                             <span className="text-2xl">⚡</span>
-                           </div>
-                           <h4 className="text-xl font-bold text-[#1E40AF] mb-2">Electric Guitar</h4>
-                           <p className="text-[#1E40AF] text-sm">Rock, blues & metal mastery</p>
-                         </div>
-                         <div className="space-y-2">
-                           <div className="flex items-center space-x-2">
-                             <span className="w-2 h-2 bg-[#2563EB] rounded-full"></span>
-                             <span className="text-[#1E40AF] text-sm">Distortion & effects</span>
-                           </div>
-                           <div className="flex items-center space-x-2">
-                             <span className="w-2 h-2 bg-[#2563EB] rounded-full"></span>
-                             <span className="text-[#1E40AF] text-sm">Solo techniques</span>
-                           </div>
-                           <div className="flex items-center space-x-2">
-                             <span className="w-2 h-2 bg-[#2563EB] rounded-full"></span>
-                             <span className="text-[#1E40AF] text-sm">Amplified sound</span>
-                           </div>
-                         </div>
-                       </div>
-
-                       {/* Bass Guitar */}
-                       <div className="bg-gradient-to-br from-[#D1FAE5] to-[#6EE7B7] rounded-2xl p-6 border-2 border-[#059669] shadow-lg hover:shadow-xl transition-all duration-300 group">
-                         <div className="text-center mb-4">
-                           <div className="w-16 h-16 bg-[#059669] rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                             <span className="text-2xl">🎵</span>
-                           </div>
-                           <h4 className="text-xl font-bold text-[#047857] mb-2">Bass Guitar</h4>
-                           <p className="text-[#047857] text-sm">Rhythm foundation & groove</p>
-                         </div>
-                         <div className="space-y-2">
-                           <div className="flex items-center space-x-2">
-                             <span className="w-2 h-2 bg-[#059669] rounded-full"></span>
-                             <span className="text-[#047857] text-sm">Low-end frequencies</span>
-                           </div>
-                           <div className="flex items-center space-x-2">
-                             <span className="w-2 h-2 bg-[#059669] rounded-full"></span>
-                             <span className="text-[#047857] text-sm">Slap & pop techniques</span>
-                           </div>
-                           <div className="flex items-center space-x-2">
-                             <span className="w-2 h-2 bg-[#059669] rounded-full"></span>
-                             <span className="text-[#047857] text-sm">Band coordination</span>
-                           </div>
-                         </div>
-                       </div>
-
-                       {/* Classical Guitar */}
-                       <div className="bg-gradient-to-br from-[#FCE7F3] to-[#F9A8D4] rounded-2xl p-6 border-2 border-[#EC4899] shadow-lg hover:shadow-xl transition-all duration-300 group">
-                         <div className="text-center mb-4">
-                           <div className="w-16 h-16 bg-[#EC4899] rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                             <span className="text-2xl">🎼</span>
-                           </div>
-                           <h4 className="text-xl font-bold text-[#BE185D] mb-2">Classical Guitar</h4>
-                           <p className="text-[#BE185D] text-sm">Traditional & classical pieces</p>
-                         </div>
-                         <div className="space-y-2">
-                           <div className="flex items-center space-x-2">
-                             <span className="w-2 h-2 bg-[#EC4899] rounded-full"></span>
-                             <span className="text-[#BE185D] text-sm">Fingerstyle mastery</span>
-                           </div>
-                           <div className="flex items-center space-x-2">
-                             <span className="w-2 h-2 bg-[#EC4899] rounded-full"></span>
-                             <span className="text-[#BE185D] text-sm">Nylon strings</span>
-                           </div>
-                           <div className="flex items-center space-x-2">
-                             <span className="w-2 h-2 bg-[#EC4899] rounded-full"></span>
-                             <span className="text-[#BE185D] text-sm">Concert performances</span>
-                           </div>
-                         </div>
-                       </div>
-                     </div>
-                   </div>
-                 )}
-
                 {/* Quick Info Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
                   <div className="bg-[#E8F5E8] rounded-xl sm:rounded-2xl p-4 sm:p-6 text-center">
@@ -489,6 +396,104 @@ const Courses = () => {
                     </p>
                   </div>
                 </div>
+
+                {/* Detailed Pricing Section */}
+                {selectedCourse.pricingDetails && (
+                  <div className="mb-8">
+                    <h3 className="text-2xl font-bold text-black mb-6 text-center">Course Pricing Details</h3>
+                    
+                    {/* Monthly Pricing - Show only in Normal Course mode */}
+                    {!isDiplomaMode && (
+                      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 mb-6 border-2 border-blue-200">
+                        <h4 className="text-xl font-bold text-blue-800 mb-4 text-center">Monthly Fees</h4>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div className="bg-white rounded-xl p-4 shadow-md">
+                            <h5 className="font-semibold text-blue-700 mb-2">Individual Classes</h5>
+                            <p className="text-2xl font-bold text-blue-800">{selectedCourse.pricingDetails.individual.monthly}</p>
+                            <p className="text-sm text-gray-600">Registration: {selectedCourse.pricingDetails.individual.registration}</p>
+                          </div>
+                          {selectedCourse.pricingDetails.group && (
+                            <div className="bg-white rounded-xl p-4 shadow-md">
+                              <h5 className="font-semibold text-blue-700 mb-2">Group Classes</h5>
+                              <p className="text-2xl font-bold text-blue-800">{selectedCourse.pricingDetails.group.monthly}</p>
+                              <p className="text-sm text-gray-600">Registration: {selectedCourse.pricingDetails.group.registration}</p>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Quarterly Pricing for University Courses - Only in Diploma mode */}
+                    {isDiplomaMode && (
+                      <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-6 mb-6 border-2 border-green-200">
+                        <h4 className="text-xl font-bold text-green-800 mb-4 text-center">Quarterly Fees (University Recognition)</h4>
+                        <p className="text-center text-green-700 mb-4">Students pursuing courses from recognized universities</p>
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                          {/* Show different pricing structures based on course */}
+                          {selectedCourse.pricingDetails.quarterly.initial ? (
+                            // Western University Structure (Guitar, Keyboard, Piano, Drums, Western Vocal, Online Sessions)
+                            <>
+                              <div className="bg-white rounded-xl p-4 shadow-md text-center">
+                                <h5 className="font-semibold text-green-700 mb-2">Grade Initial</h5>
+                                <p className="text-2xl font-bold text-green-800">{selectedCourse.pricingDetails.quarterly.initial}</p>
+                              </div>
+                              <div className="bg-white rounded-xl p-4 shadow-md text-center">
+                                <h5 className="font-semibold text-green-700 mb-2">Grade 1-3</h5>
+                                <p className="text-2xl font-bold text-green-800">{selectedCourse.pricingDetails.quarterly.grade1to3}</p>
+                              </div>
+                              <div className="bg-white rounded-xl p-4 shadow-md text-center">
+                                <h5 className="font-semibold text-green-700 mb-2">Grade 4-6</h5>
+                                <p className="text-2xl font-bold text-green-800">{selectedCourse.pricingDetails.quarterly.grade4to6}</p>
+                              </div>
+                              <div className="bg-white rounded-xl p-4 shadow-md text-center">
+                                <h5 className="font-semibold text-green-700 mb-2">Grade 7</h5>
+                                <p className="text-2xl font-bold text-green-800">{selectedCourse.pricingDetails.quarterly.grade7}</p>
+                              </div>
+                              <div className="bg-white rounded-xl p-4 shadow-md text-center">
+                                <h5 className="font-semibold text-green-700 mb-2">Grade 8</h5>
+                                <p className="text-2xl font-bold text-green-800">{selectedCourse.pricingDetails.quarterly.grade8}</p>
+                              </div>
+                            </>
+                          ) : (
+                            // Indian University Structure (Vocal, Tabla, Indian Flute)
+                            <>
+                              <div className="bg-white rounded-xl p-4 shadow-md text-center">
+                                <h5 className="font-semibold text-green-700 mb-2">Praveshika till Junior Diploma (2nd year) and 3rd year</h5>
+                                <p className="text-2xl font-bold text-green-800">{selectedCourse.pricingDetails.quarterly.praveshika}</p>
+                              </div>
+                              <div className="bg-white rounded-xl p-4 shadow-md text-center">
+                                <h5 className="font-semibold text-green-700 mb-2">Senior Diploma (4th year) & 5th year</h5>
+                                <p className="text-2xl font-bold text-green-800">{selectedCourse.pricingDetails.quarterly.seniorDiploma}</p>
+                              </div>
+                              <div className="bg-white rounded-xl p-4 shadow-md text-center">
+                                <h5 className="font-semibold text-green-700 mb-2">BA in Music 6th year</h5>
+                                <p className="text-2xl font-bold text-green-800">{selectedCourse.pricingDetails.quarterly.baMusic}</p>
+                              </div>
+                            </>
+                          )}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Recognized Universities - Only in Diploma mode */}
+                    {isDiplomaMode && (
+                      <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-6 border-2 border-purple-200">
+                        <h4 className="text-xl font-bold text-purple-800 mb-4 text-center">Recognized Universities</h4>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                          {selectedCourse.pricingDetails.universities.map((university, index) => (
+                            <div key={index} className="bg-white rounded-xl p-4 shadow-md text-center">
+                              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span className="text-2xl">🎓</span>
+                              </div>
+                              <p className="font-semibold text-purple-800">{university}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
 
                 {/* Features */}
                 <div className="mb-6 sm:mb-8">

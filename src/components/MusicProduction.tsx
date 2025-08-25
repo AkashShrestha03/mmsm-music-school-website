@@ -10,6 +10,14 @@ interface ProductionCourse {
   image: string;
   features: string[];
   highlight?: string;
+  price?: string;
+  schedule?: string;
+  pricingDetails?: {
+    individual: {
+      monthly: string;
+      registration: string;
+    };
+  };
 }
 
 const MusicProduction = () => {
@@ -27,6 +35,20 @@ const MusicProduction = () => {
   };
 
   const productionCourses: ProductionCourse[] = [
+         {
+       name: "Music Production",
+       description: "Learn professional music production techniques using industry-standard software and equipment.",
+       image: "/service/music.jpg",
+       features: ["Digital Audio Workstations", "Mixing & Mastering", "Sound Design", "Music Theory"],
+       price: "₹4,000",
+       schedule: "Individual: Once a week for 40 mins",
+       pricingDetails: {
+         individual: {
+           monthly: "₹4,000",
+           registration: "₹500 (first time)"
+         }
+       }
+     },
     {
       name: "Studio Rental",
       description: "Rent professional studios for music recording, podcasting, and voice-overs.",
@@ -87,11 +109,9 @@ const MusicProduction = () => {
                     {course.name}
                   </h4>
                   
-                  <p className="text-sm sm:text-base text-[#353535] mb-4 font-['Nunito'] italic leading-relaxed flex-1">
-                    {course.description}
-                  </p>
-
-                  
+                                     <p className="text-sm sm:text-base text-[#353535] mb-4 font-['Nunito'] italic leading-relaxed flex-1">
+                     {course.description}
+                   </p>
 
                   {/* CTA Button */}
                   <button 
@@ -144,7 +164,69 @@ const MusicProduction = () => {
 
                              {/* Service Details */}
                <div className="p-4 sm:p-6 lg:p-8">
-                                                      {selectedCourse.name === "Studio Rental" ? (
+                 {selectedCourse.name === "Music Production" ? (
+                   <>
+                     <div className="mb-6">
+                       <h3 className="text-xl font-semibold text-gray-800 mb-4">Music Production Course</h3>
+                       <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                         Master professional music production techniques using industry-standard software and equipment.
+                       </p>
+                       
+                       {/* Pricing Details */}
+                       {selectedCourse.pricingDetails && (
+                         <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-6 mb-6 border-2 border-purple-200">
+                           <h4 className="text-xl font-bold text-purple-800 mb-4 text-center">Course Pricing</h4>
+                           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                             <div className="bg-white rounded-xl p-4 shadow-md">
+                               <h5 className="font-semibold text-purple-700 mb-2">Individual Classes</h5>
+                               <p className="text-2xl font-bold text-purple-800">{selectedCourse.pricingDetails.individual.monthly}</p>
+                               <p className="text-sm text-gray-600">Registration: {selectedCourse.pricingDetails.individual.registration}</p>
+                             </div>
+                             <div className="bg-white rounded-xl p-4 shadow-md">
+                               <h5 className="font-semibold text-purple-700 mb-2">Schedule</h5>
+                               <p className="text-lg font-bold text-purple-800">{selectedCourse.schedule}</p>
+                               <p className="text-sm text-gray-600">Flexible timing available</p>
+                             </div>
+                           </div>
+                         </div>
+                       )}
+                       
+                       <div className="space-y-4 mb-6">
+                         <div className="flex items-center space-x-3">
+                           <span className="w-3 h-3 bg-[#81E6D9] rounded-full"></span>
+                           <span className="text-lg text-gray-700 font-medium">Digital Audio Workstations (DAW)</span>
+                         </div>
+                         <div className="flex items-center space-x-3">
+                           <span className="w-3 h-3 bg-[#81E6D9] rounded-full"></span>
+                           <span className="text-lg text-gray-700 font-medium">Mixing & Mastering Techniques</span>
+                         </div>
+                         <div className="flex items-center space-x-3">
+                           <span className="w-3 h-3 bg-[#81E6D9] rounded-full"></span>
+                           <span className="text-lg text-gray-700 font-medium">Sound Design & Synthesis</span>
+                         </div>
+                         <div className="flex items-center space-x-3">
+                           <span className="w-3 h-3 bg-[#81E6D9] rounded-full"></span>
+                           <span className="text-lg text-gray-700 font-medium">Music Theory & Composition</span>
+                         </div>
+                       </div>
+                       
+                       <div className="p-4 bg-purple-100 rounded-lg border-l-4 border-purple-500 mb-6">
+                         <p className="text-lg text-purple-800 font-medium">
+                           Learn from industry professionals using the latest software and equipment.
+                         </p>
+                       </div>
+                     </div>
+                     
+                     <div className="text-center">
+                       <button 
+                         className="px-8 py-3 bg-[#81E6D9] hover:bg-[#6DD5C8] text-white font-semibold rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-lg border-2 border-transparent hover:border-[#6DD5C8] focus:outline-none focus:ring-2 focus:ring-[#81E6D9] focus:ring-opacity-50"
+                         onClick={playButtonSound}
+                       >
+                         Enroll Now
+                       </button>
+                     </div>
+                   </>
+                 ) : selectedCourse.name === "Studio Rental" ? (
                      <>
                        <div className="mb-6">
                          <h3 className="text-xl font-semibold text-gray-800 mb-4">Studio Rental Services</h3>
