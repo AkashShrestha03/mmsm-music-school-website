@@ -13,6 +13,7 @@ const Banner = () => {
           priority
           sizes="100vw"
           className="object-cover object-center"
+          style={{ opacity: 'unset', transform: 'unset' }}
         />
       </div>
     </section>

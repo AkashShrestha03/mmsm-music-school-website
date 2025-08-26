@@ -1,103 +1,158 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { playButtonSound } from '../utils/soundEffects';
+
+interface GoogleReview {
+  author_name: string;
+  rating: number;
+  text: string;
+  time: number;
+  profile_photo_url?: string;
+}
+
+interface PlaceInfo {
+  name: string;
+  formatted_address: string;
+  rating: number;
+  user_ratings_total: number;
+}
 
 const Testimonials = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const [reviews, setReviews] = useState<GoogleReview[]>([]);
+  const [placeInfo, setPlaceInfo] = useState<PlaceInfo | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  const testimonials = [
-    {
-      id: 0,
-      name: "Shivan Thukral",
-      title: "Director - Mouj Maalik",
-      text: "I've been using this service for a while now, and I must say that I am impressed with their commitment to providing high-quality services at reasonable prices. Strongly recommended!",
-      rating: 5,
-      image: "/testimonials/client1.jpg"
-    },
-    {
-      id: 1,
-      name: "Priya Sharma",
-      title: "Music Student",
-      text: "The instructors here are incredibly talented and patient. I've learned so much about classical music in just a few months. The studio facilities are top-notch!",
-      rating: 5,
-      image: "/testimonials/client2.jpg"
-    },
-    {
-      id: 2,
-      name: "Rajesh Kumar",
-      title: "Professional Musician",
-      text: "As a working musician, I needed flexible studio time and professional equipment. This place delivers exactly what I need at affordable rates. Highly recommended!",
-      rating: 5,
-      image: "/testimonials/client3.jpg"
-    }
-  ];
+  // Fetch Google Reviews
+  useEffect(() => {
+    const fetchReviews = async () => {
+      try {
+        setLoading(true);
+        console.log("Fetching Google reviews for testimonials...");
+        
+        const response = await fetch("/api/reviews");
+        console.log("Response status:", response.status);
+        
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(errorData.error || "Failed to fetch reviews");
+        }
+        
+        const data = await response.json();
+        console.log("Received reviews data:", data);
+        
+        if (data.error) {
+          throw new Error(data.error);
+        }
+        
+        // Handle the new response format
+        if (data.reviews && Array.isArray(data.reviews)) {
+          setReviews(data.reviews);
+          setPlaceInfo(data.placeInfo);
+        } else if (Array.isArray(data)) {
+          setReviews(data);
+        } else {
+          setReviews([]);
+        }
+      } catch (err) {
+        console.error("Error fetching reviews:", err);
+        setError(err instanceof Error ? err.message : "An error occurred");
+        setReviews([]);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  const shortTestimonials = [
-    "I was wary of using a new service for my digital demands, but this company went well beyond my hopes.",
-    "They offered excellent solutions for a portion of what other companies charged."
-  ];
+    fetchReviews();
+  }, []);
 
+  if (loading) {
+    return (
+      <section className="py-20 bg-purple-50 flex justify-center items-center">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600"></div>
+      </section>
+    );
+  }
 
+  if (error || reviews.length === 0) {
+    return (
+      <section className="py-20 bg-purple-50 text-center">
+        <p className="text-gray-600">No testimonials available at the moment.</p>
+        {error && <p className="text-red-500 mt-2">Error: {error}</p>}
+      </section>
+    );
+  }
 
   return (
     <section className="py-20 bg-purple-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Two Column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Left Column - Section Title and Short Testimonials */}
+          {/* Left Column - Section Title */}
           <div>
             <h2 className="text-4xl font-extrabold text-black mb-4 font-['Montserrat']">
               What Our <span className="text-gray-600">Clients Say</span>
             </h2>
-            
-            <div className="space-y-6">
-              {shortTestimonials.map((testimonial, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <div className="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <div className="w-3 h-3 bg-gray-600 rounded-full"></div>
-                  </div>
-                  <p className="text-gray-700 text-lg leading-relaxed">
-                    {testimonial}
-                  </p>
-                </div>
-              ))}
-            </div>
+
+            {placeInfo && (
+              <div className="bg-white p-6 rounded-lg shadow border-l-4 border-purple-500">
+                <h3 className="text-xl font-semibold">{placeInfo.name}</h3>
+                <p className="text-gray-600">{placeInfo.formatted_address}</p>
+                <p className="mt-2 text-purple-600 font-bold">
+                  ★ {placeInfo.rating} ({placeInfo.user_ratings_total} ratings)
+                </p>
+              </div>
+            )}
           </div>
 
-          {/* Right Column - Featured Testimonial and Client Navigation */}
+          {/* Right Column - Featured Testimonial */}
           <div className="relative">
-            {/* Featured Testimonial Card */}
             <div className="bg-white rounded-2xl shadow-lg p-8 border-l-4 border-purple-500 relative">
               {/* Star Rating */}
               <div className="flex space-x-1 mb-4">
-                {[...Array(testimonials[activeTestimonial].rating)].map((_, i) => (
+                {[...Array(reviews[activeTestimonial].rating)].map((_, i) => (
                   <span key={i} className="text-purple-500 text-xl">★</span>
                 ))}
               </div>
               
               {/* Testimonial Text */}
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                &ldquo;{testimonials[activeTestimonial].text}&rdquo;
+                &ldquo;{reviews[activeTestimonial].text}&rdquo;
               </p>
               
-              {/* Client Name and Title */}
-              <div>
-                <h4 className="text-xl font-bold text-gray-800 mb-1">
-                  {testimonials[activeTestimonial].name}
-                </h4>
-                <p className="text-gray-600">
-                  {testimonials[activeTestimonial].title}
-                </p>
+              {/* Client Info */}
+              <div className="flex items-center space-x-4">
+                {reviews[activeTestimonial].profile_photo_url ? (
+                  <img
+                    src={reviews[activeTestimonial].profile_photo_url}
+                    alt={reviews[activeTestimonial].author_name}
+                    className="w-12 h-12 rounded-full"
+                  />
+                ) : (
+                  <div className="w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center">
+                    <span className="text-gray-600 font-bold text-lg">
+                      {reviews[activeTestimonial].author_name.charAt(0)}
+                    </span>
+                  </div>
+                )}
+                <div>
+                  <h4 className="text-xl font-bold text-gray-800">
+                    {reviews[activeTestimonial].author_name}
+                  </h4>
+                  <p className="text-gray-600 text-sm">
+                    {new Date(reviews[activeTestimonial].time * 1000).toLocaleDateString()}
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* Client Profile Pictures Navigation */}
+            {/* Profile Navigation */}
             <div className="absolute -right-4 top-8 flex flex-col space-y-4">
-              {testimonials.map((testimonial, index) => (
-                <div key={testimonial.id} className="relative">
-                  {/* Profile Picture */}
-                  <div 
+              {reviews.map((review, index) => (
+                <div key={index} className="relative">
+                  <div
                     className={`w-16 h-16 rounded-full border-2 cursor-pointer transition-all duration-300 ${
                       index === activeTestimonial 
                         ? 'border-purple-500 scale-110' 
@@ -108,13 +163,21 @@ const Testimonials = () => {
                       playButtonSound();
                     }}
                   >
-                    <div className="w-full h-full rounded-full bg-gray-200 flex items-center justify-center">
-                      <span className="text-gray-600 font-semibold text-lg">
-                        {testimonial.name.charAt(0)}
-                      </span>
-                    </div>
+                    {review.profile_photo_url ? (
+                      <img
+                        src={review.profile_photo_url}
+                        alt={review.author_name}
+                        className="w-full h-full rounded-full object-cover"
+                      />
+                    ) : (
+                      <div className="w-full h-full rounded-full bg-gray-200 flex items-center justify-center">
+                        <span className="text-gray-600 font-semibold text-lg">
+                          {review.author_name.charAt(0)}
+                        </span>
+                      </div>
+                    )}
                   </div>
-                  
+
                   {/* Active Indicator */}
                   {index === activeTestimonial && (
                     <div className="absolute -left-2 top-1/2 transform -translate-y-1/2">
@@ -125,15 +188,13 @@ const Testimonials = () => {
                   )}
                 </div>
               ))}
-              
-              
             </div>
           </div>
         </div>
 
         {/* Mobile Navigation Dots */}
         <div className="flex justify-center space-x-2 mt-8 lg:hidden">
-          {testimonials.map((_, index) => (
+          {reviews.map((_, index) => (
             <button
               key={index}
               onClick={() => {
