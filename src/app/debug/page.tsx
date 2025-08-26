@@ -38,8 +38,8 @@ export default function DebugPage() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch("/api/reviews");
-      const data = await response.json();
+      const apiResponse = await fetch("/api/reviews");
+      const data = await apiResponse.json();
       
       console.log("Our API Response:", data);
       setResult(data);
