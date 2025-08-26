@@ -54,7 +54,7 @@ export default function DebugPage() {
   return (
     <div className="min-h-screen bg-gray-50 p-8">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-8">Debug Google Places API - Fixed</h1>
+        <h1 className="text-4xl font-bold text-center mb-8">Debug Google Places API - All Errors Fixed</h1>
         
         <div className="grid md:grid-cols-2 gap-6 mb-8">
           <div className="bg-white rounded-lg shadow-md p-6">
