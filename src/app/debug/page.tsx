@@ -22,7 +22,6 @@ export default function DebugPage() {
       
       console.log("Testing URL:", url);
       
-      const response = await fetch(url);
       const data = await response.json();
       
       console.log("Direct Google API Response:", data);
