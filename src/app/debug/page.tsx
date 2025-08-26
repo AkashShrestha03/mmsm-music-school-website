@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 export default function DebugPage() {
-  const [result, setResult] = useState<unknown>(null);
+  const [result, setResult] = useState<object | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
