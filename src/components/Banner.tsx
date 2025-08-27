@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 const Banner = () => {
   return (
-    <section className="relative w-full pt-20">
-      <div className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[650px] overflow-hidden">
+    <section className="relative w-full">
+      <div className="relative w-full h-[200px] sm:h-[280px] md:h-[380px] lg:h-[480px] xl:h-[600px] 2xl:h-[700px] overflow-hidden">
         <Image
           src="/banner-1.png"
           alt="MOUJ MAALIK Banner"
@@ -13,7 +13,6 @@ const Banner = () => {
           priority
           sizes="100vw"
           className="object-cover object-center"
-          style={{ opacity: 'unset', transform: 'unset' }}
         />
       </div>
     </section>
@@ -21,6 +20,7 @@ const Banner = () => {
 };
 
 export default Banner;
+
 
 
 

@@ -13,13 +13,13 @@ const CTA = () => {
           <p className="text-lg sm:text-xl text-[#353535] mb-8 max-w-3xl mx-auto leading-relaxed font-['Nunito'] italic">
             Whether you need studio time, equipment access, or acoustic consultation, we&apos;ve got you covered with professional-grade solutions.
           </p>
-          <button 
+          {/* <button 
             className="px-8 py-4 bg-gray-500 hover:bg-gray-600 active:bg-gray-700 text-white font-bold text-lg rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 hover:shadow-xl active:shadow-inner cursor-pointer hover:-translate-y-1 border-2 border-transparent hover:border-gray-400 focus:outline-none focus:ring-4 focus:ring-gray-300 focus:ring-opacity-50"
             onClick={playButtonSound}
             onMouseEnter={playRagaHoverSound}
           >
             Get Started Today
-          </button>
+          </button> */}
         </div>
       </div>
     </section>

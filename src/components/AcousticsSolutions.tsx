@@ -107,12 +107,12 @@ const AcousticsSolutions = () => {
                    </p>
 
                                      {/* CTA Button */}
-                   <button 
+                   {/* <button 
                      className="w-full bg-gray-500 hover:bg-gray-600 active:bg-gray-700 text-white font-bold py-2 md:py-3 px-4 md:px-6 rounded-lg md:rounded-xl shadow-md hover:shadow-xl transform hover:scale-105 active:scale-95 hover:-translate-y-1 transition-all duration-300 border-2 border-transparent hover:border-[#FFD54F] focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-opacity-50 text-xs md:text-sm lg:text-base mt-auto"
                      onClick={playButtonSound}
                    >
                      Learn More
-                   </button>
+                   </button> */}
                 </div>
 
                                  {/* Decorative Elements */}
@@ -184,14 +184,14 @@ const AcousticsSolutions = () => {
                         </div>
                       </div>
                      
-                     <div className="text-center">
+                     {/* <div className="text-center">
                        <button 
                          className="px-8 py-3 bg-[#81E6D9] hover:bg-[#6DD5C8] text-white font-semibold rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-lg border-2 border-transparent hover:border-[#6DD5C8] focus:outline-none focus:ring-2 focus:ring-[#81E6D9] focus:ring-opacity-50"
                          onClick={playButtonSound}
                        >
                          Book Consultation
                        </button>
-                     </div>
+                     </div> */}
                    </>
                 ) : (
                   <>
@@ -227,14 +227,14 @@ const AcousticsSolutions = () => {
                       </div>
                     </div>
                     
-                    <div className="text-center">
+                    {/* <div className="text-center">
                       <button 
                         className="px-8 py-3 bg-[#81E6D9] hover:bg-[#6DD5C8] text-white font-semibold rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-lg border-2 border-transparent hover:border-[#6DD5C8] focus:outline-none focus:ring-2 focus:ring-[#81E6D9] focus:ring-opacity-50"
                         onClick={playButtonSound}
                       >
                         Get Treatment Quote
                       </button>
-                    </div>
+                    </div> */}
                   </>
                 )}
               </div>

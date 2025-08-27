@@ -109,7 +109,7 @@ const Testimonials = () => {
 
           {/* Right Column - Featured Testimonial */}
           <div className="relative">
-            <div className="bg-white rounded-2xl shadow-lg p-8 border-l-4 border-purple-500 relative">
+            <div className="bg-white rounded-2xl shadow-lg p-8 pl-16 border-l-4 border-purple-500 relative">
               {/* Star Rating */}
               <div className="flex space-x-1 mb-4">
                 {[...Array(reviews[activeTestimonial].rating)].map((_, i) => (
@@ -119,7 +119,7 @@ const Testimonials = () => {
               
               {/* Testimonial Text */}
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                &ldquo;{reviews[activeTestimonial].text}&rdquo;
+                {reviews[activeTestimonial].text}
               </p>
               
               {/* Client Info */}
@@ -149,7 +149,7 @@ const Testimonials = () => {
             </div>
 
             {/* Profile Navigation */}
-            <div className="absolute -right-4 top-8 flex flex-col space-y-4">
+            <div className="absolute -left-4 top-8 flex flex-col space-y-4">
               {reviews.map((review, index) => (
                 <div key={index} className="relative">
                   <div
@@ -180,7 +180,7 @@ const Testimonials = () => {
 
                   {/* Active Indicator */}
                   {index === activeTestimonial && (
-                    <div className="absolute -left-2 top-1/2 transform -translate-y-1/2">
+                    <div className="absolute -right-2 top-1/2 transform -translate-y-1/2">
                       <div className="w-4 h-4 bg-purple-500 rounded-full flex items-center justify-center">
                         <div className="w-2 h-2 bg-white rounded-full"></div>
                       </div>

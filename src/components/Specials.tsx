@@ -95,13 +95,13 @@ const Specials = () => {
               </div>
 
               {/* CTA Button */}
-              <button 
+              {/* <button 
                 className="w-full py-3 bg-gray-500 hover:bg-gray-600 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:-translate-y-1 border-2 border-transparent hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-opacity-50 font-['Nunito']"
                 onClick={playButtonSound}
                 onMouseEnter={playRagaHoverSound}
               >
                 Enroll Now
-              </button>
+              </button> */}
 
               {/* Hover Effect Overlay */}
               {hoveredCard === card.id && (
@@ -116,13 +116,13 @@ const Specials = () => {
                      <p className="text-[#353535]/80 text-lg mb-6 font-['Nunito'] italic">
              Ready to take your music to the next level?
            </p>
-          <button 
+          {/* <button 
             className="px-8 py-4 bg-gray-500 hover:bg-gray-600 text-white font-bold text-lg rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:-translate-y-1 border-2 border-transparent hover:border-gray-400 focus:outline-none focus:ring-4 focus:ring-gray-300 focus:ring-opacity-50 shadow-lg font-['Nunito']"
             onClick={playButtonSound}
             onMouseEnter={playRagaHoverSound}
           >
             View All Programs
-          </button>
+          </button> */}
         </div>
       </div>
     </section>

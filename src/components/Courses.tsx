@@ -79,11 +79,11 @@ const Courses = () => {
       pricingDetails: {
         individual: {
           monthly: "₹2,500",
-          registration: "₹500 (first time)"
+          registration: "₹500 (First time)"
         },
         group: {
           monthly: "₹2,500",
-          registration: "₹500 (first time)"
+          registration: "₹500 (First time)"
         },
         quarterly: {
           initial: "₹7,500",
@@ -106,7 +106,7 @@ const Courses = () => {
       pricingDetails: {
         individual: {
           monthly: "₹2,500",
-          registration: "₹500 (first time)"
+          registration: "₹500 (First time)"
         },
         quarterly: {
           initial: "₹7,500",
@@ -129,7 +129,7 @@ const Courses = () => {
       pricingDetails: {
         individual: {
           monthly: "₹3,000",
-          registration: "₹500 (first time)"
+          registration: "₹500 (First time)"
         },
         quarterly: {
           initial: "₹9,000",
@@ -152,7 +152,7 @@ const Courses = () => {
       pricingDetails: {
         individual: {
           monthly: "₹2,500",
-          registration: "₹500 (first time)"
+          registration: "₹500 (First time)"
         },
         quarterly: {
           initial: "₹7,500",
@@ -175,11 +175,11 @@ const Courses = () => {
       pricingDetails: {
         individual: {
           monthly: "₹2,500",
-          registration: "₹500 (first time)"
+          registration: "₹500 (First time)"
         },
         group: {
           monthly: "₹2,500",
-          registration: "₹500 (first time)"
+          registration: "₹500 (First time)"
         },
         quarterly: {
           praveshika: "₹7,500",
@@ -200,7 +200,7 @@ const Courses = () => {
       pricingDetails: {
         individual: {
           monthly: "₹3,000",
-          registration: "₹500 (first time)"
+          registration: "₹500 (First time)"
         },
         quarterly: {
           praveshika: "₹9,000",
@@ -221,11 +221,11 @@ const Courses = () => {
       pricingDetails: {
         individual: {
           monthly: "₹2,500",
-          registration: "₹500 (first time)"
+          registration: "₹500 (First time)"
         },
         group: {
           monthly: "₹2,500",
-          registration: "₹500 (first time)"
+          registration: "₹500 (First time)"
         },
         quarterly: {
           praveshika: "₹7,500",
@@ -234,11 +234,11 @@ const Courses = () => {
         },
         universities: ["Prayag Sangeet Samiti Allahabad"]
       },
-      westernPricingDetails: {
-        individual: {
-          monthly: "₹3,000",
-          registration: "₹500 (first time)"
-        },
+             westernPricingDetails: {
+         individual: {
+           monthly: "₹3,000",
+           registration: "₹500 (First time)"
+         },
         quarterly: {
           initial: "₹9,000",
           grade1to3: "₹10,500",
@@ -260,7 +260,7 @@ const Courses = () => {
       pricingDetails: {
         individual: {
           monthly: "₹4,000",
-          registration: "₹500 (first time)"
+          registration: "₹500 (First time)"
         },
         quarterly: {
           initial: "₹12,000",
@@ -323,12 +323,12 @@ const Courses = () => {
                   </p>
 
                   {/* CTA Button */}
-                  <button 
+                  {/* <button 
                     className="w-full bg-gray-500 hover:bg-gray-600 active:bg-gray-700 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 hover:-translate-y-1 transition-all duration-300 border-2 border-transparent hover:border-[#FFD54F] focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-opacity-50 text-sm sm:text-base mt-auto"
                     onClick={playButtonSound}
                   >
                     Learn More
-                  </button>
+                  </button> */}
                 </div>
 
                 {/* Decorative Elements */}
@@ -498,6 +498,10 @@ const Courses = () => {
                       <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-6 mb-6 border-2 border-green-200">
                         <h4 className="text-xl font-bold text-green-800 mb-4 text-center">Quarterly Fees (University Recognition)</h4>
                         <p className="text-center text-green-700 mb-4">Students pursuing courses from recognized universities</p>
+                                                 <div className="bg-white rounded-xl p-4 shadow-md text-center mb-4">
+                           <h5 className="font-semibold text-green-700 mb-2">Registration Fee</h5>
+                           <p className="text-2xl font-bold text-green-800">₹1000 (First time)</p>
+                         </div>
                         
                                                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                            {/* Show different pricing structures based on course and vocal style */}
@@ -723,14 +727,14 @@ const Courses = () => {
                  </div>
 
                 {/* CTA Button */}
-                <div className="text-center">
+                {/* <div className="text-center">
                   <button 
                     className="px-8 py-4 bg-gray-500 hover:bg-gray-600 active:bg-gray-700 text-white font-bold text-lg rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 hover:shadow-xl active:shadow-inner hover:-translate-y-1 border-2 border-transparent hover:border-gray-400 focus:outline-none focus:ring-4 focus:ring-gray-300 focus:ring-opacity-50 cursor-pointer"
                     onClick={playButtonSound}
                   >
                     {isDiplomaMode ? 'Enroll in Diploma' : 'Enroll Now'}
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

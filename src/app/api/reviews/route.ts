@@ -68,17 +68,17 @@ export async function GET() {
     console.log("Falling back to mock data...");
     
     const mockPlaceInfo = {
-      name: "MMSM Music School",
+      name: "Mouj Maalik School Of Music, School of Music Production, Jampads, Recording Studio and Soundproofing/Acoustic Solutions",
       formatted_address: "Delhi, India",
-      rating: 4.8,
-      user_ratings_total: 127
+      rating: 5,
+      user_ratings_total: 106
     };
     
     const mockReviews = [
       {
-        author_name: "Jayan",
+        author_name: "Ritesh Kumar",
         rating: 5,
-        text: "I have been learning guitar here from the past 2 months and I must say that all the teacher's are very well educated in their specialised subjects. My learning from Swarnima ma'am is really good and she is really a great teacher with confident personality who teaches perfectly as i have reached from basics to the two songs on tabs so early. so I'm really thankful to the studio of mouj maalik as they helped me to learn as quickly and perfectly as possible and I suggest any new music learner to learn music from here.",
+        text: "My son is learning Guitar here and he is Grade 4 Trinity Rock and Pop and as far as i have seen the progress, it's really fantastic and teachers are also very hardworking with the students as they love to impart right knowledge.",
         time: Math.floor(Date.now() / 1000) - 5184000, // 2 months ago
         profile_photo_url: undefined
       },
@@ -90,9 +90,9 @@ export async function GET() {
         profile_photo_url: undefined
       },
       {
-        author_name: "Ritesh Kumar",
+        author_name: "Singki Lama",
         rating: 5,
-        text: "My son is learning Guitar here and he is Grade 4 Trinity Rock and Pop and as far as i have seen the progress, it's really fantastic and teachers are also very hardworking with the students as they love to impart right knowledge.",
+                text: "Very amazing teaching as I am learning drums from the 2 years and I have seen lot of improvement in my playing style. Thanks to mouj maalik",
         time: Math.floor(Date.now() / 1000) - 86400, // 1 day ago
         profile_photo_url: undefined
       }
